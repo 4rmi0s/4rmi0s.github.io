@@ -1,21 +1,26 @@
 ---
-title: "[포스팅 예시] 이곳에 제목을 입력하세요"
-excerpt: "본문의 주요 내용을 여기에 입력하세요"
+title: "delegate란 무엇인가 ?"
+excerpt: "위임"
 
 categories:
-  - categories1
+  - iOS
 tags:
-  - [tag1, tag2]
+  - [iOS, Swift]
 
-permalink: /categories1/post-name-here/
+permalink: Swift/delegate
 
 toc: true
 toc_sticky: true
 
-date: 2020-05-21
-last_modified_at: 2021-10-09
+date: 2022-08-04
+last_modified_at: 2022-08-09
 ---
+먼저 공부한 내용은 Zeddios 님의 블로그를 참고했음을 밝힙니다. 
 
-## 🦥 본문
+## 🍎 delegate
 
-본문은 여기에 ...
+delegate는 객체가 맡은 임무를 위임하는 것을 뜻한다. 
+
+
+
+

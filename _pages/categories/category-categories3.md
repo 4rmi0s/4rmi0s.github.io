@@ -3,7 +3,7 @@ title: "iOS"
 layout: category
 permalink: /categories/iOS/
 author_profile: true
-taxonomy: Categories3
+taxonomy: iOS
 sidebar:
   nav: "categories"
 ---
