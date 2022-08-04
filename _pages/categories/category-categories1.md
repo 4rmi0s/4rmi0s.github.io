@@ -1,7 +1,7 @@
 ---
-title: "Categories1"
+title: "Swift"
 layout: category
-permalink: /categories/categories1/
+permalink: /categories/Swift/
 author_profile: true
 taxonomy: Categories1
 sidebar:

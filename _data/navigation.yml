@@ -18,11 +18,11 @@ main:
 # sidebar navigation (categories)
 # 2022.02.15 sidebar update : simple ver.
 categories:
-  - title: "Categories1"
-    url: /categories/categories1/
-  - title: "Categories2"
-    url: /categories/categories2/
-  - title: "Categories3"
-    url: /categories/categories3/
+  - title: "Swift"
+    url: /categories/Swift/
+  - title: "Security"
+    url: /categories/Security/
+  - title: "iOS"
+    url: /categories/iOS/
   - title: "Categories4"
     url: /categories/categories4/

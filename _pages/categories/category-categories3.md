@@ -1,7 +1,7 @@
 ---
-title: "Categories3"
+title: "iOS"
 layout: category
-permalink: /categories/categories3/
+permalink: /categories/iOS/
 author_profile: true
 taxonomy: Categories3
 sidebar:
