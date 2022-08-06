@@ -5,16 +5,10 @@ var store = [{
         "url": "/categories3/post-name-here-3/",
         "teaser": null
       },{
-        "title": "[포스팅 예시] 이곳에 제목을 입력하세요",
-        "excerpt":"🦥 본문   본문은 여기에 …  ","categories": ["categories4"],
-        "tags": ["tag1","tag2"],
-        "url": "/categories4/post-name-here-4/",
-        "teaser": null
-      },{
-        "title": "delegate란 무엇인가 ?",
-        "excerpt":"먼저 공부한 내용은 Zeddios 님의 블로그를 참고했음을 밝힙니다.   🍎 delegate   delegate는 객체가 맡은 임무를 위임하는 것을 뜻한다.   ","categories": ["iOS"],
-        "tags": ["iOS","Swift"],
-        "url": "/Swift/delegate",
+        "title": "블로그 기록 start",
+        "excerpt":"🦥 블로그 전부터 기술 블로그 하나 만들어보자! 라는 생각을 갖고 있었다. 그전에는 노션, velog, 네이버 블로그 등 많은 블로그를 만들고 사용했지만 뭔가 하나씩 마음에 들지 않았다.그렇게 해서 찾게 된 것이 깃 블로그다. 내가 알아본 깃 블로그는 다른 블로그보다 자유가 확보된 느낌이였다.물론 이 자유도가 하나하나 직접 환경을 만들어줘야 하는 단점으로 나타나긴...","categories": ["Life"],
+        "tags": ["Life","study"],
+        "url": "/categories4/start/",
         "teaser": null
       },{
         "title": " 크롤링 검색 사이트 정리 ",
