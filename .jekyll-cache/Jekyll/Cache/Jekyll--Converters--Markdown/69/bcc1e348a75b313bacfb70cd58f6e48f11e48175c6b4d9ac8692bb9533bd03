@@ -1,0 +1,93 @@
+I"�<h1 id="설치-방법">설치 방법</h1>
+
+<h2 id="코코아팟-설치">코코아팟 설치</h2>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sudo</span> <span class="n">gem</span> <span class="n">install</span> <span class="n">cocoapods</span>
+</code></pre></div></div>
+
+<h2 id="프로젝트-경로로-이동하기">프로젝트 경로로 이동하기</h2>
+
+<p>프로젝트 경로로 이동하는 방법은 많다. 그중에 나는 <code class="language-plaintext highlighter-rouge">Finder</code> 를 이용하는 방법을 사용함.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Xcode</code> 키고 → 원하는 project에서 오른쪽 마우스 클릭 or 터치패드 두 손가락으로 클릭 → <code class="language-plaintext highlighter-rouge">show in Finder</code> → 다시 Finder에서 원하는 project를 선택한 후 오른쪽 마우스 클릭/터치패드 클릭 → <code class="language-plaintext highlighter-rouge">폴더에서 새로운 터미널 열기</code>  를 누르면 project 경로가 설정된 모습을 볼 수 있다.</p>
+
+<h2 id="pod-파일-생성해주기">pod 파일 생성해주기</h2>
+
+<p>프로젝트 경로로 이동한 후에는 프로젝트 안에 pod 파일을 생성해 줘야 한다. 이 파일로 Xcode 외부 라이브러리를 <code class="language-plaintext highlighter-rouge">install</code> 하여 사용할 수 있다.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pod</span> <span class="kd">init</span> 
+</code></pre></div></div>
+
+<h3 id="주의할-점">주의할 점</h3>
+
+<p><img src="../pod.png" alt="pod.jpg" /> {: weight:100px}</p>
+
+<h2 id="pod파일-열기">pod파일 열기</h2>
+
+<p>pod 파일을 수정해 외부 라이브러리를 install 하는 것이기 때문에 텍스트 편집기를 사용해야 한다. 내가 주로 이용하는 것은 <code class="language-plaintext highlighter-rouge">vim</code> 이지만 기본 <code class="language-plaintext highlighter-rouge">텍스트 편집기</code>를 사용하는 것도 편하다. 또한, vscode에서 텍스트 편집도 가능하다는 점.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">vim</span> <span class="n">podfile</span>
+</code></pre></div></div>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">open</span> <span class="o">-</span><span class="n">e</span> <span class="n">podfile</span>
+</code></pre></div></div>
+
+<h2 id="pod-파일-수정">pod 파일 수정</h2>
+
+<p>파일 수정은 각 라이브러리마다 다르기 때문에  tabman 을 예로 들어보자 . Podfile의 특정 위치에 설치하고 싶은 라이브러리를 적어주면 된다.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pod</span> <span class="err">'</span><span class="kt">Tabman</span><span class="err">'</span><span class="p">,</span> <span class="err">'</span><span class="o">~&gt;</span> <span class="mf">2.11</span><span class="err">'</span>
+<span class="n">pod</span> <span class="err">'</span><span class="kt">Pageboy</span><span class="err">'</span><span class="p">,</span> <span class="err">'</span><span class="o">~&gt;</span> <span class="mf">3.6</span><span class="err">'</span>
+</code></pre></div></div>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/576e11d4-397b-433d-9eae-cf3b7e542d63/Untitled.png" alt="Untitled" /></p>
+
+<h3 id="주의할-점-1">주의할 점</h3>
+
+<aside>
+<img src="https://super.so/icon/dark/check.svg" alt="https://super.so/icon/dark/check.svg" width="40px" /> Tabman은 Pageboy 라이브러리와 같이 사용해야 한다.
+
+</aside>
+
+<h2 id="pod-파일-설치">pod 파일 설치</h2>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pod</span> <span class="n">install</span>
+</code></pre></div></div>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">arch</span> <span class="o">-</span><span class="n">x86_64</span> <span class="n">pod</span> <span class="n">install</span>
+</code></pre></div></div>
+
+<h3 id="주의할-점-2">주의할 점</h3>
+
+<aside>
+<img src="https://super.so/icon/dark/check.svg" alt="https://super.so/icon/dark/check.svg" width="40px" /> 설치 후 실행해야 하는 파일은 `xcworkspace` 파일이다
+
+</aside>
+
+<aside>
+<img src="https://super.so/icon/dark/check.svg" alt="https://super.so/icon/dark/check.svg" width="40px" /> m1 mac의 경우 위의 2번째 코드를 사용해야 한다.
+
+</aside>
+
+<h1 id="설치-과정에서-오류-발생">설치 과정에서 오류 발생</h1>
+
+<p>Loaderror 발생할 경우에 다음과 같이 하면 된다.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sudo</span> <span class="n">arch</span> <span class="o">-</span><span class="n">x86_64</span> <span class="n">gem</span> <span class="n">install</span> <span class="n">ffi</span>
+</code></pre></div></div>
+
+<p>(터미널 키자마자)</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">arch</span> <span class="o">-</span><span class="n">x86_64</span> <span class="n">pod</span> <span class="n">install</span>
+</code></pre></div></div>
+
+<p>(원하는 경로로 이동하여)</p>
+
+<hr />
+
+<h1 id="참고자료">참고자료</h1>
+
+<p><a href="https://bcoding-lab.tistory.com/119">iOS Swift 코코아팟 설치 + 라이브러리 Tabman 사용하기</a></p>
+
+<p><a href="https://github.com/uias/Tabman](https://github.com/uias/Tabman)"></a></p>
+:ET
