@@ -8,7 +8,7 @@ var store = [{
         "title": "[iOS]delegate란 무엇인가 ?",
         "excerpt":"먼저 공부한 내용은 Zeddios 님의 블로그를 참고했음을 밝힙니다.   🍎 delegate   delegate는 객체가 맡은 임무를 위임하는 것을 뜻합니다.   ","categories": ["iOS"],
         "tags": ["iOS","Swift"],
-        "url": "/Swift/delegate",
+        "url": "/iOS/delegate",
         "teaser": null
       },{
         "title": "[Life]블로그 기록 start",
