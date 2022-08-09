@@ -1,5 +1,5 @@
 ---
-title: "delegate란 무엇인가 ?"
+title: "[iOS]delegate란 무엇인가 ?"
 excerpt: "역할을 위임한다 ?"
 
 categories:
@@ -7,7 +7,7 @@ categories:
 tags:
   - [iOS, Swift]
 
-permalink: iOS/delegate
+permalink: Swift/delegate
 
 toc: true
 toc_sticky: true

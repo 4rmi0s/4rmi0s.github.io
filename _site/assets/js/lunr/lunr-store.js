@@ -1,14 +1,14 @@
 var store = [{
-        "title": " 크롤링 검색 사이트 정리 ",
+        "title": "[Security]크롤링 검색 사이트 정리 ",
         "excerpt":"🦥 웹 크롤링을 통한 정보수집 웹 크롤링을 통해 정보를 수집할 수 있는 방법에는 다양한 방법이 있다. 하나하나 설명을 해보자. 나는 간단히 웹에서 서비스를 제공하여 이를 이용하는 방법과 cmd 창에서 명령어를 입력해 정보수집을 할 수 있는 방법으로 구분해 보겠다. 1. 웹 서비스 shodan urlscan internet archive 2. 명령어 shodan whois fiece...","categories": ["Security"],
         "tags": ["crawling","web"],
         "url": "/Security/web1/",
         "teaser": null
       },{
-        "title": "delegate란 무엇인가 ?",
+        "title": "[iOS]delegate란 무엇인가 ?",
         "excerpt":"먼저 공부한 내용은 Zeddios 님의 블로그를 참고했음을 밝힙니다.   🍎 delegate   delegate는 객체가 맡은 임무를 위임하는 것을 뜻합니다.   ","categories": ["iOS"],
         "tags": ["iOS","Swift"],
-        "url": "/iOS/delegate",
+        "url": "/Swift/delegate",
         "teaser": null
       },{
         "title": "[Life]블로그 기록 start",
