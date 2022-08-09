@@ -1,11 +1,11 @@
 ---
-title: "Pod 설치 방법"
+title: "[iOS]Pod 설치 방법"
 excerpt: ""
 
 categories:
-  - swift
+  - iOS
 tags:
-  - [swift, pod]
+  - [iOS, pod]
 
 permalink: /ios/pod
 

@@ -7,7 +7,7 @@ categories:
 tags:
   - [iOS, Swift]
 
-permalink: Swift/delegate
+permalink: iOS/delegate
 
 toc: true
 toc_sticky: true

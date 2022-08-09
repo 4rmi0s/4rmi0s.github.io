@@ -4,9 +4,9 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
-        <loc>http://localhost:4000/ios/pod.html</loc>
+        <loc>http://localhost:4000/Life/start/.html</loc>
         
-        <lastmod>2022-08-09T00:00:00+09:00</lastmod>
+        <lastmod>2022-08-04T00:00:00+09:00</lastmod>
         
 
         
@@ -23,54 +23,6 @@
         <loc>http://localhost:4000/Security/web1/.html</loc>
         
         <lastmod>2022-08-04T00:00:00+09:00</lastmod>
-        
-
-        
-        <changefreq>weekly</changefreq>
-        
-
-        
-        <priority>0.5</priority>
-        
-
-    </url>
-    
-    <url>
-        <loc>http://localhost:4000/categories3/post-name-here-3/.html</loc>
-        
-        <lastmod>2022-07-24T00:00:00+09:00</lastmod>
-        
-
-        
-        <changefreq>weekly</changefreq>
-        
-
-        
-        <priority>0.5</priority>
-        
-
-    </url>
-    
-    <url>
-        <loc>http://localhost:4000/categories3/post-name-here-3/.html</loc>
-        
-        <lastmod>2022-07-24T00:00:00+09:00</lastmod>
-        
-
-        
-        <changefreq>weekly</changefreq>
-        
-
-        
-        <priority>0.5</priority>
-        
-
-    </url>
-    
-    <url>
-        <loc>http://localhost:4000/categories3/post-name-here-3/.html</loc>
-        
-        <lastmod>2022-07-24T00:00:00+09:00</lastmod>
         
 
         
