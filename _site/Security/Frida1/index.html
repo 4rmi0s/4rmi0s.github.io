@@ -52,8 +52,8 @@
     
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>[Security]크롤링 검색 사이트 정리  | plump-goose</title>
-<meta name="description" content="SHODAN,CESSYS">
+<!-- begin _includes/seo.html --><title>[Security] Frida 환경 구성 | plump-goose</title>
+<meta name="description" content="this is my blog!">
 
 
   <meta name="author" content="plump-goose">
@@ -65,32 +65,32 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="Hokyung's blog">
-<meta property="og:title" content="[Security]크롤링 검색 사이트 정리">
-<meta property="og:url" content="http://localhost:4000/Security/web1/">
+<meta property="og:title" content="[Security] Frida 환경 구성">
+<meta property="og:url" content="http://localhost:4000/Security/Frida1/">
 
 
-  <meta property="og:description" content="SHODAN,CESSYS">
-
-
-
+  <meta property="og:description" content="this is my blog!">
 
 
 
 
-  <meta property="article:published_time" content="2022-08-04T00:00:00+09:00">
 
 
 
-  <meta property="article:modified_time" content="2022-08-24T00:00:00+09:00">
+  <meta property="article:published_time" content="2022-08-10T00:00:00+09:00">
 
 
 
-  
+  <meta property="article:modified_time" content="2022-08-10T00:00:00+09:00">
+
+
 
   
 
+  
 
-<link rel="canonical" href="http://localhost:4000/Security/web1/">
+
+<link rel="canonical" href="http://localhost:4000/Security/Frida1/">
 
 
 
@@ -362,15 +362,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[Security]크롤링 검색 사이트 정리">
-    <meta itemprop="description" content="SHODAN,CESSYS">
-    <meta itemprop="datePublished" content="2022-08-04T00:00:00+09:00">
-    <meta itemprop="dateModified" content="2022-08-24T00:00:00+09:00">
+    <meta itemprop="headline" content="[Security] Frida 환경 구성">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="2022-08-10T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2022-08-10T00:00:00+09:00">
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">[Security]크롤링 검색 사이트 정리
+          <h1 id="page-title" class="page__title" itemprop="headline">[Security] Frida 환경 구성
 </h1>
           
 
@@ -379,7 +379,7 @@
       
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
-        <time datetime="2022-08-04T00:00:00+09:00">August 4, 2022</time>
+        <time datetime="2022-08-10T00:00:00+09:00">August 10, 2022</time>
       </span>
     
 
@@ -397,36 +397,74 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#-웹-크롤링을-통한-정보수집">🦥 웹 크롤링을 통한 정보수집</a><ul><li><a href="#1-웹-서비스">1. 웹 서비스</a><ul><li><a href="#shodan">shodan</a></li><li><a href="#urlscan">urlscan</a></li><li><a href="#internet-archive">internet archive</a></li></ul></li><li><a href="#2-명령어">2. 명령어</a><ul><li><a href="#shodan-1">shodan</a></li><li><a href="#whois">whois</a></li><li><a href="#fiece">fiece</a></li></ul></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#frida-란-무엇인가-">Frida 란 무엇인가 ?</a></li><li><a href="#환경-구성">환경 구성</a><ul><li><a href="#필요한-환경">필요한 환경</a><ul><li><a href="#xcode-command-line-tools">Xcode Command Line Tools</a></li><li><a href="#homebrew">homebrew</a></li><li><a href="#git-설치">git 설치</a></li><li><a href="#python3--pip">python3 &amp; pip</a></li><li><a href="#대망의-frida-설치">대망의 frida 설치</a></li></ul></li></ul></li></ul>
 
             </nav>
           </aside>
         
-        <h1 id="-웹-크롤링을-통한-정보수집">🦥 웹 크롤링을 통한 정보수집</h1>
+        <p>[DreamHack 참고]</p>
 
-<p>웹 크롤링을 통해 정보를 수집할 수 있는 방법에는 다양한 방법이 있다.<br />
-하나하나 설명을 해보자.<br /></p>
+<h1 id="frida-란-무엇인가-">Frida 란 무엇인가 ?</h1>
+<blockquote>
+  <p>Inject JavaScript to explore native apps on Windows, macOS, GNU/Linux, iOS, Android, and QNX.</p>
+</blockquote>
 
-<p>나는 간단히 웹에서 서비스를 제공하여 이를 이용하는 방법과 cmd 창에서 명령어를 입력해 정보수집을 할 수 있는 방법으로 구분해 보겠다.</p>
+<p>출처 : https://frida.re/</p>
 
-<hr />
+<p>번역해보면 자바스크립트를 이용하여 Windows, macOS, GNU/Linux, iOS, Android, QNX 앱을 분석할 수 있게 도와주는 Tool이다. 즉,Frida를 통해 스크립트를 주입하여 원하는 동작을 할 수 있게 만든다.</p>
 
-<h2 id="1-웹-서비스">1. 웹 서비스</h2>
-<h3 id="shodan">shodan</h3>
+<h1 id="환경-구성">환경 구성</h1>
+<p>[들어가기에 앞서 제가 공부한 환경은 m1 macbook Air임을 밝힙니다.]</p>
+<h2 id="필요한-환경">필요한 환경</h2>
+<ul>
+  <li>맥북</li>
+  <li>충분한 용량</li>
+  <li>Xcode</li>
+</ul>
 
-<h3 id="urlscan">urlscan</h3>
+<blockquote>
+  <p>기존 ios 모바일 해킹을 하기 위해서는 탈옥이 필수 조건이였다. (Cydia 를 사용해야 하기 때문) 하지만 m1 이후의 버전부터는 xcode의 시뮬레이터를 이용해 모바일 해킹 실습을 진행할 수 있다.</p>
+</blockquote>
 
-<h3 id="internet-archive">internet archive</h3>
+<h3 id="xcode-command-line-tools">Xcode Command Line Tools</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xcode-select <span class="nt">--install</span>
+</code></pre></div></div>
 
-<h2 id="2-명령어">2. 명령어</h2>
+<h3 id="homebrew">homebrew</h3>
+<p> <a href="https://brew.sh/">https://brew.sh</a></p>
 
-<h3 id="shodan-1">shodan</h3>
+<p>![[Pasted image 20220810001516.png]]</p>
 
-<h3 id="whois">whois</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/usr/bin/ruby <span class="nt">-e</span> <span class="s2">"</span><span class="si">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/master/install<span class="si">)</span><span class="s2">"</span>
+</code></pre></div></div>
 
-<h3 id="fiece">fiece</h3>
+<p>이후에 설치 확인하여 설치된 주소가 출력되면 Complete!</p>
 
-<hr />
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>which brew
+</code></pre></div></div>
+
+<h3 id="git-설치">git 설치</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install git
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>which git
+</code></pre></div></div>
+
+<p>git 또한 설치된 주소가 출력되면 Complete</p>
+
+<h3 id="python3--pip">python3 &amp; pip</h3>
+<p>frida는 python으로 만들어진 언어다. 그렇기에 설치하기 위해서는 python3 설치는 불가피하다.</p>
+
+<p>https://www.python.org/</p>
+
+<p>위 경로를 통해 python을 Download한다.</p>
+
+<h3 id="대망의-frida-설치">대망의 frida 설치</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install frida
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python -m pip install frida-tools
+</code></pre></div></div>
 
 
         
@@ -453,7 +491,7 @@
 
 
         
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2022-08-24">August 24, 2022</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2022-08-10">August 10, 2022</time></p>
 
 
       </footer>
@@ -463,11 +501,11 @@
       
   <nav class="pagination">
     
-      <a href="#" class="pagination--pager disabled">Prev</a>
+      <a href="/ios/pod" class="pagination--pager" title="[iOS]Pod 설치 방법
+">Prev</a>
     
     
-      <a href="/iOS/delegate" class="pagination--pager" title="[iOS]delegate란 무엇인가 ?
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -482,42 +520,6 @@
     <div class="page__related">
       <h4 class="page__related-title">You may also enjoy</h4>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/Security/Frida1/" rel="permalink">[Security] Frida 환경 구성
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-calendar-alt" aria-hidden="true"></i>
-        <time datetime="2022-08-10T00:00:00+09:00">August 10, 2022</time>
-      </span>
-    
-
-    
-
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-</p>
-  </article>
-</div>
-
         
           
 
@@ -622,6 +624,42 @@
 
 
     <p class="archive__item-excerpt" itemprop="description">역할을 위임한다 ?
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/Security/web1/" rel="permalink">[Security]크롤링 검색 사이트 정리
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2022-08-04T00:00:00+09:00">August 4, 2022</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">SHODAN,CESSYS
 </p>
   </article>
 </div>

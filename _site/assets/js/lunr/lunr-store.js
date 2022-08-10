@@ -22,4 +22,10 @@ var store = [{
         "tags": ["iOS","pod"],
         "url": "/ios/pod",
         "teaser": null
+      },{
+        "title": "[Security] Frida 환경 구성",
+        "excerpt":"[DreamHack 참고] Frida 란 무엇인가 ? Inject JavaScript to explore native apps on Windows, macOS, GNU/Linux, iOS, Android, and QNX. 출처 : https://frida.re/ 번역해보면 자바스크립트를 이용하여 Windows, macOS, GNU/Linux, iOS, Android, QNX 앱을 분석할 수 있게 도와주는 Tool이다. 즉,Frida를 통해 스크립트를 주입하여 원하는 동작을 할 수 있게 만든다. 환경 구성...","categories": ["Security"],
+        "tags": ["Security","Mobile"],
+        "url": "/Security/Frida1/",
+        "teaser": null
       }]
