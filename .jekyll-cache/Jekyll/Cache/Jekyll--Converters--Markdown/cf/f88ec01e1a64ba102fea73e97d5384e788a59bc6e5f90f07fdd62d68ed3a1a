@@ -1,0 +1,44 @@
+I"�<h1 id="주요-기능">주요 기능</h1>
+<h2 id="injection">injection</h2>
+<p>임의 코드를 메모리나 애플리케이션에 주입
+<br /></p>
+
+<h2 id="interception">Interception</h2>
+<p>함수가 실행되기 전에 함수의 매개변수나 반환값을 수정
+<br /></p>
+
+<h2 id="stalking">stalking</h2>
+<p>원하는 명령어나 함수를 찾아 메모리 데이터 추출</p>
+
+<hr />
+<h1 id="frida-tools">Frida Tools</h1>
+<blockquote>
+  <p>REPL : 컴파일 과정 없이 대화형 인터페이스를 사용한다. 인터프리터 형식과 유사</p>
+</blockquote>
+
+<h2 id="옵션">옵션</h2>
+<ul>
+  <li><strong><code class="language-plaintext highlighter-rouge">frida-ps</code></strong>: 프로세스 목록 출력
+    <ul>
+      <li>프로세스는 쉽게 말하면 메모리 상에 올라간 즉 실행시킨 프로그램을 뜻한다.</li>
+      <li>정리하면 <strong><mark>frida-ps</mark></strong>는 실행중인 프로그램을 출력한다.</li>
+    </ul>
+  </li>
+  <li><strong><code class="language-plaintext highlighter-rouge">frida-trace</code></strong>:함수 호출 추적
+    <ul>
+      <li>매개변수로 들어온 함수를 추적한다.</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">frida-ls-device</code></strong> : 연결된 기기 출력</p>
+  </li>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">frida-kill</code></strong> : 동작중인 프로세스 종료</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">-U</code> : usb로 연결된 기기와 연결할 때 사용하는 옵션</p>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">-D</code> : 가상 디바이스 -&gt; 시뮬레이터라고 생각하면 된다.</li>
+</ul>
+
+:ET

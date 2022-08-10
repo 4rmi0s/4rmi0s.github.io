@@ -28,4 +28,10 @@ var store = [{
         "tags": ["Security","Mobile"],
         "url": "/Security/Frida1/",
         "teaser": null
+      },{
+        "title": "[Security] Frida 기능",
+        "excerpt":"주요 기능 injection 임의 코드를 메모리나 애플리케이션에 주입 Interception 함수가 실행되기 전에 함수의 매개변수나 반환값을 수정 stalking 원하는 명령어나 함수를 찾아 메모리 데이터 추출 Frida Tools REPL : 컴파일 과정 없이 대화형 인터페이스를 사용한다. 인터프리터 형식과 유사 옵션 frida-ps: 프로세스 목록 출력 프로세스는 쉽게 말하면 메모리 상에 올라간 즉 실행시킨...","categories": ["Security"],
+        "tags": ["Security","Mobile"],
+        "url": "/Security/Frida2/",
+        "teaser": null
       }]
