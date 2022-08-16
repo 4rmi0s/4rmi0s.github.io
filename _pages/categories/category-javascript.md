@@ -1,9 +1,9 @@
 ---
-title: "python"
+title: "Javascript"
 layout: category
-permalink: /categories/python/
+permalink: /categories/Javascript/
 author_profile: true
-taxonomy: python
+taxonomy: Javascript
 sidebar:
   nav: "categories"
 ---
