@@ -34,4 +34,10 @@ var store = [{
         "tags": ["Security","Mobile"],
         "url": "/Security/Frida2/",
         "teaser": null
+      },{
+        "title": "[Life] 자바스크립스의 시작",
+        "excerpt":"자바스크립트의 시작… iOS, Android 사랑 나는 어렸을 때부터 태블릿 및 핸드폰 기기에 무척 관심이 많았다. 이 관심은 내가 모은 돈 모두를 각종 핸드폰 기기를 사는데 쏟아붓게 했고 이러한 유별난 취미가 각종 모바일 운영체제를 사용할 수 있는 기회를 얻게 만들어줬다. 물론 내가 많은 기기를 사용해본것은 아니다. 어렸을 때의 용돈으로 기기를 산다는...","categories": ["Life"],
+        "tags": ["javascript","security"],
+        "url": "/Life/javascript/",
+        "teaser": null
       }]

@@ -7,7 +7,7 @@ categories:
 tags:
   - [javascript, security]
 
-permalink: /Life/start/
+permalink: /Life/javascript/
 
 toc: true
 toc_sticky: true
