@@ -1,10 +1,4 @@
 var store = [{
-        "title": "[Security]크롤링 검색 사이트 정리 ",
-        "excerpt":"🦥 웹 크롤링을 통한 정보수집 웹 크롤링을 통해 정보를 수집할 수 있는 방법에는 다양한 방법이 있다. 하나하나 설명을 해보자. 나는 간단히 웹에서 서비스를 제공하여 이를 이용하는 방법과 cmd 창에서 명령어를 입력해 정보수집을 할 수 있는 방법으로 구분해 보겠다. 1. 웹 서비스 shodan urlscan internet archive 2. 명령어 shodan whois fiece...","categories": ["Security"],
-        "tags": ["crawling","web"],
-        "url": "/Security/web1/",
-        "teaser": null
-      },{
         "title": "[iOS]delegate란 무엇인가 ?",
         "excerpt":"먼저 공부한 내용은 Zeddios 님의 블로그를 참고했음을 밝힙니다.   🍎 delegate   delegate는 객체가 맡은 임무를 위임하는 것을 뜻합니다.   ","categories": ["iOS"],
         "tags": ["iOS","Swift"],
@@ -39,5 +33,11 @@ var store = [{
         "excerpt":"자바스크립트의 시작… iOS, Android 사랑 나는 어렸을 때부터 태블릿 및 핸드폰 기기에 무척 관심이 많았다. 이 관심은 내가 모은 돈 모두를 각종 핸드폰 기기를 사는데 쏟아붓게 했고 이러한 유별난 취미가 각종 모바일 운영체제를 사용할 수 있는 기회를 얻게 만들어줬다. 물론 내가 많은 기기를 사용해본것은 아니다. 어렸을 때의 용돈으로 기기를 산다는...","categories": ["Life"],
         "tags": ["javascript","security"],
         "url": "/Life/javascript/",
+        "teaser": null
+      },{
+        "title": "[iOS] @IBOutlet vs @IBAction ",
+        "excerpt":"오늘은 @IBOutlet와 @IBAction 에 대해 정리해보겠습니다. @IBOutlet vs @IBAction IB는 Interface builder의 약자입니다. 즉,화면에 무언가를 만들어준다는 뜻으로 생각하시면 됩니다. 더 쉽게 생각하면 화면에 어떠한 영향을 주는 키워드입니다. 그렇기에 IBOutlet은 IB + Outlet으로, Outlet(배출)하여 화면에 어떠한 영향을 주겠다! 라는 뜻입니다. 이와 비슷하게 IBAction은 화면에서 어떠한 action을 취하게 하는 것이죠. 조금 더...","categories": ["iOS"],
+        "tags": ["iOS","object"],
+        "url": "/iOS/variable/",
         "teaser": null
       }]
