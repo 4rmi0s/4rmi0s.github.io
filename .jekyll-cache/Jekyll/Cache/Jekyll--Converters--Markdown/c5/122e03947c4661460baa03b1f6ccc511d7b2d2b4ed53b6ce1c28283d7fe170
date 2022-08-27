@@ -1,0 +1,17 @@
+I"�<h1 id="colorliteral">#colorLiteral()</h1>
+
+<p>기존의 색을 설정하는 방법은 UIColor와 colorLiteral이 있었습니다. 
+하지만 최근 업데이트로 인해 #colorLiteral()에 대해 간략하게 설명해보려 합니다.</p>
+
+<h1 id="사용-방법">사용 방법</h1>
+<p>사용 방법은 굉장히 쉽습니다.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mainLabel</span><span class="o">.</span><span class="n">background</span> <span class="o">=</span> <span class="err">#</span><span class="nf">colorLiteral</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>이와 같이 원하는 값을 <mark>#colorLiteral</mark>를 이용해 넣어주기만 하면 됩니다.</p>
+
+<div>
+    <img src="/assets/images/#colorLiteral().png" alt=" " width="70%" min-width="700px" itemprop="image" />
+</div>
+:ET
