@@ -35,8 +35,8 @@ var store = [{
         "url": "/Life/javascript/",
         "teaser": null
       },{
-        "title": "[iOS] @IBOutlet vs @IBAction ",
-        "excerpt":"오늘은 @IBOutlet와 @IBAction 에 대해 정리해보겠습니다. @IBOutlet vs @IBAction IB는 Interface builder의 약자입니다. 즉,화면에 무언가를 만들어준다는 뜻으로 생각하시면 됩니다. 더 쉽게 생각하면 화면에 어떠한 영향을 주는 키워드입니다. 그렇기에 IBOutlet은 IB + Outlet으로, Outlet(배출)하여 화면에 어떠한 영향을 주겠다! 라는 뜻입니다. 이와 비슷하게 IBAction은 화면에서 어떠한 action을 취하게 하는 것이죠. 조금 더...","categories": ["iOS"],
+        "title": "[iOS] @IBOutlet ",
+        "excerpt":"오늘은 @IBOutlet와 @IBAction 에 대해 정리해보겠습니다. ☝🏻 @IBOutlet 먼저 @IBOutlet 입니다. @IBOutlet은 UI를 코드로 바꿔주는 작업을 한다고 생각하면 됩니다. 더 쉽게 생각하면 화면에 UI 객체를 만들어 주는 키워드입니다. 저는 @IBOutlet을 어원에 접근해 이해하는 것이 쉽다고 생각하는데요. IBOutlet은 IB(interface builder) + Outlet으로, Outlet(배출)하여 화면에 어떠한 영향을 주겠다! 라는 뜻입니다. 이와 비슷하게...","categories": ["iOS"],
         "tags": ["iOS","object"],
         "url": "/iOS/variable/",
         "teaser": null
