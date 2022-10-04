@@ -48,7 +48,7 @@ var store = [{
         "teaser": null
       },{
         "title": "[iOS] Button 사용법",
-        "excerpt":"UIButton 코드로 만들기 버튼의 타이틀을 바꾸는 법 button.setTitle(\"my text here\",forstate: .normal) 버튼 색깔 바꾸기 button.backgroudn = #colorLiteral() 버튼 객체 코드로만 만들기 private let passwordResetButton : UIButton = { let button = UIButton() button.backgroundColor = .clear button.setTitle(\"\", for: .normal) button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14) button.addTarget(self, action: #selector (resetButtonTapped),for: .touchUpInside) return button }()...","categories": ["iOS"],
+        "excerpt":"UIButton 코드로 만들기 ❗️ 버튼의 타이틀을 바꾸는 법 ❗️ button.setTitle(\"my text here\",forstate: .normal) ❗️ 버튼 색깔 바꾸기 ❗️ button.backgroudn = #colorLiteral() ❗️ 버튼 객체 코드로만 만들기 ❗️ private let passwordResetButton : UIButton = { let button = UIButton() button.backgroundColor = .clear button.setTitle(\"\", for: .normal) button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14) button.addTarget(self, action:...","categories": ["iOS"],
         "tags": ["iOS","UIButton"],
         "url": "/iOS/UIButton/",
         "teaser": null
