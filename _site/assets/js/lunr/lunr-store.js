@@ -42,8 +42,14 @@ var store = [{
         "teaser": null
       },{
         "title": "[iOS] #colorLiteral()",
-        "excerpt":"#colorLiteral()   기존의 색을 설정하는 방법은 UIColor와 colorLiteral이 있었습니다.  하지만 최근 업데이트로 인해 #colorLiteral()에 대해 간략하게 설명해보려 합니다.   사용 방법  사용 방법은 굉장히 쉽습니다.   mainLabel.background = #colorLiteral()   이와 같이 원하는 값을 #colorLiteral를 이용해 넣어주기만 하면 됩니다.          ","categories": ["UIKit"],
+        "excerpt":"#colorLiteral()   기존의 색을 설정하는 방법은 UIColor와 colorLiteral이 있었습니다.  하지만 최근 업데이트로 인해 #colorLiteral()에 대해 간략하게 설명해보려 합니다.   사용 방법  사용 방법은 굉장히 쉽습니다.   mainLabel.background = #colorLiteral()   이와 같이 원하는 값을 #colorLiteral를 이용해 넣어주기만 하면 됩니다.          ","categories": ["iOS"],
         "tags": ["iOS","UIKit"],
         "url": "/iOS/colorLiteral/",
+        "teaser": null
+      },{
+        "title": "[iOS] Button 사용법",
+        "excerpt":"UIButton 코드로 만들기 버튼의 타이틀을 바꾸는 법 button.setTitle(\"my text here\",forstate: .normal) 버튼 색깔 바꾸기 button.backgroudn = #colorLiteral() 버튼 객체 코드로만 만들기 private let passwordResetButton : UIButton = { let button = UIButton() button.backgroundColor = .clear button.setTitle(\"\", for: .normal) button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14) button.addTarget(self, action: #selector (resetButtonTapped),for: .touchUpInside) return button }()...","categories": ["iOS"],
+        "tags": ["iOS","UIButton"],
+        "url": "/iOS/UIButton/",
         "teaser": null
       }]
