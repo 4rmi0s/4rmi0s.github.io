@@ -3,7 +3,7 @@ title: "[iOS] #colorLiteral()"
 excerpt: ""
 
 categories:
-  - UIKit
+  - iOS
 tags:
   - [iOS, UIKit]
 
