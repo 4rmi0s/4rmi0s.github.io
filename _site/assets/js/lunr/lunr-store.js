@@ -52,4 +52,10 @@ var store = [{
         "tags": ["iOS","UIButton"],
         "url": "/iOS/UIButton/",
         "teaser": null
+      },{
+        "title": "[iOS] UILabel 사용법",
+        "excerpt":"UILable 코드로 만들기  ❗️ 레이블 코드로만 만들기 ❗️   레이블 텍스트 변경하기  label.text = \"안녕하세요\"   ","categories": ["iOS"],
+        "tags": ["iOS","UILabel"],
+        "url": "/iOS/UILabel/",
+        "teaser": null
       }]
