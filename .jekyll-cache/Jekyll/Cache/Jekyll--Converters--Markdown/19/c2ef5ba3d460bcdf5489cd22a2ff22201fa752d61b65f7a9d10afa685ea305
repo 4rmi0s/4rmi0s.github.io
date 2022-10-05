@@ -38,7 +38,7 @@
   <li>
     <p><code class="language-plaintext highlighter-rouge">-U</code> : usb로 연결된 기기와 연결할 때 사용하는 옵션</p>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">-D</code> : 가상 디바이스 -&gt; 시뮬레이터라고 생각하면 된다.</li>
+  <li><code class="language-plaintext highlighter-rouge">-D</code> : 가상 디바이스 -&gt; 에뮬레이터라고 생각하면 된다.</li>
 </ul>
 
 :ET
