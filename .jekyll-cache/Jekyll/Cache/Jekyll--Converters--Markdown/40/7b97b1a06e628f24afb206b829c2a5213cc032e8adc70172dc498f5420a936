@@ -1,4 +1,4 @@
-I"�<p>[DreamHack 참고]</p>
+I"�<p>[DreamHack 참고]</p>
 
 <h1 id="frida-란-무엇인가-">Frida 란 무엇인가 ?</h1>
 <blockquote>
@@ -55,7 +55,7 @@
 
 <p>위 경로를 통해 python을 Download한다.</p>
 
-<h3 id="대망의-frida-설치">대망의 frida 설치</h3>
+<h3 id="frida-설치">frida 설치</h3>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install frida
 </code></pre></div></div>
 
