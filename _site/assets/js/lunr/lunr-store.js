@@ -53,6 +53,12 @@ var store = [{
         "url": "/iOS/UIButton/",
         "teaser": null
       },{
+        "title": "[Security] Frida 간단 작성법",
+        "excerpt":"기본 구조 - JS Java.perform(function() { var [변수1] = Java.use(\"[Hooking할 함수의 클래스]\"); [변수1].[Hooking할 함수].implementation = function (args){ [원하는 코드 작성] } }); 기본 구조 - Python import frida, sys def on_message(message, data): if message['type'] == 'send': print(\"[*] {0}\".format(message['payload'])) else: print(message) PACKAGE_NAME = \"[패키지명]\" jscode = \"\"\" Java.perform(function() { var [변수1]...","categories": ["Security"],
+        "tags": ["Security","Frida"],
+        "url": "/Security/FridaScript/",
+        "teaser": null
+      },{
         "title": "[iOS] UILabel 사용법",
         "excerpt":"UILable 코드로 만들기  ❗️ 레이블 코드로만 만들기 ❗️   레이블 텍스트 변경하기  label.text = \"안녕하세요\"   ","categories": ["iOS"],
         "tags": ["iOS","UILabel"],
