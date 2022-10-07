@@ -1,9 +1,9 @@
-I"�8<h2 id="textfield-delegate-준비조건">TextField Delegate 준비조건</h2>
+I"�:<h2 id="textfield-delegate-준비조건">TextField Delegate 준비조건</h2>
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">textField</span><span class="o">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="k">self</span>
 </code></pre></div></div>
 
 <h2 id="textfield-사용하기">TextField 사용하기</h2>
-<p>텍스트필드의 입력이 시작될 때 호출</p>
+<h4 id="텍스트필드의-입력이-시작될-때-호출">텍스트필드의 입력이 시작될 때 호출</h4>
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 텍스트 필드의 입력을 시작할 때 호출(시작할지 말지 여부 허락하는 것)</span>
 
 <span class="kd">func</span> <span class="nf">textFieldShouldBeginEditing</span><span class="p">(</span><span class="nv">textField</span><span class="p">:</span> <span class="kt">UITextField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
@@ -13,7 +13,7 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p>시작 시점을 알 수 있다..</p>
+<h4 id="시작-시점을-알-수-있다">시작 시점을 알 수 있다..</h4>
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 시작 시점 </span>
 
 <span class="err"> </span> <span class="err"> </span> <span class="kd">func</span> <span class="nf">textFieldDidBeginEditing</span><span class="p">(</span><span class="nv">textField</span><span class="p">:</span><span class="kt">UITextField</span><span class="p">)</span> <span class="p">{</span>
@@ -23,7 +23,7 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p>한글자 한글자 입력되는 경우</p>
+<h4 id="한글자-한글자-입력되는-경우">한글자 한글자 입력되는 경우</h4>
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err"> </span><span class="c1">// 텍스트 필드의 글자 내용이 입력되거나 지워질 때 호출이 되고 허락</span>
 
 <span class="err"> </span> <span class="err"> </span> <span class="kd">func</span> <span class="nf">textField</span><span class="p">(</span><span class="nv">textField</span><span class="p">:</span> <span class="kt">UITextField</span><span class="p">,</span> <span class="n">shouldChangeCharactersIn</span> <span class="nv">range</span><span class="p">:</span> <span class="kt">NSRange</span><span class="p">,</span> <span class="n">replacementString</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
@@ -35,7 +35,7 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p>엔터키가 눌러지면 다음 동작 허락</p>
+<h4 id="엔터키가-눌러지면-다음-동작-허락">엔터키가 눌러지면 다음 동작 허락</h4>
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 텍스트필드의 엔터키가 눌러지면 다음 동작을 허락할 것인지 말것인지</span>
 
 <span class="err"> </span> <span class="err"> </span> <span class="kd">func</span> <span class="nf">textFieldShouldReturn</span><span class="p">(</span><span class="nv">textField</span><span class="p">:</span> <span class="kt">UITextField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
@@ -45,7 +45,7 @@
 <span class="err"> </span> <span class="err"> </span> <span class="p">}</span>
 </code></pre></div></div>
 
-<p>프로토콜이용해서 10글자 &amp; 숫자 입력 안되게 하기</p>
+<h4 id="프로토콜이용해서-10글자--숫자-입력-안되게-하기">프로토콜이용해서 10글자 &amp; 숫자 입력 안되게 하기</h4>
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">textField</span><span class="p">(</span><span class="nv">textField</span><span class="p">:</span><span class="kt">UITextField</span><span class="p">,</span> <span class="n">shouldChangeCharactersIn</span> <span class="nv">range</span><span class="p">:</span> <span class="kt">NSRange</span><span class="p">,</span> <span class="n">replacementString</span> <span class="nv">string</span><span class="p">:</span><span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
 
 <span class="c1">//        print(#function)</span>
@@ -69,15 +69,15 @@
 <span class="err"> </span> <span class="err"> </span> <span class="p">}</span>
 </code></pre></div></div>
 
-<p>앱 시작하자마자 텍스트필드 키보드 on - viewDidLoad에 추가가능</p>
+<h4 id="앱-시작하자마자-텍스트필드-키보드-on---viewdidload에-추가가능">앱 시작하자마자 텍스트필드 키보드 on - viewDidLoad에 추가가능</h4>
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">textField</span><span class="o">.</span><span class="nf">becomeFirstResponder</span><span class="p">()</span>
 </code></pre></div></div>
 
-<p>텍스트 필드 키보드 off하기</p>
+<h4 id="텍스트-필드-키보드-off하기">텍스트 필드 키보드 off하기</h4>
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">textField</span><span class="o">.</span><span class="nf">resignFirstResponder</span><span class="p">()</span>
 </code></pre></div></div>
 
-<p>텍스트 필드 바깥 터치시 키보드 off</p>
+<h4 id="텍스트-필드-바깥-터치시-키보드-off">텍스트 필드 바깥 터치시 키보드 off</h4>
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 화면의 탭을 감지하는 메소드</span>
 
 <span class="k">override</span> <span class="kd">func</span> <span class="nf">touchesBegan</span><span class="p">(</span><span class="nv">touches</span><span class="p">:</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt">UITouch</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">with</span> <span class="nv">event</span><span class="p">:</span><span class="kt">UIEvent</span><span class="p">?)</span> <span class="p">{</span>
@@ -85,7 +85,7 @@
 <span class="p">}</span>
 </code></pre></div></div>
 
-<p>텍스트 필드에 숫자 입력만 받기</p>
+<h4 id="텍스트-필드에-숫자-입력만-받기">텍스트 필드에 숫자 입력만 받기</h4>
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">textField</span><span class="p">(</span><span class="nv">textField</span><span class="p">:</span> <span class="kt">UITextField</span><span class="p">,</span> <span class="n">shouldChangeCharactersIn</span> <span class="nv">range</span><span class="p">:</span> <span class="kt">NSRange</span><span class="p">,</span> <span class="n">replacementString</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
 
 <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span> <span class="n">textField</span> <span class="o">==</span> <span class="n">getHeight</span> <span class="p">{</span>
@@ -103,7 +103,7 @@
 <span class="err"> </span> <span class="err"> </span> <span class="p">}</span>
 </code></pre></div></div>
 
-<p>텍스트 필드 키보드 내리기</p>
+<h4 id="텍스트-필드-키보드-내리기">텍스트 필드 키보드 내리기</h4>
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">textFieldShouldReturn</span><span class="p">(</span><span class="nv">textField</span><span class="p">:</span> <span class="kt">UITextField</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
 
 <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">if</span> <span class="n">getHeight</span><span class="o">.</span><span class="n">text</span> <span class="o">!=</span> <span class="s">""</span> <span class="p">,</span> <span class="n">getWeight</span><span class="o">.</span><span class="n">text</span> <span class="o">!=</span> <span class="s">""</span> <span class="p">{</span>
