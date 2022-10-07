@@ -65,9 +65,15 @@ var store = [{
         "url": "/iOS/UILabel/",
         "teaser": null
       },{
-        "title": "[iOS] iOS에서 타이머 설정하기",
+        "title": "[iOS] 타이머 사용법",
         "excerpt":"Timer 사용법   타이머 설정하기  var timer = Timer()  override func viewDidLoad() {     self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { in         updateCounting()     }) }  func updateCounting(){     print(\"counting...\") }   timer_?.invalidate()  ","categories": ["iOS"],
         "tags": ["iOS","iOS"],
         "url": "/iOS/UITimer/",
+        "teaser": null
+      },{
+        "title": "[iOS] Sound 사용법",
+        "excerpt":"시스템 사운드 킬 때  import AVFoundation  AudioServicesPlayAlertSound(SystemSoundID(1322))   ","categories": ["iOS"],
+        "tags": ["iOS","SystemSound"],
+        "url": "/iOS/Sound/",
         "teaser": null
       }]
