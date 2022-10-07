@@ -1,21 +1,38 @@
-<!-- ---
-title: "[포스팅 예시] 이곳에 제목을 입력하세요"
-excerpt: "본문의 주요 내용을 여기에 입력하세요"
+---
+title: "[iOS] iOS에서 타이머 설정하기"
+excerpt: ""
 
 categories:
-  - categories3
+  - iOS
 tags:
-  - [tag1, tag2]
+  - [iOS, iOS]
 
-permalink: /categories3/post-name-here-3/
+permalink: /iOS/UITimer/
 
 toc: true
 toc_sticky: true
 
-date: 2022-07-24
-last_modified_at: 2022-07-24
+date: 2022-10-06
+last_modified_at: 2022-10-06
 ---
 
-## 🦥 본문
+## Timer 사용법
 
-본문은 여기에 ... -->
+타이머 설정하기 
+```swift
+var timer = Timer()
+
+override func viewDidLoad() {
+    self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { in
+        updateCounting()
+    })
+}
+
+func updateCounting(){
+    print("counting...")
+}
+```
+
+```swift
+timer_?.invalidate()
+```
