@@ -1,0 +1,21 @@
+I"O<p>FridaLab is an app to study the framework called Frida.
+Before I knew this app, I kept coming to Crackme’s Android, but it was difficult because I couldn’t understand exactly how to use the API that Frida pursues.
+My primary purpose of writing this article is to summarize why Frida was used this way.<br />
+Let’s get started ~</p>
+
+<h2 id="-fridalab01">☝🏻 FridaLab01</h2>
+<h4 id="change-class-challenge_01s-variable-chall01-to-1">Change class challenge_01’s variable ‘chall01’ to 1:</h4>
+
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">uk.rossmarks.fridalab</span><span class="o">;</span>
+
+<span class="cm">/* loaded from: classes.dex */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">challenge_01</span> <span class="o">{</span>
+    <span class="kd">static</span> <span class="kt">int</span> <span class="n">chall01</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">getChall01Int</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">chall01</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="o">}</span>
+</code></pre></div></div>
+
+:ET
