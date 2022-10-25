@@ -1,0 +1,19 @@
+I"�<h2 id="timer-사용법">Timer 사용법</h2>
+
+<p>타이머 설정하기</p>
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">var</span> <span class="nv">timer</span> <span class="o">=</span> <span class="kt">Timer</span><span class="p">()</span>
+
+<span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">self</span><span class="o">.</span><span class="n">timer</span> <span class="o">=</span> <span class="kt">Timer</span><span class="o">.</span><span class="nf">scheduledTimer</span><span class="p">(</span><span class="nv">withTimeInterval</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nv">repeats</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">block</span><span class="p">:</span> <span class="p">{</span> <span class="k">in</span>
+        <span class="nf">updateCounting</span><span class="p">()</span>
+    <span class="p">})</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">updateCounting</span><span class="p">(){</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"counting..."</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">timer_</span><span class="p">?</span><span class="o">.</span><span class="nf">invalidate</span><span class="p">()</span>
+</code></pre></div></div>
+:ET
