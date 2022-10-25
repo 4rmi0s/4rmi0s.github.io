@@ -82,4 +82,10 @@ var store = [{
         "tags": ["iOS","SystemSound"],
         "url": "/iOS/Sound/",
         "teaser": null
+      },{
+        "title": "[Security] Android Frida",
+        "excerpt":"FridaLab is an app to study the framework called Frida. Before I knew this app, I kept coming to Crackme’s Android, but it was difficult because I couldn’t understand exactly how to use the API that Frida pursues. My primary purpose of writing this article is to summarize why Frida...","categories": ["Security"],
+        "tags": ["Security","Frida"],
+        "url": "/Security/FridaLab/",
+        "teaser": null
       }]

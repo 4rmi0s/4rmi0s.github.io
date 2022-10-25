@@ -52,19 +52,21 @@
     
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Swift | plump-goose</title>
+<!-- begin _includes/seo.html --><title>[Security] Android Frida | plump-goose</title>
 <meta name="description" content="this is my blog!">
 
 
   <meta name="author" content="plump-goose">
   
+  <meta property="article:author" content="plump-goose">
+  
 
 
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="Hokyung's blog">
-<meta property="og:title" content="Swift">
-<meta property="og:url" content="http://localhost:4000/categories/Swift/">
+<meta property="og:title" content="[Security] Android Frida">
+<meta property="og:url" content="http://localhost:4000/Security/FridaLab/">
 
 
   <meta property="og:description" content="this is my blog!">
@@ -75,7 +77,11 @@
 
 
 
+  <meta property="article:published_time" content="2022-10-26T00:00:00+09:00">
 
+
+
+  <meta property="article:modified_time" content="2022-10-26T00:00:00+09:00">
 
 
 
@@ -84,7 +90,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/categories/Swift/">
+<link rel="canonical" href="http://localhost:4000/Security/FridaLab/">
 
 
 
@@ -155,7 +161,7 @@
     <meta name="theme-color" content="#ffffff">
   </head>
 
-  <body class="layout--category">
+  <body class="layout--single">
     <nav class="skip-links">
   <h2 class="screen-reader-text">Skip links</h2>
   <ul>
@@ -355,20 +361,272 @@
 
 
 
-  <div class="archive">
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[Security] Android Frida">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="2022-10-26T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2022-10-26T00:00:00+09:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">[Security] Android Frida
+</h1>
+          
+
+  <p class="page__meta">
     
-      <h1 id="page-title" class="page__title">Swift</h1>
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2022-10-26T00:00:00+09:00">October 26, 2022</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#-fridalab01">☝🏻 FridaLab01</a><ul><li><a href="#change-class-challenge_01s-variable-chall01-to-1">Change class challenge_01’s variable ‘chall01’ to 1:</a></li></ul></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <p>FridaLab is an app to study the framework called Frida.
+Before I knew this app, I kept coming to Crackme’s Android, but it was difficult because I couldn’t understand exactly how to use the API that Frida pursues.
+My primary purpose of writing this article is to summarize why Frida was used this way.
+Let’s get started ~</p>
+
+<h2 id="-fridalab01">☝🏻 FridaLab01</h2>
+<h4 id="change-class-challenge_01s-variable-chall01-to-1">Change class challenge_01’s variable ‘chall01’ to 1:</h4>
+<p><br />&lt;/br&gt;</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">package</span> <span class="nn">uk.rossmarks.fridalab</span><span class="o">;</span>
+
+<span class="cm">/* loaded from: classes.dex */</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">challenge_01</span> <span class="o">{</span>
+    <span class="kd">static</span> <span class="kt">int</span> <span class="n">chall01</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">getChall01Int</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">chall01</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="o">}</span>
+</code></pre></div></div>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#security" class="page__taxonomy-item" rel="tag">Security</a>
+    
+    </span>
+  </p>
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2022-10-26">October 26, 2022</time></p>
+
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/iOS/Sound/" class="pagination--pager" title="[iOS] Sound 사용법
+">Prev</a>
     
     
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
 
 
 
-<div class="entries-list">
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/iOS/Sound/" rel="permalink">[iOS] Sound 사용법
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2022-10-07T00:00:00+09:00">October 7, 2022</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/iOS/TextFieldDelegate/" rel="permalink">[iOS] TextField Delegate
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2022-10-07T00:00:00+09:00">October 7, 2022</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/iOS/UITimer/" rel="permalink">[iOS] 타이머 사용법
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2022-10-06T00:00:00+09:00">October 6, 2022</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/iOS/UILabel/" rel="permalink">[iOS] UILabel 사용법
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2022-10-05T00:00:00+09:00">October 5, 2022</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
   
 </div>
 
-  </div>
-</div>
     </div>
 
     
@@ -418,6 +676,33 @@
 
 
 
+
+
+    <script>
+  'use strict';
+
+  (function() {
+    var commentContainer = document.querySelector('#utterances-comments');
+
+    if (!commentContainer) {
+      return;
+    }
+
+    var script = document.createElement('script');
+    script.setAttribute('src', 'https://utteranc.es/client.js');
+    script.setAttribute('repo', 'plump-goose/plump-goose-comments');
+    script.setAttribute('issue-term', 'pathname');
+    script.setAttribute('theme', 'github-light');
+    script.setAttribute('crossorigin', 'anonymous');
+
+    commentContainer.appendChild(script);
+  })();
+
+</script>
+
+
+
+  
 
 
 
