@@ -397,7 +397,7 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#-fridalab01">☝🏻 FridaLab01</a><ul><li><a href="#change-class-challenge_01s-variable-chall01-to-1">Change class challenge_01’s variable ‘chall01’ to 1:</a></li></ul></li><li><a href="#클래스에-접근하는-방법">클래스에 접근하는 방법</a></li><li><a href="#메소드에-접근하는-방법">메소드에 접근하는 방법</a></li><li><a href="#변수에-접근하는-방법">변수에 접근하는 방법</a></li></ul></li><li><a href="#-code">✌🏻 Code</a></li></ul>
+              <ul class="toc__menu"><li><a href="#-fridalab01">☝🏻 FridaLab01</a><ul><li><a href="#change-class-challenge_01s-variable-chall01-to-1">Change class challenge_01’s variable ‘chall01’ to 1:</a></li></ul></li><li><a href="#how-to-access-a-class">How to access a class</a></li><li><a href="#to-access-the-method">To access the method</a></li><li><a href="#to-access-a-variable">To access a variable</a></li></ul></li><li><a href="#-code">✌🏻 Code</a></li></ul>
 
             </nav>
           </aside>
@@ -423,30 +423,31 @@ Let’s get started ~</p>
 </code></pre></div></div>
 <p><br /></p>
 
-<p>첫번째 문제는 challenge_01 클래스의 chall01 변수에 접근해 그 값을 1로 변경하는 것입니다.
-이 문제를 해결하기 위해 생각할 것은 3가지 입니다.</p>
+<p>The first problem is to access the chall01 variable in challenge_01 class and change the value to 1.<br />
+There are three things to think about to solve this problem.</p>
 
 <blockquote>
-  <p>1) challenge_01 클래스에 어떻게 접근할 것인지
-2) challenge_01 클래스에서 chall01변수로 어떻게 접근해야할지
-3) 변수에 접근하여 그 값을 대입하여 주기(변경하기) 위해서는 어떻게 해야할지</p>
+  <p>1) How to access the challenge_01 class
+<br />
+2) How to approach the challenge_01 variable in the class
+<br />
+3) How to approach a variable and put it into the cycle (change)</p>
 </blockquote>
 
-<p><br />차근차근 해결해봅시다.<br /></p>
+<p><br />Let’s work it out step by step<br /></p>
 
-<h3 id="클래스에-접근하는-방법">클래스에 접근하는 방법</h3>
-<p>클래스를 통해 특정 메소드에 접근하는 방법으로는 두가지가 있습니다.
-첫번째로 <code class="language-plaintext highlighter-rouge">Java.use(className)</code> API를 사용하는 것입니다.
-두번째로는 <code class="language-plaintext highlighter-rouge">Java.choose(className,callback)</code> API를 이용하는 것입니다.</p>
+<h3 id="how-to-access-a-class">How to access a class</h3>
+<p>There are two ways to access a particular method through the class.<br />
+First, use <code class="language-plaintext highlighter-rouge">Java.use(className)</code> API.<br />
+The second is to use the <code class="language-plaintext highlighter-rouge">Java.choose(className,callback)</code> API.<br /></p>
 
-<p>[ 각각의 설명에 대해서는 다른 블로그를 참조해주세요 ] -&gt; <a href="https://changkr28.tistory.com/entry/Frida-%EB%AC%B8%EB%B2%95">블로그</a></p>
+<p>[ Please refer to the other blog for each description ] -&gt; <a href="https://changkr28.tistory.com/entry/Frida-%EB%AC%B8%EB%B2%95">blog</a></p>
 
-<h3 id="메소드에-접근하는-방법">메소드에 접근하는 방법</h3>
-<p>메소드에 접근하는 방법은 다른 프로그래밍 언어에서와 같습니다. <code class="language-plaintext highlighter-rouge">.</code> 을 이용하여 클래스의 메소드에 접근할 수 있습니다.</p>
+<h3 id="to-access-the-method">To access the method</h3>
+<p>The approach to the method is the same as in any other programming languages. <code class="language-plaintext highlighter-rouge">.</code> You can access the class’ methods using the .</p>
 
-<h3 id="변수에-접근하는-방법">변수에 접근하는 방법</h3>
-<p>저는 이 부분에서 참조를 했는데요. <br />
-값을 가져오는 방법으로 <code class="language-plaintext highlighter-rouge">value</code> 필드를 이용합니다.</p>
+<h3 id="to-access-a-variable">To access a variable</h3>
+<p>Use the ‘value’ field to get the value.</p>
 
 <h2 id="-code">✌🏻 Code</h2>
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kd">function</span> <span class="nx">sol1</span><span class="p">()</span> <span class="p">{</span>
