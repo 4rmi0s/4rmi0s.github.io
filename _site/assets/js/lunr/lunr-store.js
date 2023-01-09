@@ -88,4 +88,10 @@ var store = [{
         "tags": ["Security","Frida"],
         "url": "/Security/FridaLab/",
         "teaser": null
+      },{
+        "title": "[Android Malware] Android Malware Analyze",
+        "excerpt":"블로그 테스트중   ","categories": ["Malware"],
+        "tags": ["Malware","Android"],
+        "url": "/Malware/Android%20Malware/",
+        "teaser": null
       }]
