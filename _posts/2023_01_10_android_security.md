@@ -3,7 +3,7 @@ title: "[Android Malware] 안드로이드 악성코드 분석"
 excerpt: ""
 
 categories:
-  - Security
+  - Malware
 tags:
   - [Security, Android Malware]
 
