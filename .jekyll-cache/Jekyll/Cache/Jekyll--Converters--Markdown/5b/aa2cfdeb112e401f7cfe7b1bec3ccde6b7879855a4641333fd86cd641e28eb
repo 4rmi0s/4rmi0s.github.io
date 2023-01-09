@@ -1,4 +1,4 @@
-I"F<h1 id="-what-">☝🏻 What ?</h1>
+I"f<h1 id="-what-">☝🏻 What ?</h1>
 <ul>
   <li>어떤 것을 분석하느냐</li>
 </ul>
@@ -17,6 +17,17 @@
 그중에 나는 내가 자주 사용하는 방법인 jadx-gui 툴을 이용하여 디컴파일을 한 후에 분석을 진행해보려고 한다.</p>
 
 <h2 id="분석-환경-및-분석-파일">분석 환경 및 분석 파일</h2>
-<p>HOST : MAC OS Macbook Pro M1 <br /></p>
+<p>HOST : MAC OS Macbook Pro M1 <br />
+Emulator : Galaxy A8 star <br />
+target : 5251a356421340a45c8dc6d431ef8a8cbca4078a0305a87f4fbd552e9fc0793e.apk</p>
+
+<h2 id="setting">Setting</h2>
+<ul>
+  <li>Download</li>
+</ul>
+
+<div>
+    <img src="/assets/images/Download.png" alt=" " width="70%" min-width="700px" itemprop="image" />
+</div>
 
 :ET

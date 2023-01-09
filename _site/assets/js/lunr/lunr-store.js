@@ -90,7 +90,7 @@ var store = [{
         "teaser": null
       },{
         "title": "[Android Malware] Android Malware Analyze - part.1",
-        "excerpt":"☝🏻 What ? 어떤 것을 분석하느냐 안드로이드 악성코드를 이렇게 본격적으로 분석하는 것은 처음이다. 따라서 나는 단계별로 구분되어 정리되어 있는 하나의 블로그를 이용할 예정이다. Anroid Malware Sample How ? 어떤 식으로 분석했느냐 ? 안드로이드 악성코드를 분석하는 방식은 다양하다. 그중에 나는 내가 자주 사용하는 방법인 jadx-gui 툴을 이용하여 디컴파일을 한 후에 분석을...","categories": ["Malware"],
+        "excerpt":"☝🏻 What ? 어떤 것을 분석하느냐 안드로이드 악성코드를 이렇게 본격적으로 분석하는 것은 처음이다. 따라서 나는 단계별로 구분되어 정리되어 있는 하나의 블로그를 이용할 예정이다. Anroid Malware Sample ✌🏻 How ? 어떤 식으로 분석했느냐 ? 안드로이드 악성코드를 분석하는 방식은 다양하다. 그중에 나는 내가 자주 사용하는 방법인 jadx-gui 툴을 이용하여 디컴파일을 한 후에...","categories": ["Malware"],
         "tags": ["Malware","Android"],
         "url": "/Malware/Android%20Malware/",
         "teaser": null
