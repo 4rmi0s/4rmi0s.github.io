@@ -38,7 +38,7 @@ target : 5251a356421340a45c8dc6d431ef8a8cbca4078a0305a87f4fbd552e9fc0793e.apk</p
 
 <p>이번 APK 파일의 경우에는 디컴파일 시 다음과 같은 구조를 가진다.</p>
 <div>
-    <img src="/assets/images/FileFormat.png" alt=" " width="70%" min-width="700px" itemprop="image" />
+    <img src="/assets/images/FileFormat.png" alt=" " width="70%" min-width="100px" itemprop="image" />
 </div>
 
 :ET
