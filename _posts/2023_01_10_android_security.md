@@ -5,9 +5,9 @@ excerpt: ""
 categories:
   - Malware
 tags:
-  - [Security, Android Malware]
+  - [Android, Malware]
 
-permalink: /Security/Android Malware_1/
+permalink: /Malware/Android Malware_1/
 
 toc: true
 toc_sticky: true
