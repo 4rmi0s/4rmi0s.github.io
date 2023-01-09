@@ -1,0 +1,22 @@
+I"F<h1 id="-what-">☝🏻 What ?</h1>
+<ul>
+  <li>어떤 것을 분석하느냐</li>
+</ul>
+
+<p>안드로이드 악성코드를 이렇게 본격적으로 분석하는 것은 처음이다. <br />
+따라서 나는 단계별로 구분되어 정리되어 있는 하나의 블로그를 이용할 예정이다.</p>
+
+<p><a href="https://maldroid.github.io/android-malware-samples/">Anroid Malware Sample</a></p>
+
+<h1 id="how-">How ?</h1>
+<ul>
+  <li>어떤 식으로 분석했느냐 ?</li>
+</ul>
+
+<p>안드로이드 악성코드를 분석하는 방식은 다양하다. <br />
+그중에 나는 내가 자주 사용하는 방법인 jadx-gui 툴을 이용하여 디컴파일을 한 후에 분석을 진행해보려고 한다.</p>
+
+<h2 id="분석-환경-및-분석-파일">분석 환경 및 분석 파일</h2>
+<p>HOST : MAC OS Macbook Pro M1 <br /></p>
+
+:ET
