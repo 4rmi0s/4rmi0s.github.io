@@ -1,4 +1,4 @@
-I"a<h1 id="-what-">☝🏻 What ?</h1>
+I"<h1 id="-what-">☝🏻 What ?</h1>
 <ul>
   <li>어떤 것을 분석하느냐</li>
 </ul>
@@ -87,6 +87,41 @@ BootReceiver의 경우 부팅이 완료되는 액션이 진행되면 MyService �
 
 <div>
     <img src="/assets/images/business logic.png" alt=" " width="70%" min-width="100px" itemprop="image" />
+</div>
+
+<ul>
+  <li>동적 분석 결과
+동적 분석을 위해 앱을 실행시켜보도록 하였다. <br />
+먼저 앱을 설치하면 다음과 같은 화면이 나타난다.<br /></li>
+</ul>
+
+<div>
+    <img src="/assets/images/install.png" alt=" " width="70%" min-width="100px" itemprop="image" />
+</div>
+
+<p>이 후에 앱을 실행시켜 보도록 하자. <br />
+이때 어떤 앱이 설치된건지 파악을 제대로 하지 못해 adb 명령어를 이용하여 실행을 완료하였다. <br />
+그 후에 실행한 결과는 다음과 같다.</p>
+
+<div>
+    <img src="/assets/images/run.png" alt=" " width="70%" min-width="100px" itemprop="image" />
+</div>
+
+<div>
+    <img src="/assets/images/ransomeware.png" alt=" " width="70%" min-width="100px" itemprop="image" />
+</div>
+
+<p>여기서 위의 명령어를 사용한 이유에 대해 알기 전에 먼저 ‘AndroidManifest.xml’ 파일에 대해 알아야 한다.<br />
+‘AndroidManifest.xml’ 파일에서 첫 시작 화면으로 MainActivity를 지정하고 있다. <br />
+따라서 앱을 실행하고 난 후에 가장 먼저 볼 수 있는 화면은 MainActivity 와 관련있을 것이다.</p>
+
+<div>
+    <img src="/assets/images/acitivity.png" alt=" " width="70%" min-width="100px" itemprop="image" />
+</div>
+
+<p>패스워드는 다음과 같이 풀 수 있다.</p>
+<div>
+    <img src="/assets/images/password.png" alt=" " width="70%" min-width="100px" itemprop="image" />
 </div>
 
 <h2 id="-result">🤟🏻 Result</h2>
