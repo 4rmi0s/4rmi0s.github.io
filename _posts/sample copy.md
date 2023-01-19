@@ -1,5 +1,5 @@
 ---
-title: "[Android Malware] Android Malware Analyze - part.1"
+title: "[Android Malware] Android Malware Analyze - part.2"
 excerpt: ""
 
 categories:
@@ -12,39 +12,40 @@ permalink: /Malware/Android Malware/
 toc: true
 toc_sticky: true
 
-date: 2023-01-10
-last_modified_at: 2023-01-10
+date: 2023-01-19
+last_modified_at: 2023-01-19
 ---
 
 # ☝🏻 What ?
 - 어떤 것을 분석하느냐
 
-안드로이드 악성코드를 이렇게 본격적으로 분석하는 것은 처음이다. <br>
-따라서 나는 단계별로 구분되어 정리되어 있는 하나의 블로그를 이용할 예정이다.
+저번에 안드로이드에서 나타나는 대표적인 Randsomeware에 대해 공부를 했다. <br> 
+오늘은 그에 이어 안드로이드 악성코드가 어떻게 사용자의 메시지 정보를 가져오는지 알아보려고 한다. <br>
+메시지 정보는 특히 중요한 것이 메시지를 통해 사용자의 정보가 오고 가기 때문이다. <br>
 
 **[Anroid Malware Sample](https://maldroid.github.io/android-malware-samples/)**
 
 # ✌🏻 How ?
 - 어떤 식으로 분석했느냐 ?
 
-안드로이드 악성코드를 분석하는 방식은 다양하다. <br>
-그중에 나는 내가 자주 사용하는 방법인 jadx-gui 툴을 이용하여 디컴파일을 한 후에 분석을 진행해보려고 한다.
+저번 시간과 마찬가지로 'JADX-GUI' 툴을 이용하여 APK 파일을 디컴파일하여 분석을 하였다. <br>
+또한, 이번 악성코드부터는 에뮬레이터에서 앱 실행을 진행하였다.
 
 ### ⭐️ 분석 환경 및 분석 파일
-> HOST : MAC OS Macbook Pro M1 <br> Emulator : Galaxy A8 star <br> target : 5251a356421340a45c8dc6d431ef8a8cbca4078a0305a87f4fbd552e9fc0793e.apk
+> HOST : MAC OS Macbook Pro M1 <br> Emulator : 안드로이드 에뮬레이터 <br> target : 355cd2b71db971dfb0fac1fc391eb4079e2b090025ca2cdc83d4a22a0ed8f082 .apk
 
 ### ⭐️ Setting
 
 **Dowload**
 
 <div>
-    <img src="/assets/images/Download.png" alt=" " width="70%" min-width="700px" itemprop="image">
+    <img src="/assets/images/Download2.png" alt=" " width="70%" min-width="700px" itemprop="image">
 </div>
 
 다음과 같이 선택된 부분의 파일을 설치하면 된다.
 
 ### ⭐️ Analyze
-- 분석 결과
+- 정적 분석 결과
 
 이번 APK 파일의 경우에는 디컴파일 시 다음과 같은 구조를 가진다.
 <div>
@@ -93,38 +94,6 @@ MyService 에서는 windowManager 객체를 생성해주고 있다. <br>
     <img src="/assets/images/business logic.png" alt=" " width="70%" min-width="100px" itemprop="image">
 </div>
 
-- 동적 분석 결과
-동적 분석을 위해 앱을 실행시켜보도록 하였다. <br>
-먼저 앱을 설치하면 다음과 같은 화면이 나타난다.<br>
-
-<div>
-    <img src="/assets/images/install.png" alt=" " width="70%" min-width="100px" itemprop="image">
-</div>
-
-이 후에 앱을 실행시켜 보도록 하자. <br>
-이때 어떤 앱이 설치된건지 파악을 제대로 하지 못해 adb 명령어를 이용하여 실행을 완료하였다. <br>
-그 후에 실행한 결과는 다음과 같다.
-
-<div>
-    <img src="/assets/images/run.png" alt=" " width="70%" min-width="100px" itemprop="image">
-</div>
-
-<div>
-    <img src="/assets/images/ransomeware.png" alt=" " width="70%" min-width="100px" itemprop="image">
-</div>
-
-여기서 위의 명령어를 사용한 이유에 대해 알기 전에 먼저 'AndroidManifest.xml' 파일에 대해 알아야 한다.<br>
-'AndroidManifest.xml' 파일에서 첫 시작 화면으로 MainActivity를 지정하고 있다. <br>
-따라서 앱을 실행하고 난 후에 가장 먼저 볼 수 있는 화면은 MainActivity 와 관련있을 것이다.
-
-<div>
-    <img src="/assets/images/acitivity" alt=" " width="70%" min-width="100px" itemprop="image">
-</div>
-
-패스워드는 다음과 같이 풀 수 있다.
-<div>
-    <img src="/assets/images/password.png" alt=" " width="70%" min-width="100px" itemprop="image">
-</div>
 
 ## 🤟🏻 Result
 - 앱 분석 마침.

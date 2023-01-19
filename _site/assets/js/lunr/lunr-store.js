@@ -94,4 +94,10 @@ var store = [{
         "tags": ["Malware","Android"],
         "url": "/Malware/Android%20Malware/",
         "teaser": null
+      },{
+        "title": "[Malware] 안드로이드 리버싱시 환경 구성 방법",
+        "excerpt":"설치해야 할 툴 jadx-gui apktool nox adb 명령어 환경 변수에 설정 1. jadx-gui 설치 아래 블로그의 방식을 따라가주세요. 또한, cmd창에서 jadx-gui 명령어로 쉽게 접근하기 위해 환경변수 등록을 하면 편합니다. → 필수 X https://github.com/skylot/jadx https://dev-huhu.tistory.com/27 2. apktool 무조건 환경변수 등록하기. → 앱의 위치와 apktool의 위치가 다른 경우 번거로움. https://novvon.tistory.com/213 3. nox...","categories": ["Malware"],
+        "tags": ["Reversing","Malware"],
+        "url": "/Malware/Reversing/",
+        "teaser": null
       }]
