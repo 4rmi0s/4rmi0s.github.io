@@ -1,4 +1,4 @@
-I"<h1 id="-what-">☝🏻 What ?</h1>
+I"<h1 id="-what-">☝🏻 What ?</h1>
 <ul>
   <li>어떤 것을 분석하느냐</li>
 </ul>
@@ -90,7 +90,7 @@ BootReceiver의 경우 부팅이 완료되는 액션이 진행되면 MyService �
 </div>
 
 <ul>
-  <li>동적 분석 결과
+  <li>동적 분석 결과 <br />
 동적 분석을 위해 앱을 실행시켜보도록 하였다. <br />
 먼저 앱을 설치하면 다음과 같은 화면이 나타난다.<br /></li>
 </ul>
@@ -116,7 +116,7 @@ BootReceiver의 경우 부팅이 완료되는 액션이 진행되면 MyService �
 따라서 앱을 실행하고 난 후에 가장 먼저 볼 수 있는 화면은 MainActivity 와 관련있을 것이다.</p>
 
 <div>
-    <img src="/assets/images/acitivity.png" alt=" " width="70%" min-width="100px" itemprop="image" />
+    <img src="/assets/images/activity.png" alt=" " width="70%" min-width="100px" itemprop="image" />
 </div>
 
 <p>패스워드는 다음과 같이 풀 수 있다.</p>
