@@ -1,13 +1,13 @@
 # main links
 main:
   - title: "Home"
-    url: https://plump-goose.github.io/
+    url: https://ParkHoHo.github.io/
 
   - title: "About"
     url: /about/
 
   - title: "GitHub"
-    url: https://github.com/plump-goose
+    url: https://github.com/ParkHoHo
 
   # - title: "Projects"
   #   url: /projects/
