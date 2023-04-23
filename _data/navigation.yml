@@ -20,13 +20,15 @@ main:
 categories:
   - title: "Swift"
     url: /categories/Swift/
-  - title: "Security"
-    url: /categories/Security/
-  - title: "iOS"
-    url: /categories/iOS/
-  - title: "Life"
-    url: /categories/Life/
-  - title: "Malware"
-    url: /categories/Malware/  
   - title: "Android"
     url: /categories/Android/  
+  - title: "iOS"
+    url: /categories/iOS/
+  - title: "Security"
+    url: /categories/Security/
+  - title: "Malware"
+    url: /categories/Malware/
+  - title: "Life"
+    url: /categories/Life/
+
+
