@@ -1,32 +1,30 @@
 ---
-title: "[Android Malware] Android Malware Analyze - part.2"
+title: "안드로이드OS 구조"
 excerpt: ""
 
 categories:
-  - Malware
+  - Android
 tags:
-  - [Malware, Android]
+  - [Android, Security]
 
-permalink: /Malware/Android Malware/
+permalink: /Android/AndroidOS/
 
 toc: true
 toc_sticky: true
 
-date: 2023-01-19
-last_modified_at: 2023-01-19
+date: 2023-04-21
+last_modified_at: 2023-04-21
 ---
 
-# ☝🏻 What ?
-- 어떤 것을 분석하느냐
+# ☝🏻 안드로이드 OS 구조
+안드로이드를 딥하게 들어갈수록 기본기가 부족하다고 느껴지기도 하고, 어셈블리 언어 시간에 배운 안드로이드를 복습할 겸 처음부터 정리해봅니다.<br><br>
 
-저번에 안드로이드에서 나타나는 대표적인 Randsomeware에 대해 공부를 했다. <br> 
-오늘은 그에 이어 안드로이드 악성코드가 어떻게 사용자의 메시지 정보를 가져오는지 알아보려고 한다. <br>
-메시지 정보는 특히 중요한 것이 메시지를 통해 사용자의 정보가 오고 가기 때문이다. <br>
+안드로이드 앱 구조는 위와 같이 리눅스-커널 계층, 어플리케이션 계층, 프레임워크 계층, 안드로이드 런타임, Native Library 계층, 하드웨어 추상화 계층 으로 구분된다. 
 
-**[Anroid Malware Sample](https://maldroid.github.io/android-malware-samples/)**
 
-# ✌🏻 How ?
-- 어떤 식으로 분석했느냐 ?
+
+## ✌🏻 How ?
+> - <mark>리눅스 커널 계층</mark> - 하드웨어 주요기능 제어
 
 저번 시간과 마찬가지로 'JADX-GUI' 툴을 이용하여 APK 파일을 디컴파일하여 분석을 하였다. <br>
 또한, 이번 악성코드부터는 에뮬레이터에서 앱 실행을 진행하였다.
