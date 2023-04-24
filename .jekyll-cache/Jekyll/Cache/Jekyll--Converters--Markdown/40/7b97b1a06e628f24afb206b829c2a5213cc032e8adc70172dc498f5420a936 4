@@ -1,0 +1,65 @@
+I"�<p>[DreamHack 참고]</p>
+
+<h1 id="frida-란-무엇인가-">Frida 란 무엇인가 ?</h1>
+<blockquote>
+  <p>Inject JavaScript to explore native apps on Windows, macOS, GNU/Linux, iOS, Android, and QNX.</p>
+</blockquote>
+
+<p>출처 : https://frida.re/</p>
+
+<p>번역해보면 자바스크립트를 이용하여 Windows, macOS, GNU/Linux, iOS, Android, QNX 앱을 분석할 수 있게 도와주는 Tool이다. 즉,Frida를 통해 스크립트를 주입하여 원하는 동작을 할 수 있게 만든다.</p>
+
+<h1 id="환경-구성">환경 구성</h1>
+<p>[들어가기에 앞서 제가 공부한 환경은 m1 macbook Air임을 밝힙니다.]</p>
+<h2 id="필요한-환경">필요한 환경</h2>
+<ul>
+  <li>맥북</li>
+  <li>충분한 용량</li>
+  <li>Xcode</li>
+</ul>
+
+<blockquote>
+  <p>기존 ios 모바일 해킹을 하기 위해서는 탈옥이 필수 조건이였다. (Cydia 를 사용해야 하기 때문) 하지만 m1 이후의 버전부터는 xcode의 시뮬레이터를 이용해 모바일 해킹 실습을 진행할 수 있다.</p>
+</blockquote>
+
+<h3 id="xcode-command-line-tools">Xcode Command Line Tools</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xcode-select <span class="nt">--install</span>
+</code></pre></div></div>
+
+<h3 id="homebrew">homebrew</h3>
+<p> <a href="https://brew.sh/">https://brew.sh</a></p>
+
+<p>![[Pasted image 20220810001516.png]]</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/usr/bin/ruby <span class="nt">-e</span> <span class="s2">"</span><span class="si">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/master/install<span class="si">)</span><span class="s2">"</span>
+</code></pre></div></div>
+
+<p>이후에 설치 확인하여 설치된 주소가 출력되면 Complete!</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>which brew
+</code></pre></div></div>
+
+<h3 id="git-설치">git 설치</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install git
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>which git
+</code></pre></div></div>
+
+<p>git 또한 설치된 주소가 출력되면 Complete</p>
+
+<h3 id="python3--pip">python3 &amp; pip</h3>
+<p>frida는 python으로 만들어진 언어다. 그렇기에 설치하기 위해서는 python3 설치는 불가피하다.</p>
+
+<p>https://www.python.org/</p>
+
+<p>위 경로를 통해 python을 Download한다.</p>
+
+<h3 id="frida-설치">frida 설치</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install frida
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python -m pip install frida-tools
+</code></pre></div></div>
+
+:ET
