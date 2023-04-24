@@ -1,0 +1,41 @@
+I"U<h1 id="-문제">☝🏻 문제</h1>
+<p>입력조건</p>
+
+<ul>
+  <li>첫째 줄에 N(2&lt;= N &lt;= 1,000 ),M(1 &lt;= M &lt;= 10,000), K(1&lt;= K &lt;= 10,000) 의 자연수가 주어지며, 각 자연수는 공백으로 구분된다.</li>
+  <li>둘째 줄에 N개의 자연수가 주어진다. 각 자연수는 공백으로 구분한다. 단, 각각의 자연수는 1이상의 10,000 이하의 수로 주어진다.</li>
+  <li>입력으로 주어지는 K는 항상 M보다 작거나 같다.</li>
+</ul>
+
+<p>출력조건</p>
+
+<ul>
+  <li>첫째 줄에 동빈이의 큰 수의 법칙에 따라 더해진 답을 출력한다.</li>
+</ul>
+
+<h2 id="-how-">✌🏻 How ?</h2>
+
+<p>같은 수열이 반복되는 것을 보고 그러면 큰수가 몇번 반복되는지 알면 끝나는거 아닌가? 라는 생각으로 
+큰수가 몇번나오는지 계산하려고 했다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">N</span><span class="p">,</span> <span class="n">M</span><span class="p">,</span> <span class="n">K</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">().</span><span class="n">split</span><span class="p">())</span>  <span class="c1"># 5,8,3
+</span>    <span class="n">data</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span><span class="nb">input</span><span class="p">().</span><span class="n">split</span><span class="p">()))</span> <span class="c1"># [2,4,5,4,6]
+</span>
+    <span class="n">data</span><span class="p">.</span><span class="n">sort</span><span class="p">()</span> <span class="c1"># [2,4,5,4,6]
+</span>    <span class="n">most_one</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">N</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">most_second</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">N</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+
+    <span class="n">count</span> <span class="o">=</span> <span class="n">M</span><span class="o">//</span><span class="p">(</span><span class="n">K</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">K</span> <span class="o">+</span> <span class="n">M</span> <span class="o">%</span> <span class="p">(</span><span class="n">K</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">result</span> <span class="o">+=</span> <span class="n">count</span> <span class="o">*</span> <span class="n">most_one</span>
+    <span class="n">result</span> <span class="o">+=</span> <span class="p">(</span><span class="n">M</span><span class="o">-</span><span class="n">count</span><span class="p">)</span> <span class="o">*</span> <span class="n">most_second</span>
+
+    <span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</code></pre></div></div>
+
+:ET
