@@ -52,19 +52,21 @@
     
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>iOS | ParkHoho</title>
+<!-- begin _includes/seo.html --><title>숫자 카드 게임 | ParkHoho</title>
 <meta name="description" content="this is my blog!">
 
 
   <meta name="author" content="ParkHoho">
   
+  <meta property="article:author" content="ParkHoho">
+  
 
 
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="Hokyung's blog">
-<meta property="og:title" content="iOS">
-<meta property="og:url" content="http://localhost:4000/categories/iOS/">
+<meta property="og:title" content="숫자 카드 게임">
+<meta property="og:url" content="http://localhost:4000/Algorithm/a%20number%20card%20game/">
 
 
   <meta property="og:description" content="this is my blog!">
@@ -75,7 +77,11 @@
 
 
 
+  <meta property="article:published_time" content="2023-04-26T00:00:00+09:00">
 
+
+
+  <meta property="article:modified_time" content="2023-04-26T00:00:00+09:00">
 
 
 
@@ -84,7 +90,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/categories/iOS/">
+<link rel="canonical" href="http://localhost:4000/Algorithm/a%20number%20card%20game/">
 
 
 
@@ -155,7 +161,7 @@
     <meta name="theme-color" content="#ffffff">
   </head>
 
-  <body class="layout--category">
+  <body class="layout--single">
     <nav class="skip-links">
   <h2 class="screen-reader-text">Skip links</h2>
   <ul>
@@ -379,25 +385,157 @@
 
 
 
-  <div class="archive">
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="숫자 카드 게임">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="2023-04-26T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2023-04-26T00:00:00+09:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">숫자 카드 게임
+</h1>
+          
+
+  <p class="page__meta">
     
-      <h1 id="page-title" class="page__title">iOS</h1>
-    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2023-04-26T00:00:00+09:00">April 26, 2023</time>
+      </span>
     
 
+    
+
+    
+  </p>
 
 
-<div class="entries-list">
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#-문제">☝🏻 문제</a><ul><li><a href="#-how-">✌🏻 How ?</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h1 id="-문제">☝🏻 문제</h1>
+<blockquote>
+  <p>입력조건</p>
+  <ul>
+    <li>첫째 줄에 숫자 카드들이 놓인 행의 개수 N과 열의 개수 M이 공백을 기준으로 하여 각각 자연수로 주어진다.</li>
+    <li>둘째 줄부터 N개의 줄에 걸쳐 각 카드에 적힌 숫자가 주어진다. 각 숫자는 1이상 10,000 이하의 자연수이다.</li>
+  </ul>
+</blockquote>
+
+<blockquote>
+  <p>출력조건</p>
+  <ul>
+    <li>첫째 줄에 게임의 룰에 맞게 선택한 카드에 적힌 숫자를 출력한다.</li>
+  </ul>
+</blockquote>
+
+<h2 id="-how-">✌🏻 How ?</h2>
+
+<ol>
+  <li>입력받기</li>
+  <li>입력받은 숫자 중 각행마다 가장 작은수를 저장한다. -&gt; 정렬 후 (sort) [0]</li>
+  <li>그중 가장 큰 수 찾기</li>
+</ol>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">N</span><span class="p">,</span> <span class="n">M</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">().</span><span class="n">split</span><span class="p">())</span>  <span class="c1"># 3 3
+</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">input</span><span class="p">().</span><span class="n">split</span><span class="p">()))</span>
+        <span class="n">data</span><span class="p">.</span><span class="n">sort</span><span class="p">()</span>
+        <span class="nb">max</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">result</span> <span class="o">&lt;</span> <span class="nb">max</span> <span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="nb">max</span>
+
+    <span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+
+</code></pre></div></div>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
   
 
 
+  
 
-<div class="list__item">
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#algorithm" class="page__taxonomy-item" rel="tag">Algorithm</a>
+    
+    </span>
+  </p>
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2023-04-26">April 26, 2023</time></p>
+
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/Algorithm/law%20of%20large%20numbers/" class="pagination--pager" title="큰수의 법칙
+">Prev</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/iOS/Sound/" rel="permalink">[iOS] Sound 사용법
+        <a href="/Algorithm/law%20of%20large%20numbers/" rel="permalink">큰수의 법칙
 </a>
       
     </h2>
@@ -408,7 +546,7 @@
       
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
-        <time datetime="2022-10-07T00:00:00+09:00">October 7, 2022</time>
+        <time datetime="2023-04-21T00:00:00+09:00">April 21, 2023</time>
       </span>
     
 
@@ -423,15 +561,17 @@
   </article>
 </div>
 
+        
+          
 
 
 
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/iOS/TextFieldDelegate/" rel="permalink">[iOS] TextField Delegate
+        <a href="/Malware/Reversing/" rel="permalink">[Malware] 안드로이드 리버싱시 환경 구성 방법
 </a>
       
     </h2>
@@ -442,7 +582,7 @@
       
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
-        <time datetime="2022-10-07T00:00:00+09:00">October 7, 2022</time>
+        <time datetime="2023-01-17T00:00:00+09:00">January 17, 2023</time>
       </span>
     
 
@@ -457,15 +597,17 @@
   </article>
 </div>
 
+        
+          
 
 
 
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/iOS/UITimer/" rel="permalink">[iOS] 타이머 사용법
+        <a href="/Malware/Android%20Malware/" rel="permalink">[Android Malware] Android Malware Analyze - part.1
 </a>
       
     </h2>
@@ -476,7 +618,7 @@
       
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
-        <time datetime="2022-10-06T00:00:00+09:00">October 6, 2022</time>
+        <time datetime="2023-01-10T00:00:00+09:00">January 10, 2023</time>
       </span>
     
 
@@ -491,15 +633,17 @@
   </article>
 </div>
 
+        
+          
 
 
 
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/iOS/UILabel/" rel="permalink">[iOS] UILabel 사용법
+        <a href="/Security/FridaLab/" rel="permalink">[Security] Android Frida
 </a>
       
     </h2>
@@ -510,7 +654,7 @@
       
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
-        <time datetime="2022-10-05T00:00:00+09:00">October 5, 2022</time>
+        <time datetime="2022-10-26T00:00:00+09:00">October 26, 2022</time>
       </span>
     
 
@@ -525,180 +669,13 @@
   </article>
 </div>
 
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/iOS/UIButton/" rel="permalink">[iOS] Button 사용법
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-calendar-alt" aria-hidden="true"></i>
-        <time datetime="2022-10-04T00:00:00+09:00">October 4, 2022</time>
-      </span>
-    
-
-    
-
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-</p>
-  </article>
+        
+      </div>
+    </div>
+  
+  
 </div>
 
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/iOS/colorLiteral/" rel="permalink">[iOS] #colorLiteral()
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-calendar-alt" aria-hidden="true"></i>
-        <time datetime="2022-08-27T00:00:00+09:00">August 27, 2022</time>
-      </span>
-    
-
-    
-
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-</p>
-  </article>
-</div>
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/iOS/variable/" rel="permalink">[iOS] @IBOutlet
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-calendar-alt" aria-hidden="true"></i>
-        <time datetime="2022-08-26T00:00:00+09:00">August 26, 2022</time>
-      </span>
-    
-
-    
-
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-</p>
-  </article>
-</div>
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/ios/pod" rel="permalink">[iOS]Pod 설치 방법
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-calendar-alt" aria-hidden="true"></i>
-        <time datetime="2022-08-09T00:00:00+09:00">August 9, 2022</time>
-      </span>
-    
-
-    
-
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-</p>
-  </article>
-</div>
-
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/iOS/delegate" rel="permalink">[iOS]delegate란 무엇인가 ?
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-calendar-alt" aria-hidden="true"></i>
-        <time datetime="2022-08-04T00:00:00+09:00">August 4, 2022</time>
-      </span>
-    
-
-    
-
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">역할을 위임한다 ?
-</p>
-  </article>
-</div>
-
-</div>
-
-  </div>
-</div>
     </div>
 
     
@@ -748,6 +725,33 @@
 
 
 
+
+
+    <script>
+  'use strict';
+
+  (function() {
+    var commentContainer = document.querySelector('#utterances-comments');
+
+    if (!commentContainer) {
+      return;
+    }
+
+    var script = document.createElement('script');
+    script.setAttribute('src', 'https://utteranc.es/client.js');
+    script.setAttribute('repo', 'ParkHoHo/blogComments');
+    script.setAttribute('issue-term', 'pathname');
+    script.setAttribute('theme', 'github-light');
+    script.setAttribute('crossorigin', 'anonymous');
+
+    commentContainer.appendChild(script);
+  })();
+
+</script>
+
+
+
+  
 
 
 

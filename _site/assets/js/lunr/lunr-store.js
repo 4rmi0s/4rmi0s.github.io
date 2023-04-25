@@ -106,4 +106,10 @@ var store = [{
         "tags": ["Algorithm","python"],
         "url": "/Algorithm/law%20of%20large%20numbers/",
         "teaser": null
+      },{
+        "title": "숫자 카드 게임",
+        "excerpt":"☝🏻 문제 입력조건 첫째 줄에 숫자 카드들이 놓인 행의 개수 N과 열의 개수 M이 공백을 기준으로 하여 각각 자연수로 주어진다. 둘째 줄부터 N개의 줄에 걸쳐 각 카드에 적힌 숫자가 주어진다. 각 숫자는 1이상 10,000 이하의 자연수이다. 출력조건 첫째 줄에 게임의 룰에 맞게 선택한 카드에 적힌 숫자를 출력한다. ✌🏻 How ?...","categories": ["Algorithm"],
+        "tags": ["Algorithm","python"],
+        "url": "/Algorithm/a%20number%20card%20game/",
+        "teaser": null
       }]

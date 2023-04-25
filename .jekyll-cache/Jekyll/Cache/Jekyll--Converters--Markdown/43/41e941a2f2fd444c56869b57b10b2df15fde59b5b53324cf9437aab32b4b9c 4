@@ -1,8 +1,0 @@
-I"�<h2 id="uilable-코드로-만들기">UILable 코드로 만들기</h2>
-<h3 id="️-레이블-코드로만-만들기-️">❗️ 레이블 코드로만 만들기 ❗️</h3>
-
-<p>레이블 텍스트 변경하기</p>
-<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">label</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="s">"안녕하세요"</span>
-</code></pre></div></div>
-
-:ET
