@@ -1,0 +1,812 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <style> 
+      ::-webkit-scrollbar{ 
+        width: 10px;
+        height: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        width: 0px;
+        background-color: rgba(224, 224, 224, 0.2);
+        /* border-radius: 5px; */
+      }
+
+      ::-webkit-scrollbar-thumb {
+        width: 0px;
+        background-color: rgba(220, 219, 218, 0.6);
+        border-radius: 5px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        width: 10px;
+        height: 20px;
+        /* background-color: rgba(190, 190, 190, 0.2); */
+        background-color: rgba(193, 192, 191, 0.7);
+        border-radius: 5px;
+      }
+
+      ::-webkit-scrollbar-track:hover {
+        width: 10px;
+        /* background-color: rgba(150, 150, 150, 0.1); */
+        background-color: rgba(224, 224, 224, 0.5);
+        border-radius: 5px;
+        /* background: transparent; */
+        /* border-radius: 10px; */
+      }
+
+      ::-webkit-scrollbar-button:start:decrement,::-webkit-scrollbar-button:end:increment {
+          width:0px;
+          height: 0px;
+          /* background-color: rgb(14, 221, 24); */
+          /* border-radius: 50%; */
+      }
+    </style>
+    
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[iOS]Pod 설치 방법 | ParkHoho</title>
+<meta name="description" content="this is my blog!">
+
+
+  <meta name="author" content="ParkHoho">
+  
+  <meta property="article:author" content="ParkHoho">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="Hokyung's blog">
+<meta property="og:title" content="[iOS]Pod 설치 방법">
+<meta property="og:url" content="http://localhost:4000/ios/pod">
+
+
+  <meta property="og:description" content="this is my blog!">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2022-08-09T00:00:00+09:00">
+
+
+
+  <meta property="article:modified_time" content="2022-08-09T00:00:00+09:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/ios/pod">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "ParkHoHo",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Hokyung's blog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://github-account.github.io/assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://github-account.github.io/assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://github-account.github.io/assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="https://github-account.github.io/assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="https://github-account.github.io/assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Hokyung's blog
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://ParkHoHo.github.io/">Home</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://github.com/ParkHoHo">GitHub</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/itsme2.png" alt="ParkHoho" itemprop="image">
+      
+    </div>
+  
+
+  <!-- 2022.02.17 author content hidden -->
+  <!-- <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">ParkHoho</h3>
+    
+    
+  </div> -->
+
+  <div class="author__urls-wrapper">
+    <!-- <button class="btn btn--inverse">Follow</button> -->
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    <!-- <li>
+      <span class="nav__total">🌴 Total Posts: 19</span>
+    </li> -->
+    
+    
+      <li>
+        
+              <a href="/categories/Swift/"><span class="nav__sub-title">Swift</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+              <a href="/categories/Android/"><span class="nav__sub-title">Android</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+              <a href="/categories/iOS/"><span class="nav__sub-title">iOS</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+              <a href="/categories/Security/"><span class="nav__sub-title">Security</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+              <a href="/categories/Malware/"><span class="nav__sub-title">Malware</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+              <a href="/categories/Algorithm/"><span class="nav__sub-title">Algorithm</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+              <a href="/categories/Life/"><span class="nav__sub-title">Life</span></a>
+        
+
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[iOS]Pod 설치 방법">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="2022-08-09T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2022-08-09T00:00:00+09:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">[iOS]Pod 설치 방법
+</h1>
+          
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2022-08-09T00:00:00+09:00">August 9, 2022</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#설치-방법">설치 방법</a><ul><li><a href="#코코아팟-설치">코코아팟 설치</a></li><li><a href="#프로젝트-경로로-이동하기">프로젝트 경로로 이동하기</a></li><li><a href="#pod-파일-생성해주기">pod 파일 생성해주기</a><ul><li><a href="#주의할-점">주의할 점</a></li></ul></li><li><a href="#pod파일-열기">pod파일 열기</a></li><li><a href="#pod-파일-수정">pod 파일 수정</a><ul><li><a href="#주의할-점-1">주의할 점</a></li></ul></li><li><a href="#pod-파일-설치">pod 파일 설치</a><ul><li><a href="#주의할-점-2">주의할 점</a></li></ul></li></ul></li><li><a href="#설치-과정에서-오류-발생">설치 과정에서 오류 발생</a></li><li><a href="#참고자료">참고자료</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h1 id="설치-방법">설치 방법</h1>
+
+<h2 id="코코아팟-설치">코코아팟 설치</h2>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sudo</span> <span class="n">gem</span> <span class="n">install</span> <span class="n">cocoapods</span>
+</code></pre></div></div>
+
+<h2 id="프로젝트-경로로-이동하기">프로젝트 경로로 이동하기</h2>
+
+<p>프로젝트 경로로 이동하는 방법은 많다. 그중에 나는 <code class="language-plaintext highlighter-rouge">Finder</code> 를 이용하는 방법을 사용함.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Xcode</code> 키고 → 원하는 project에서 오른쪽 마우스 클릭 or 터치패드 두 손가락으로 클릭 → <code class="language-plaintext highlighter-rouge">show in Finder</code> → 다시 Finder에서 원하는 project를 선택한 후 오른쪽 마우스 클릭/터치패드 클릭 → <code class="language-plaintext highlighter-rouge">폴더에서 새로운 터미널 열기</code>  를 누르면 project 경로가 설정된 모습을 볼 수 있다.</p>
+
+<h2 id="pod-파일-생성해주기">pod 파일 생성해주기</h2>
+
+<p>프로젝트 경로로 이동한 후에는 프로젝트 안에 pod 파일을 생성해 줘야 한다. 이 파일로 Xcode 외부 라이브러리를 <code class="language-plaintext highlighter-rouge">install</code> 하여 사용할 수 있다.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pod</span> <span class="kd">init</span> 
+</code></pre></div></div>
+
+<h3 id="주의할-점">주의할 점</h3>
+
+<aside>
+<img src="https://super.so/icon/dark/check.svg" alt="" width="40px" /> 빈 프로젝트가 아닌 프로젝트에서 pod init 명령어를 사용해야 한다.
+
+</aside>
+
+<h2 id="pod파일-열기">pod파일 열기</h2>
+
+<p>pod 파일을 수정해 외부 라이브러리를 install 하는 것이기 때문에 텍스트 편집기를 사용해야 한다. 내가 주로 이용하는 것은 <code class="language-plaintext highlighter-rouge">vim</code> 이지만 기본 <code class="language-plaintext highlighter-rouge">텍스트 편집기</code>를 사용하는 것도 편하다. 또한, vscode에서 텍스트 편집도 가능하다는 점.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">vim</span> <span class="n">podfile</span>
+</code></pre></div></div>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">open</span> <span class="o">-</span><span class="n">e</span> <span class="n">podfile</span>
+</code></pre></div></div>
+
+<h2 id="pod-파일-수정">pod 파일 수정</h2>
+
+<p>파일 수정은 각 라이브러리마다 다르기 때문에  tabman 을 예로 들어보자 . Podfile의 특정 위치에 설치하고 싶은 라이브러리를 적어주면 된다.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pod</span> <span class="err">'</span><span class="kt">Tabman</span><span class="err">'</span><span class="p">,</span> <span class="err">'</span><span class="o">~&gt;</span> <span class="mf">2.11</span><span class="err">'</span>
+<span class="n">pod</span> <span class="err">'</span><span class="kt">Pageboy</span><span class="err">'</span><span class="p">,</span> <span class="err">'</span><span class="o">~&gt;</span> <span class="mf">3.6</span><span class="err">'</span>
+</code></pre></div></div>
+
+<p align="center"><img src="../pod.png" alt="" width="400px" /></p>
+
+<h3 id="주의할-점-1">주의할 점</h3>
+
+<aside>
+<img src="https://super.so/icon/dark/check.svg" alt="https://super.so/icon/dark/check.svg" width="40px" /> Tabman은 Pageboy 라이브러리와 같이 사용해야 한다.
+
+</aside>
+
+<h2 id="pod-파일-설치">pod 파일 설치</h2>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pod</span> <span class="n">install</span>
+</code></pre></div></div>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">arch</span> <span class="o">-</span><span class="n">x86_64</span> <span class="n">pod</span> <span class="n">install</span>
+</code></pre></div></div>
+
+<h3 id="주의할-점-2">주의할 점</h3>
+
+<aside>
+<img src="https://super.so/icon/dark/check.svg" alt="" /> 설치 후 실행해야 하는 파일은 `xcworkspace` 파일이다
+
+</aside>
+
+<aside>
+<img src="https://super.so/icon/dark/check.svg" alt="" width="40px" /> m1 mac의 경우 위의 2번째 코드를 사용해야 한다.
+
+</aside>
+
+<h1 id="설치-과정에서-오류-발생">설치 과정에서 오류 발생</h1>
+
+<p>Loaderror 발생할 경우에 다음과 같이 하면 된다.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sudo</span> <span class="n">arch</span> <span class="o">-</span><span class="n">x86_64</span> <span class="n">gem</span> <span class="n">install</span> <span class="n">ffi</span>
+</code></pre></div></div>
+
+<p>(터미널 키자마자)</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">arch</span> <span class="o">-</span><span class="n">x86_64</span> <span class="n">pod</span> <span class="n">install</span>
+</code></pre></div></div>
+
+<p>(원하는 경로로 이동하여)</p>
+
+<hr />
+
+<h1 id="참고자료">참고자료</h1>
+
+<p><a href="https://bcoding-lab.tistory.com/119">iOS Swift 코코아팟 설치 + 라이브러리 Tabman 사용하기</a></p>
+
+<p><a href="https://github.com/uias/Tabman](https://github.com/uias/Tabman)"></a></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#ios" class="page__taxonomy-item" rel="tag">iOS</a>
+    
+    </span>
+  </p>
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2022-08-09">August 9, 2022</time></p>
+
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/Life/start/" class="pagination--pager" title="[Life]블로그 기록 start
+">Prev</a>
+    
+    
+      <a href="/Security/Frida1/" class="pagination--pager" title="[Security] Frida 환경 구성
+">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/Algorithm/a%20number%20card%20game/" rel="permalink">숫자 카드 게임
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2023-04-26T00:00:00+09:00">April 26, 2023</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/Algorithm/law%20of%20large%20numbers/" rel="permalink">큰수의 법칙
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2023-04-21T00:00:00+09:00">April 21, 2023</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/Malware/Reversing/" rel="permalink">[Malware] 안드로이드 리버싱시 환경 구성 방법
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2023-01-17T00:00:00+09:00">January 17, 2023</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/Malware/Android%20Malware/" rel="permalink">[Android Malware] Android Malware Analyze - part.1
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2023-01-10T00:00:00+09:00">January 10, 2023</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 ParkHoHo. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+    <script>
+  'use strict';
+
+  (function() {
+    var commentContainer = document.querySelector('#utterances-comments');
+
+    if (!commentContainer) {
+      return;
+    }
+
+    var script = document.createElement('script');
+    script.setAttribute('src', 'https://utteranc.es/client.js');
+    script.setAttribute('repo', 'ParkHoHo/blogComments');
+    script.setAttribute('issue-term', 'pathname');
+    script.setAttribute('theme', 'github-light');
+    script.setAttribute('crossorigin', 'anonymous');
+
+    commentContainer.appendChild(script);
+  })();
+
+</script>
+
+
+
+  
+
+
+
+
+
+  </body>
+</html>
