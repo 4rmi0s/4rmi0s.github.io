@@ -1,7 +1,0 @@
-I"�<h2 id="시스템-사운드-킬-때">시스템 사운드 킬 때</h2>
-<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">import</span> <span class="kt">AVFoundation</span>
-
-<span class="kt">AudioServicesPlayAlertSound</span><span class="p">(</span><span class="kt">SystemSoundID</span><span class="p">(</span><span class="mi">1322</span><span class="p">))</span>
-</code></pre></div></div>
-
-:ET
