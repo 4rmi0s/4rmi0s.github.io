@@ -1,0 +1,893 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <style> 
+      ::-webkit-scrollbar{ 
+        width: 10px;
+        height: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        width: 0px;
+        background-color: rgba(224, 224, 224, 0.2);
+        /* border-radius: 5px; */
+      }
+
+      ::-webkit-scrollbar-thumb {
+        width: 0px;
+        background-color: rgba(220, 219, 218, 0.6);
+        border-radius: 5px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        width: 10px;
+        height: 20px;
+        /* background-color: rgba(190, 190, 190, 0.2); */
+        background-color: rgba(193, 192, 191, 0.7);
+        border-radius: 5px;
+      }
+
+      ::-webkit-scrollbar-track:hover {
+        width: 10px;
+        /* background-color: rgba(150, 150, 150, 0.1); */
+        background-color: rgba(224, 224, 224, 0.5);
+        border-radius: 5px;
+        /* background: transparent; */
+        /* border-radius: 10px; */
+      }
+
+      ::-webkit-scrollbar-button:start:decrement,::-webkit-scrollbar-button:end:increment {
+          width:0px;
+          height: 0px;
+          /* background-color: rgb(14, 221, 24); */
+          /* border-radius: 50%; */
+      }
+    </style>
+    
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[Life] S-개발자 후기 | ParkHoho</title>
+<meta name="description" content="this is my blog!">
+
+
+  <meta name="author" content="ParkHoho">
+  
+  <meta property="article:author" content="ParkHoho">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="Hokyung's blog">
+<meta property="og:title" content="[Life] S-개발자 후기">
+<meta property="og:url" content="http://localhost:4000/Life/Sdev/">
+
+
+  <meta property="og:description" content="this is my blog!">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2023-12-25T00:00:00+09:00">
+
+
+
+  <meta property="article:modified_time" content="2023-12-25T00:00:00+09:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/Life/Sdev/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "ParkHoHo",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Hokyung's blog Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://github-account.github.io/assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://github-account.github.io/assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://github-account.github.io/assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="https://github-account.github.io/assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="https://github-account.github.io/assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Hokyung's blog
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="https://ParkHoHo.github.io/">Home</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://github.com/ParkHoHo">GitHub</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/itsme2.png" alt="ParkHoho" itemprop="image">
+      
+    </div>
+  
+
+  <!-- 2022.02.17 author content hidden -->
+  <!-- <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">ParkHoho</h3>
+    
+    
+  </div> -->
+
+  <div class="author__urls-wrapper">
+    <!-- <button class="btn btn--inverse">Follow</button> -->
+    <ul class="author__urls social-icons">
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    <!-- <li>
+      <span class="nav__total">🌴 Total Posts: 20</span>
+    </li> -->
+    
+    
+      <li>
+        
+              <a href="/categories/Swift/"><span class="nav__sub-title">Swift</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+              <a href="/categories/Android/"><span class="nav__sub-title">Android</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+              <a href="/categories/iOS/"><span class="nav__sub-title">iOS</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+              <a href="/categories/Security/"><span class="nav__sub-title">Security</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+              <a href="/categories/Malware/"><span class="nav__sub-title">Malware</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+              <a href="/categories/Algorithm/"><span class="nav__sub-title">Algorithm</span></a>
+        
+
+        
+      </li>
+    
+      <li>
+        
+              <a href="/categories/Life/"><span class="nav__sub-title">Life</span></a>
+        
+
+        
+      </li>
+    
+  </ul>
+</nav>
+
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[Life] S-개발자 후기">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="2023-12-25T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2023-12-25T00:00:00+09:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">[Life] S-개발자 후기
+</h1>
+          
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2023-12-25T00:00:00+09:00">December 25, 2023</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#-지원동기">☝🏻 지원동기</a></li><li><a href="#-지원과정">✌🏻 지원과정</a><ul><li><a href="#서류">서류</a></li><li><a href="#면접">면접</a></li></ul></li><li><a href="#최종결과">최종결과</a></li><li><a href="#-교육">🤟🏻 교육</a><ul><li><a href="#기초교육">기초교육</a></li><li><a href="#중간고사">중간고사</a></li><li><a href="#심화교육">심화교육</a></li><li><a href="#기말고사">기말고사</a></li></ul></li><li><a href="#-프로젝트">✌🏻✌🏻 프로젝트</a></li><li><a href="#-끝">🖐🏻 끝</a><ul><li><a href="#정리">정리</a><ul><li><a href="#장점">장점</a></li><li><a href="#단점">단점</a></li></ul></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <p><strong>S-개발자</strong>가 <strong>이번년도(2023)</strong>에 <strong>1기</strong>가 <strong>끝</strong>이 났다.<br />
+많은 <strong>우여곡절</strong>도 있었고, <strong>중간</strong>에 <strong>포기</strong>하려고도 <strong>생각</strong>했지만<br />
+꾸역꾸역 <strong>버티다</strong>보니 <strong>수료</strong>를 하게 되었다.<br />
+이번 글을 통해 <strong>S-개발자</strong>에 <strong>지원</strong>하는 누군가에게 <strong>도움</strong>이 또는 <strong>조언</strong>이 되었으면 한다.<br /></p>
+
+<h2 id="-지원동기">☝🏻 지원동기</h2>
+
+<p><strong>3학년 1학기</strong>가 너무나도 <strong>힘들어서</strong> <strong>휴학</strong>을 <strong>생각</strong>하고 있었다.<br />
+<strong>휴학</strong>하고 뭘 하는게 좋을까를 가장 많이 생각을 했고, <br />
+<strong>BOB</strong>를 <strong>지원</strong>해보려고 했던 것이 <strong>목표</strong>였다.<br />
+하지만, 시험기간과 겹치고 과제 및 프로젝트와도 겹치면서 BOB를 지원할 시간이 도저히 나오지 않았다.<br /><br />
+그러던 중에 찾은 것이 <strong>S-개발자</strong>였다.<br /></p>
+
+<p>S-개발자 모집공고를 봤을 때 <strong>보안취약점*</strong>을 배운다는 점이 <strong>BOB</strong>와도 크게 다를게 없지 않을까? 하는 생각이 들었고,<br />
+무엇보다 <strong>기업참여프로젝트</strong>를 할 수 있다는 점이 <strong>메리트</strong>로 다가왔던 것 같다.<br /></p>
+
+<div>
+    <img src="/assets/images/sdev.png" alt=" " width="70%" min-width="700px" itemprop="image" />
+</div>
+
+<h2 id="-지원과정">✌🏻 지원과정</h2>
+
+<p><strong>지원과정</strong>은 <strong>3가지</strong>로 나뉜다.</p>
+
+<ol>
+  <li>서류 (자기소개서)</li>
+  <li>면접</li>
+  <li>발표</li>
+</ol>
+
+<div>
+    <img src="/assets/images/process.png" alt=" " width="70%" min-width="700px" itemprop="image" />
+</div>
+
+<h3 id="서류">서류</h3>
+
+<p>서류는 <strong>역량설명</strong>, <strong>자기소개</strong>, <strong>관심분야</strong>,<strong>학습계획</strong> 으로 구분된다.<br />
+<strong>역량설명</strong>의 경우에는 <strong>200자</strong>, <strong>자기소개</strong>, <strong>관심분야</strong>, <strong>학습계획</strong>의 경우에는 <strong>1000자</strong>를 <strong>요구</strong>했던 걸로 기억한다.(오래되서 정확하게 기억안남…)<br /></p>
+
+<p><strong>면접</strong>때 <strong>자기소개서</strong>를 <strong>위주</strong>로 <strong>질문</strong>을 하기 때문에 자기소개서에서 <strong>준비</strong>가 잘되어있다면 <strong>90% 합격</strong>이라고 생각해도 될 것 같다.</p>
+
+<h3 id="면접">면접</h3>
+
+<p><strong>면접</strong>은 <strong>경찰병원역</strong> <strong>한국정보보호산업협회(KISIA) 본원</strong>에서 <strong>진행</strong>되었다.<br />
+집이 인천이라 15:30분 면접이였는데도 1시에 출발을 했다. <br />
+근데 본원 위치를 못 찾아서 겨우 10분 전에 도착을 했고, <br />
+그렇게 앞사람들의 면접이 지연되어 30분 더 기다리다가 면접에 들어가게 되었다.<br />
+(여유가 된다면 일찍 가서 준비하는 것이 좋아보였다.)</p>
+
+<p><strong>면접</strong>은 <strong>4명이서</strong> <strong>같이</strong> <strong>들어가게</strong> 되었고, 들어가니 <strong>총 5분</strong>이 앉아계셨다.<br />
+<strong>차례대로</strong> <strong>자기소개</strong>를 시키고, <strong>자기소개서</strong>를 위주로 <strong>질문</strong>을 하셨다.<br /></p>
+
+<p>나의 경우에는 <strong>모바일os</strong>에 관심이 많고, <strong>개발</strong>도 해봤다고 하였더니 <br />
+<strong>탈옥</strong>에서 일어난 <strong>스택오버플로우</strong>나 <strong>버퍼오버플로우</strong>에 대해 설명을 해달라고 하셨다.(정확하게 기억안남..)</p>
+
+<p><strong>스택오버플로우</strong>나 <strong>버퍼오버플로우</strong>에 대해서 알고 있었지만 <strong>탈옥</strong>과 연관지어라? <br />
+탈옥과 SOF,BOF가 관련이 있나? <br />
+여러가지 생각을 했고, 결국 모른다고 답했던 것 같다.<br /></p>
+
+<p>모른다고 답을 했더니 바로 <strong>옆에 계신분께</strong> <strong>스택오버플로우</strong>나 <strong>버퍼오버플로우</strong>에 대해 <strong>아냐</strong>고 <strong>질문</strong>이 넘어갔고,<br />
+그분이 답을 잘 해주셨던 면접이였다..<br /></p>
+
+<p>내 기준에서는 정말 대답을 잘 <strong>못</strong> 했던 <strong>면접</strong>이였고,<br />
+나 대신 면접 답을 해주신 분이 붙을 줄 알았다.<br /></p>
+
+<p>추가적으로 <strong>면접관분</strong>들이 <strong>웹개발</strong> 해본 사람에게 <strong>질문</strong>을 많이 하셨다.<br />
+보안개발이다보니깐 <strong>보안</strong>을 위주로 <strong>질문</strong>이 들어올 줄 알았는데<br />
+<strong>개발</strong>을 위주로 한 <strong>질문</strong>이 대다수였고,<br />
+개인적으로는 <strong>보안관련</strong> 활동보다는 <strong>개발 관련 활동</strong>을 한 사람에게<br />
+<strong>질문이 많이 가는</strong> 구조였다고 생각이 든다.<br /></p>
+
+<h2 id="최종결과">최종결과</h2>
+
+<p><strong>결과</strong>는 정말 빠르게 면접본지 <strong>사흘</strong>만에 받게 됐다.</p>
+
+<div>
+    <img src="/assets/images/pass.jpg" alt=" " width="70%" min-width="700px" itemprop="image" />
+</div>
+
+<h2 id="-교육">🤟🏻 교육</h2>
+
+<p>교육은 다음과 같이 이루어졌다.<br /></p>
+
+<ol>
+  <li><strong>기초교육</strong> (<strong>네트워크</strong>, <strong>암호학</strong>, <strong>리버싱</strong>, <strong>웹해킹</strong>, <strong>시스템</strong>, <strong>파이썬</strong>)</li>
+  <li><strong>중간고사</strong></li>
+  <li><strong>심화교육</strong> ( <strong>크롤링</strong>, <strong>시스템 프로그래밍</strong>, <strong>패커</strong>)</li>
+  <li><strong>기말고사</strong></li>
+</ol>
+
+<h3 id="기초교육">기초교육</h3>
+
+<p><strong>기초교육</strong>은 정말 <strong>기초만</strong>을 알려줬다.<br />
+<strong>리버싱</strong>은 Hello World를 분석하면서 리버싱의 <strong>기본적인 동작개념</strong>을 알려줬고,<br />
+<strong>파이썬</strong>은 <strong>파이썬</strong> <strong>설치</strong>부터 <strong>print</strong>하는 것부터 시작했다.<br />
+<strong>웹해킹</strong>은 <strong>bwapp</strong>을 이용한 <strong>기본적인 개념</strong>을 학습했다.<br />
+<br /></p>
+
+<p>개인적으로는 <strong>네트워크 수업</strong>이 너무나도 좋았다.<br />
+<strong>기존에 접근하지 못했던 학습방법</strong>이라서 내주신 <strong>과제</strong>를 할땐 <strong>힘들었</strong>지만<br />
+<strong>남는 것</strong>도 많고 <strong>뿌듯함</strong>도 많이 남는 수업이였다.<br /></p>
+
+<h3 id="중간고사">중간고사</h3>
+
+<p><strong>중간고사</strong>는 <strong>CTF + 필기</strong>로 이루어진다.<br />
+<strong>CTF</strong>는 <strong>리버싱, 암호학, 웹해킹</strong>으로 이루어져 있다.<br />
+문제가 많지 않아 <strong>2시간 정도</strong> 했던 거 같은데, <br />
+개인적으로 시간이 많았으면 했다.<br /></p>
+
+<p><strong>CTF</strong>하고 바로 <strong>필기시험</strong>을 보게 되는데,<br />
+<strong>수업 시간</strong>에 배우지는 않았지만, <br />
+기본적인 내용들이 나오게 된다.<br />
+<strong>한번이라도</strong> <strong>프로그래밍 공부</strong>를 해본 사람이라면,<br />
+또는 한번이라도 <strong>어셈블리언어</strong>에 대한 공부를 해본 사람이라면<br />
+쉽게 맞추지 않을까 싶다.<br /></p>
+
+<h3 id="심화교육">심화교육</h3>
+
+<p><strong>크롤링</strong> - <strong>기본적인 크롤링 코드 짜는 법</strong>부터 시작해 <strong>다크웹 크롤링과제</strong>까지 이어졌다.<br />
+<strong>시스템 프로그래밍</strong> - 배운게 너무 많아서 정리는 안되지만, <strong>window에서 동작하는 백신</strong>을 만들기 위해서
+<strong>LLVM</strong>, <strong>virus total 코드 분석</strong>, <strong>lex&amp;yacc</strong>, <strong>window OS</strong>, … 정말 많은 것을 배웠던 수업이였다.<br /></p>
+
+<h3 id="기말고사">기말고사</h3>
+
+<p><strong>심화교육때 배웠던 내용</strong>들을 위주로 시험이 출제되었다.
+<strong>중간고사</strong>와는 다르게 <strong>필기</strong>만 봤다.</p>
+
+<p>생각보다 <strong>어려운 난이도</strong>였고,
+기말고사 시즌에는 대학교때문에 빠지는 사람들이 많아서
+<strong>어수선한 분위기</strong> 속에서 진행되었다.</p>
+
+<h2 id="-프로젝트">✌🏻✌🏻 프로젝트</h2>
+
+<p>프로젝트는 <strong>기업선발 형식</strong>으로 진행되었다.<br />
+1기 1차는 <strong>직접 ppt 발표 및 팀빌딩을 하여 기업을 매칭하는 방식</strong>이라면<br />
+1기 2차의 경우에는 <strong>1지망부터 6지망까지 골라서 높은 성적인 사람부터 뽑아가는 방식</strong>이였다.<br />
+<strong>대부분</strong> <strong>1지망</strong>에서 <strong>뽑아가</strong>고, 특히 기업에 <strong>관심이 있음을 표현</strong>하면 <strong>기업 매칭</strong>이 원하는 곳에 됐다.<br /></p>
+
+<p><strong>프로젝트를 진행</strong>하면서는 그 <strong>기업에 가서</strong> 프로젝트를 진행하거나 <strong>온라인</strong>으로 진행되었다.<br />
+진행 중간중간에 직접 그 기업에 방문해 프로젝트 진행사항 보고를 하였고,<br />
+그 외의 날에는 온라인으로 프로젝트가 진행되었다.</p>
+
+<h2 id="-끝">🖐🏻 끝</h2>
+
+<p><strong>프로젝트까지</strong> 모두 <strong>끝</strong>이 났다.<br />
+<strong>중간중간에 굵직한 사건들이 많아서</strong> <strong>그만둘까</strong>를 <strong>수백번</strong>을 <strong>생각</strong>했던 것 같다.<br />
+<br />
+많은 아쉬움이 남지만, 그럼에도 잘 끝마치게 되어서 기쁘다.</p>
+
+<div>
+    <img src="/assets/images/end.jpg" alt=" " width="70%" min-width="700px" itemprop="image" />
+</div>
+
+<hr />
+
+<h3 id="정리">정리</h3>
+
+<h4 id="장점">장점</h4>
+
+<ul>
+  <li>기본적인 내용을 돌아보면서 부족한 점 혹은 앞으로 공부하려고 하는 방향을 다시 세울 수 있음.</li>
+  <li>매달 교육지원금 80만원 (향후 120만원 이상 지원 예정이라고 함.)</li>
+  <li>비슷한 관심분야로 인한 인맥 쌓기</li>
+  <li>기업과의 연계 프로젝트</li>
+</ul>
+
+<h4 id="단점">단점</h4>
+
+<ul>
+  <li>아직까지 잡히지 않은 체계</li>
+  <li>개발인지 보안인지 모르겠는 커리큘럼</li>
+  <li>큰 실력차 -&gt; 생각보다 너무 기초적인 내용 학습.</li>
+  <li>교육생에게 재학 권고 -&gt; 어수선한 분위기 + 바쁜 일정으로 원할하지 않은 프로젝트</li>
+</ul>
+
+<p>이상으로 S-개발자 후기였습니다.<br />
+많은 정보를 전달하려고 했는데, 혹시나 궁금한 점은 댓글 남겨 주세요~<br /></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#life" class="page__taxonomy-item" rel="tag">Life</a>
+    
+    </span>
+  </p>
+
+
+        
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2023-12-25">December 25, 2023</time></p>
+
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/Algorithm/a%20number%20card%20game/" class="pagination--pager" title="숫자 카드 게임
+">Prev</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/Algorithm/a%20number%20card%20game/" rel="permalink">숫자 카드 게임
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2023-04-26T00:00:00+09:00">April 26, 2023</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/Algorithm/law%20of%20large%20numbers/" rel="permalink">큰수의 법칙
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2023-04-21T00:00:00+09:00">April 21, 2023</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/Malware/Reversing/" rel="permalink">[Malware] 안드로이드 리버싱시 환경 구성 방법
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2023-01-17T00:00:00+09:00">January 17, 2023</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/Malware/Android%20Malware/" rel="permalink">[Android Malware] Android Malware Analyze - part.1
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2023-01-10T00:00:00+09:00">January 10, 2023</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 ParkHoHo. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+    <script>
+  'use strict';
+
+  (function() {
+    var commentContainer = document.querySelector('#utterances-comments');
+
+    if (!commentContainer) {
+      return;
+    }
+
+    var script = document.createElement('script');
+    script.setAttribute('src', 'https://utteranc.es/client.js');
+    script.setAttribute('repo', 'ParkHoHo/blogComments');
+    script.setAttribute('issue-term', 'pathname');
+    script.setAttribute('theme', 'github-light');
+    script.setAttribute('crossorigin', 'anonymous');
+
+    commentContainer.appendChild(script);
+  })();
+
+</script>
+
+
+
+  
+
+
+
+
+
+  </body>
+</html>

@@ -316,7 +316,7 @@
   <label for="ac-toc">Toggle menu</label>
   <ul class="nav__items">
     <!-- <li>
-      <span class="nav__total">🌴 Total Posts: 19</span>
+      <span class="nav__total">🌴 Total Posts: 20</span>
     </li> -->
     
     
@@ -426,14 +426,13 @@
             </nav>
           </aside>
         
-        <p>블로그 테스트중</p>
-
-<p>FridaLab is an app to study the framework called Frida.
+        <p>FridaLab is an app to study the framework called Frida.
 Before I knew this app, I kept coming to Crackme’s Android, but it was difficult because I couldn’t understand exactly how to use the API that Frida pursues.
 My primary purpose of writing this article is to summarize why Frida was used this way.<br />
 Let’s get started ~</p>
 
 <h2 id="-fridalab01">☝🏻 FridaLab01</h2>
+
 <h4 id="change-class-challenge_01s-variable-chall01-to-1">Change class challenge_01’s variable ‘chall01’ to 1:</h4>
 
 <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kn">package</span> <span class="nn">uk.rossmarks.fridalab</span><span class="o">;</span>
@@ -447,22 +446,26 @@ Let’s get started ~</p>
         <span class="o">}</span>
     <span class="o">}</span>
 </code></pre></div></div>
+
 <p><br /></p>
 
 <p>The first problem is to access the chall01 variable in challenge_01 class and change the value to 1.<br />
 There are three things to think about to solve this problem.</p>
 
 <blockquote>
-  <p>1) How to access the challenge_01 class
-<br />
-2) How to approach the challenge_01 variable in the class
-<br />
-3) How to approach a variable and put it into the cycle (change)</p>
+  <ol>
+    <li>How to access the challenge_01 class
+<br /></li>
+    <li>How to approach the challenge_01 variable in the class
+<br /></li>
+    <li>How to approach a variable and put it into the cycle (change)</li>
+  </ol>
 </blockquote>
 
 <p><br />Let’s work it out step by step<br /></p>
 
 <h3 id="how-to-access-a-class">How to access a class</h3>
+
 <p>There are two ways to access a particular method through the class.<br />
 First, use <code class="language-plaintext highlighter-rouge">Java.use(className)</code> API.<br />
 The second is to use the <code class="language-plaintext highlighter-rouge">Java.choose(className,callback)</code> API.<br /></p>
@@ -470,31 +473,32 @@ The second is to use the <code class="language-plaintext highlighter-rouge">Java
 <p>[ Please refer to the other blog for each description ] -&gt; <a href="https://changkr28.tistory.com/entry/Frida-%EB%AC%B8%EB%B2%95">blog</a></p>
 
 <h3 id="to-access-the-method">To access the method</h3>
+
 <p>The approach to the method is the same as in any other programming languages. <code class="language-plaintext highlighter-rouge">.</code> You can access the class’ methods using the .</p>
 
 <h3 id="to-access-a-variable">To access a variable</h3>
+
 <p>Use the ‘value’ field to get the value.</p>
 
 <h2 id="-code">✌🏻 Code</h2>
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="kd">function</span> <span class="nx">sol1</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">[&gt;] Start</span><span class="dl">"</span><span class="p">);</span>
-        <span class="c1">//     Java.perform API를 이용하여 가상머신과 연결되어잇는지 확인</span>
 
-    <span class="nx">Java</span><span class="p">.</span><span class="nx">perform</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
-        <span class="c1">// 후킹하고자 하는 변수가 static으로 선언되어 있기 때문에 use</span>
-        <span class="kd">var</span> <span class="nx">className</span> <span class="o">=</span> <span class="nx">Java</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="dl">'</span><span class="s1">uk.rossmarks.fridalab.challenge_01</span><span class="dl">'</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">sol1</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">[&gt;] Start</span><span class="dl">"</span><span class="p">);</span>
+  <span class="c1">//     Java.perform API를 이용하여 가상머신과 연결되어잇는지 확인</span>
+
+  <span class="nx">Java</span><span class="p">.</span><span class="nf">perform</span><span class="p">(</span><span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// 후킹하고자 하는 변수가 static으로 선언되어 있기 때문에 use</span>
+    <span class="kd">var</span> <span class="nx">className</span> <span class="o">=</span> <span class="nx">Java</span><span class="p">.</span><span class="nf">use</span><span class="p">(</span><span class="dl">"</span><span class="s2">uk.rossmarks.fridalab.challenge_01</span><span class="dl">"</span><span class="p">);</span>
 
     <span class="c1">// 값 접근을 위해 value 사용</span>
     <span class="nx">className</span><span class="p">.</span><span class="nx">chall01</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
 
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">[&gt;] 저장된 값: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">className</span><span class="p">.</span><span class="nx">chall01</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">[&gt;] 저장된 값: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">className</span><span class="p">.</span><span class="nx">chall01</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">}</span>
 
-    <span class="p">});</span>
-    <span class="p">}</span>
-
-    <span class="nx">sol1</span><span class="p">();</span>
+<span class="nf">sol1</span><span class="p">();</span>
 </code></pre></div></div>
-
 
         
       </section>
@@ -550,6 +554,42 @@ The second is to use the <code class="language-plaintext highlighter-rouge">Java
     <div class="page__related">
       <h4 class="page__related-title">You may also enjoy</h4>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/Life/Sdev/" rel="permalink">[Life] S-개발자 후기
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2023-12-25T00:00:00+09:00">December 25, 2023</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
         
           
 
@@ -644,42 +684,6 @@ The second is to use the <code class="language-plaintext highlighter-rouge">Java
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
         <time datetime="2023-01-17T00:00:00+09:00">January 17, 2023</time>
-      </span>
-    
-
-    
-
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/Malware/Android%20Malware/" rel="permalink">[Android Malware] Android Malware Analyze - part.1
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-calendar-alt" aria-hidden="true"></i>
-        <time datetime="2023-01-10T00:00:00+09:00">January 10, 2023</time>
       </span>
     
 

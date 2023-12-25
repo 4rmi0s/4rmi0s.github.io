@@ -84,7 +84,7 @@ var store = [{
         "teaser": null
       },{
         "title": "[Security] Android Frida",
-        "excerpt":"블로그 테스트중 FridaLab is an app to study the framework called Frida. Before I knew this app, I kept coming to Crackme’s Android, but it was difficult because I couldn’t understand exactly how to use the API that Frida pursues. My primary purpose of writing this article is to summarize...","categories": ["Security"],
+        "excerpt":"FridaLab is an app to study the framework called Frida. Before I knew this app, I kept coming to Crackme’s Android, but it was difficult because I couldn’t understand exactly how to use the API that Frida pursues. My primary purpose of writing this article is to summarize why Frida...","categories": ["Security"],
         "tags": ["Security","Frida"],
         "url": "/Security/FridaLab/",
         "teaser": null
@@ -111,5 +111,11 @@ var store = [{
         "excerpt":"☝🏻 문제 입력조건 첫째 줄에 숫자 카드들이 놓인 행의 개수 N과 열의 개수 M이 공백을 기준으로 하여 각각 자연수로 주어진다. 둘째 줄부터 N개의 줄에 걸쳐 각 카드에 적힌 숫자가 주어진다. 각 숫자는 1이상 10,000 이하의 자연수이다. 출력조건 첫째 줄에 게임의 룰에 맞게 선택한 카드에 적힌 숫자를 출력한다. ✌🏻 How ?...","categories": ["Algorithm"],
         "tags": ["Algorithm","python"],
         "url": "/Algorithm/a%20number%20card%20game/",
+        "teaser": null
+      },{
+        "title": "[Life] S-개발자 후기",
+        "excerpt":"S-개발자가 이번년도(2023)에 1기가 끝이 났다. 많은 우여곡절도 있었고, 중간에 포기하려고도 생각했지만 꾸역꾸역 버티다보니 수료를 하게 되었다. 이번 글을 통해 S-개발자에 지원하는 누군가에게 도움이 또는 조언이 되었으면 한다. ☝🏻 지원동기 3학년 1학기가 너무나도 힘들어서 휴학을 생각하고 있었다. 휴학하고 뭘 하는게 좋을까를 가장 많이 생각을 했고, BOB를 지원해보려고 했던 것이 목표였다. 하지만,...","categories": ["Life"],
+        "tags": ["Life","S-dev"],
+        "url": "/Life/Sdev/",
         "teaser": null
       }]
