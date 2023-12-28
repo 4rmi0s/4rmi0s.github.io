@@ -21,7 +21,7 @@ categories:
   - title: "Swift"
     url: /categories/Swift/
   - title: "Android"
-    url: /categories/Android/  
+    url: /categories/Android/
   - title: "iOS"
     url: /categories/iOS/
   - title: "Security"
@@ -30,9 +30,7 @@ categories:
     url: /categories/Malware/
   - title: "Algorithm"
     url: /categories/Algorithm/
+  - title: "C++"
+    url: /categories/C++/
   - title: "Life"
     url: /categories/Life/
-  - title: "C++"
-  url: /categories/C++/
-
-

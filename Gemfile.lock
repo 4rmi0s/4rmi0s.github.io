@@ -26,6 +26,8 @@ GEM
       faraday-net_http (>= 2.0, < 3.1)
       ruby2_keywords (>= 0.0.4)
     faraday-net_http (3.0.2)
+    faraday-retry (2.2.0)
+      faraday (~> 2.0)
     ffi (1.16.3)
     forwardable-extended (2.6.0)
     google-protobuf (3.25.1-arm64-darwin)
@@ -122,6 +124,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler
+  faraday-retry
   jekyll-admin
   jekyll-sitemap
   minimal-mistakes-jekyll!

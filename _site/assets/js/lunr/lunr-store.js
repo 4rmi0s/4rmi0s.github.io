@@ -113,9 +113,39 @@ var store = [{
         "url": "/Algorithm/a%20number%20card%20game/",
         "teaser": null
       },{
-        "title": "[Life] S-개발자 후기",
+        "title": "S-개발자 1차 후기",
         "excerpt":"S-개발자가 이번년도(2023)에 1기가 끝이 났다. 많은 우여곡절도 있었고, 중간에 포기하려고도 생각했지만 꾸역꾸역 버티다보니 수료를 하게 되었다. 이번 글을 통해 S-개발자에 지원하는 누군가에게 도움이 또는 조언이 되었으면 한다. ☝🏻 지원동기 3학년 1학기가 너무나도 힘들어서 휴학을 생각하고 있었다. 휴학하고 뭘 하는게 좋을까를 가장 많이 생각을 했고, BOB를 지원해보려고 했던 것이 목표였다. 하지만,...","categories": ["Life"],
         "tags": ["Life","S-dev"],
         "url": "/Life/Sdev/",
+        "teaser": null
+      },{
+        "title": "Pointer의 크기는 아키텍쳐의 크기에 따라 다르다.",
+        "excerpt":" ","categories": ["Algorithm"],
+        "tags": ["Algorithm","Pointer"],
+        "url": "/Algorithm/Pointer/",
+        "teaser": null
+      },{
+        "title": "split() 메소드 구현",
+        "excerpt":"Split() 메소드 c++에서는 split()메소드를 지원하지 않는다. 즉, 구현을 해야한다. // #include &lt;algorithm&gt; #include &lt;algorithm&gt; #include &lt;string&gt; #include &lt;vector&gt; #include &lt;iostream&gt; using namespace std; vector&lt;string&gt; split(string input,string delimiter){ long long pos; string token = \"\"; vector&lt;string&gt; ret; while((pos = input.find(delimiter)) != string::npos ){ token = input.substr(0,pos); ret.push_back(token); input.erase(0,pos+delimiter.length()); } ret.push_back(input); return...","categories": ["C++"],
+        "tags": ["tag1","tag2"],
+        "url": "/C++/split/",
+        "teaser": null
+      },{
+        "title": "시간복잡도",
+        "excerpt":"☝🏻 시간복잡도란 입력크기에 대해 어떠한 알고리즘이 실행되는데 걸리는 시간이며 주요로직의 반복횟수를 중점으로 측정된다. ✌🏻 빅오 표기법 복잡에 가장 영향을 많이 끼치는 항의 상수인자를 빼고 나머지 항을 없애서 복잡도를 나타내는 표기법 빅오 complexity chart O(1) 입력과 출력 곱하기 간단한 비교 if문 배열의 인덱스 참조 example #include &lt;bits/stdc++.h&gt; using namespace std; int...","categories": ["Algorithm"],
+        "tags": ["Algorithm","time-complexity"],
+        "url": "/Algorithm/time-complexity/",
+        "teaser": null
+      },{
+        "title": "Array decay",
+        "excerpt":" ","categories": ["Algorithm"],
+        "tags": ["Algorithm","Array decay"],
+        "url": "/Algorithm/Array-decay/",
+        "teaser": null
+      },{
+        "title": "구간합 구하기",
+        "excerpt":"☝🏻 prefixSum 구할때 // #include&lt;bits/stdc++.h&gt; #include &lt;algorithm&gt; #include &lt;string&gt; #include &lt;vector&gt; #include &lt;iostream&gt; using namespace std; typedef long long ll; int a[100004],b,c,psum[100004],n,m; int main() { cin &gt;&gt; n &gt;&gt; m; for(int i=1;i&lt;= n;i++) { cin &gt;&gt; a[i]; } for (int i=0; i&lt;m; i++) { cin &gt;&gt; b &gt;&gt; c; int...","categories": ["C++"],
+        "tags": ["C++","prefixSum"],
+        "url": "/C++/prefixSum/",
         "teaser": null
       }]
