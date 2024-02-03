@@ -52,7 +52,7 @@
     
     <meta charset="utf-8" />
 
-<!-- begin _includes/seo.html --><title>[Security] Frida 환경 구성 | ParkHoho</title>
+<!-- begin _includes/seo.html --><title>[AOS] Frida 환경 구성 | ParkHoho</title>
 <meta name="description" content="this is my blog!">
 
 
@@ -65,7 +65,7 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="Hokyung's blog">
-<meta property="og:title" content="[Security] Frida 환경 구성">
+<meta property="og:title" content="[AOS] Frida 환경 구성">
 <meta property="og:url" content="http://localhost:4000/Security/Frida1/">
 
 
@@ -330,7 +330,7 @@
   <label for="ac-toc">Toggle menu</label>
   <ul class="nav__items">
     <!-- <li>
-      <span class="nav__total">🌴 Total Posts: 25</span>
+      <span class="nav__total">🌴 Total Posts: 26</span>
     </li> -->
     
     
@@ -408,7 +408,7 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[Security] Frida 환경 구성">
+    <meta itemprop="headline" content="[AOS] Frida 환경 구성">
     <meta itemprop="description" content="">
     <meta itemprop="datePublished" content="2022-08-10T00:00:00+09:00">
     <meta itemprop="dateModified" content="2022-08-10T00:00:00+09:00">
@@ -416,7 +416,7 @@
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">[Security] Frida 환경 구성
+          <h1 id="page-title" class="page__title" itemprop="headline">[AOS] Frida 환경 구성
 </h1>
           
 
@@ -451,6 +451,7 @@
         <p>[DreamHack 참고]</p>
 
 <h1 id="frida-란-무엇인가-">Frida 란 무엇인가 ?</h1>
+
 <blockquote>
   <p>Inject JavaScript to explore native apps on Windows, macOS, GNU/Linux, iOS, Android, and QNX.</p>
 </blockquote>
@@ -460,8 +461,11 @@
 <p>번역해보면 자바스크립트를 이용하여 Windows, macOS, GNU/Linux, iOS, Android, QNX 앱을 분석할 수 있게 도와주는 Tool이다. 즉,Frida를 통해 스크립트를 주입하여 원하는 동작을 할 수 있게 만든다.</p>
 
 <h1 id="환경-구성">환경 구성</h1>
+
 <p>[들어가기에 앞서 제가 공부한 환경은 m1 macbook Air임을 밝힙니다.]</p>
+
 <h2 id="필요한-환경">필요한 환경</h2>
+
 <ul>
   <li>맥북</li>
   <li>충분한 용량</li>
@@ -473,11 +477,13 @@
 </blockquote>
 
 <h3 id="xcode-command-line-tools">Xcode Command Line Tools</h3>
+
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xcode-select <span class="nt">--install</span>
 </code></pre></div></div>
 
 <h3 id="homebrew">homebrew</h3>
-<p> <a href="https://brew.sh/">https://brew.sh</a></p>
+
+<p><a href="https://brew.sh/">https://brew.sh</a></p>
 
 <p>![[Pasted image 20220810001516.png]]</p>
 
@@ -490,6 +496,7 @@
 </code></pre></div></div>
 
 <h3 id="git-설치">git 설치</h3>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install git
 </code></pre></div></div>
 
@@ -499,6 +506,7 @@
 <p>git 또한 설치된 주소가 출력되면 Complete</p>
 
 <h3 id="python3--pip">python3 &amp; pip</h3>
+
 <p>frida는 python으로 만들어진 언어다. 그렇기에 설치하기 위해서는 python3 설치는 불가피하다.</p>
 
 <p>https://www.python.org/</p>
@@ -506,12 +514,12 @@
 <p>위 경로를 통해 python을 Download한다.</p>
 
 <h3 id="frida-설치">frida 설치</h3>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install frida
 </code></pre></div></div>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python -m pip install frida-tools
 </code></pre></div></div>
-
 
         
       </section>
@@ -547,11 +555,11 @@
       
   <nav class="pagination">
     
-      <a href="/ios/pod" class="pagination--pager" title="[iOS]Pod 설치 방법
+      <a href="/ios/pod" class="pagination--pager" title="[UIKit]Pod 설치 방법
 ">Prev</a>
     
     
-      <a href="/Security/Frida2/" class="pagination--pager" title="[Security] Frida 기능
+      <a href="/Security/Frida2/" class="pagination--pager" title="[AOS] Frida 기능
 ">Next</a>
     
   </nav>
@@ -567,6 +575,42 @@
     <div class="page__related">
       <h4 class="page__related-title">You may also enjoy</h4>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/Swift/condition/" rel="permalink">[Swift] 01.조건문
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2024-02-03T00:00:00+09:00">February 3, 2024</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
         
           
 
@@ -650,42 +694,6 @@
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/Algorithm/time-complexity/" rel="permalink">시간복잡도
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-calendar-alt" aria-hidden="true"></i>
-        <time datetime="2023-12-27T00:00:00+09:00">December 27, 2023</time>
-      </span>
-    
-
-    
-
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/C++/split/" rel="permalink">split() 메소드 구현
 </a>
       
     </h2>

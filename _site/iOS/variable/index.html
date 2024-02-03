@@ -52,7 +52,7 @@
     
     <meta charset="utf-8" />
 
-<!-- begin _includes/seo.html --><title>[iOS] @IBOutlet  | ParkHoho</title>
+<!-- begin _includes/seo.html --><title>[UIKit] @IBOutlet  | ParkHoho</title>
 <meta name="description" content="this is my blog!">
 
 
@@ -65,7 +65,7 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="Hokyung's blog">
-<meta property="og:title" content="[iOS] @IBOutlet">
+<meta property="og:title" content="[UIKit] @IBOutlet">
 <meta property="og:url" content="http://localhost:4000/iOS/variable/">
 
 
@@ -330,7 +330,7 @@
   <label for="ac-toc">Toggle menu</label>
   <ul class="nav__items">
     <!-- <li>
-      <span class="nav__total">🌴 Total Posts: 25</span>
+      <span class="nav__total">🌴 Total Posts: 26</span>
     </li> -->
     
     
@@ -408,7 +408,7 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[iOS] @IBOutlet">
+    <meta itemprop="headline" content="[UIKit] @IBOutlet">
     <meta itemprop="description" content="">
     <meta itemprop="datePublished" content="2022-08-26T00:00:00+09:00">
     <meta itemprop="dateModified" content="2022-08-26T00:00:00+09:00">
@@ -416,7 +416,7 @@
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">[iOS] @IBOutlet
+          <h1 id="page-title" class="page__title" itemprop="headline">[UIKit] @IBOutlet
 </h1>
           
 
@@ -451,6 +451,7 @@
         <p>오늘은 @IBOutlet와 @IBAction 에 대해 정리해보겠습니다.</p>
 
 <h1 id="-iboutlet">☝🏻 @IBOutlet</h1>
+
 <p>먼저 @IBOutlet 입니다. <br />
 @IBOutlet은 UI를 코드로 바꿔주는 작업을 한다고 생각하면 됩니다. <br />
 더 쉽게 생각하면 화면에 UI 객체를 만들어 주는 키워드입니다.</p>
@@ -460,6 +461,7 @@ IBOutlet은 <mark>IB(interface builder) + Outlet으로, Outlet(배출)하여 화
 이와 비슷하게 IBAction은 화면에서 어떠한 action을 취하게 하는 것이죠.</p>
 
 <h1 id="-ibaction">🫰🏻 @IBAction</h1>
+
 <p>IBAction은 이와 반대입니다. <br />
 <mark>스토리보드상에서 이벤트가 발생하면 @IBAction을 통해 액션이 발생하게 만들죠.</mark></p>
 
@@ -480,7 +482,7 @@ IBOutlet은 <mark>IB(interface builder) + Outlet으로, Outlet(배출)하여 화
 <p>위 코드에서 mainLabel이라는 이름의 UILabel을 선언해준 모습입니다.
 여기서 굳이 mainLabel을 선언해주는 이유는 무엇일까요 ?</p>
 
-<p>그 이유는 속성과 관련있습니다. 
+<p>그 이유는 속성과 관련있습니다.
 UILabel은 클래스로 선언되어 있습니다.
 (viewController.swift 파일에서 UILabel를 option키와 함께 클릭한다면 관련 설명이 나타나는 것을 확인할 수 있습니다.)</p>
 
@@ -497,6 +499,7 @@ UILabel은 클래스로 선언되어 있습니다.
 정답은 값을 할당하기 위해 그 값의 타입이 맞아야 합니다.. 따라서 <mark>타입을 설정해주고 그 타입이 가지고 있는 속성값을 선언해주면</mark> 원하는 값이 들어가게 되는 것이죠.</p>
 
 <h1 id="전체코드">전체코드</h1>
+
 <div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//</span>
 <span class="c1">//  ViewController.swift</span>
 <span class="c1">//  MyfirstApp</span>
@@ -510,27 +513,27 @@ UILabel은 클래스로 선언되어 있습니다.
 
     <span class="kd">@IBOutlet</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">mainLabel</span><span class="p">:</span> <span class="kt">UILabel</span><span class="o">!</span>
     <span class="kd">@IBOutlet</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">myButton</span><span class="p">:</span> <span class="kt">UIButton</span><span class="o">!</span>
-    
+
     <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
         <span class="c1">// 함수를 실행하고 있구나 !</span>
         <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
         <span class="c1">// Do any additional setup after loading the view.</span>
     <span class="p">}</span>
-    
+
     <span class="kd">@IBAction</span> <span class="kd">func</span> <span class="nf">buttonPressed</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">UIButton</span><span class="p">)</span> <span class="p">{</span>
-        
-        
+
+
         <span class="c1">// Label의 구성요소</span>
         <span class="n">mainLabel</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="s">"안녕하세요!!!"</span>
-        
+
         <span class="n">mainLabel</span><span class="o">.</span><span class="n">backgroundColor</span> <span class="o">=</span> <span class="k">#colorLiteral</span><span class="p">(</span><span class="nv">red</span><span class="p">:</span> <span class="mf">0.3411764801</span><span class="p">,</span> <span class="nv">green</span><span class="p">:</span> <span class="mf">0.6235294342</span><span class="p">,</span> <span class="nv">blue</span><span class="p">:</span> <span class="mf">0.1686274558</span><span class="p">,</span> <span class="nv">alpha</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span>
         <span class="c1">//mainLabel.backgroundColor = UIColor.yellow</span>
-        
+
         <span class="n">mainLabel</span><span class="o">.</span><span class="n">textColor</span> <span class="o">=</span> <span class="k">#colorLiteral</span><span class="p">(</span><span class="nv">red</span><span class="p">:</span> <span class="mf">0.06274510175</span><span class="p">,</span> <span class="nv">green</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">blue</span><span class="p">:</span> <span class="mf">0.1921568662</span><span class="p">,</span> <span class="nv">alpha</span><span class="p">:</span> <span class="mi">1</span><span class="p">)</span>
-        
+
         <span class="c1">// mainLabel.textAlignment = NSTextAlignment.right</span>
         <span class="c1">// textAlignment의 속성값을 따라간다.</span>
-        
+
         <span class="n">myButton</span><span class="o">.</span><span class="nf">setTitleColor</span><span class="p">(</span><span class="o">.</span><span class="n">black</span><span class="p">,</span> <span class="nv">for</span><span class="p">:</span> <span class="o">.</span><span class="n">normal</span><span class="p">)</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -541,6 +544,7 @@ UILabel은 클래스로 선언되어 있습니다.
 <hr />
 
 <h1 id="정리">정리</h1>
+
 <p><strong><mark>IBOutlet</mark></strong> : UI를 다루기 위해 사용되는 키워드<br />
 <strong><mark>IBACtion</mark></strong> : UI에 이벤트가 발생했을 때 원하는 이벤트를 하게 해주는 키워드</p>
 
@@ -584,7 +588,7 @@ UILabel은 클래스로 선언되어 있습니다.
 ">Prev</a>
     
     
-      <a href="/iOS/colorLiteral/" class="pagination--pager" title="[iOS] #colorLiteral()
+      <a href="/iOS/colorLiteral/" class="pagination--pager" title="[UIKit] #colorLiteral()
 ">Next</a>
     
   </nav>
@@ -600,6 +604,42 @@ UILabel은 클래스로 선언되어 있습니다.
     <div class="page__related">
       <h4 class="page__related-title">You may also enjoy</h4>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/Swift/condition/" rel="permalink">[Swift] 01.조건문
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2024-02-03T00:00:00+09:00">February 3, 2024</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
         
           
 
@@ -683,42 +723,6 @@ UILabel은 클래스로 선언되어 있습니다.
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/Algorithm/time-complexity/" rel="permalink">시간복잡도
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-calendar-alt" aria-hidden="true"></i>
-        <time datetime="2023-12-27T00:00:00+09:00">December 27, 2023</time>
-      </span>
-    
-
-    
-
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/C++/split/" rel="permalink">split() 메소드 구현
 </a>
       
     </h2>

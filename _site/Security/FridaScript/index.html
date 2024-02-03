@@ -52,7 +52,7 @@
     
     <meta charset="utf-8" />
 
-<!-- begin _includes/seo.html --><title>[Security] Frida 간단 작성법 | ParkHoho</title>
+<!-- begin _includes/seo.html --><title>[AOS] Frida 간단 작성법 | ParkHoho</title>
 <meta name="description" content="this is my blog!">
 
 
@@ -65,7 +65,7 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="Hokyung's blog">
-<meta property="og:title" content="[Security] Frida 간단 작성법">
+<meta property="og:title" content="[AOS] Frida 간단 작성법">
 <meta property="og:url" content="http://localhost:4000/Security/FridaScript/">
 
 
@@ -330,7 +330,7 @@
   <label for="ac-toc">Toggle menu</label>
   <ul class="nav__items">
     <!-- <li>
-      <span class="nav__total">🌴 Total Posts: 25</span>
+      <span class="nav__total">🌴 Total Posts: 26</span>
     </li> -->
     
     
@@ -408,7 +408,7 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[Security] Frida 간단 작성법">
+    <meta itemprop="headline" content="[AOS] Frida 간단 작성법">
     <meta itemprop="description" content="">
     <meta itemprop="datePublished" content="2022-10-05T00:00:00+09:00">
     <meta itemprop="dateModified" content="2022-10-05T00:00:00+09:00">
@@ -416,7 +416,7 @@
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">[Security] Frida 간단 작성법
+          <h1 id="page-title" class="page__title" itemprop="headline">[AOS] Frida 간단 작성법
 </h1>
           
 
@@ -456,12 +456,13 @@
         <span class="p">[</span><span class="nx">변수1</span><span class="p">].[</span><span class="nx">Hooking할</span> <span class="nx">함수</span><span class="p">].</span><span class="nx">implementation</span> <span class="o">=</span> <span class="nf">function </span><span class="p">(</span><span class="nx">args</span><span class="p">){</span>
         	<span class="p">[</span><span class="nx">원하는</span> <span class="nx">코드</span> <span class="nx">작성</span><span class="p">]</span>
         <span class="p">}</span>
-    
+
     <span class="p">});</span>
-    
+
 </code></pre></div></div>
 
 <h1 id="기본-구조---python">기본 구조 - Python</h1>
+
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">frida</span><span class="p">,</span> <span class="n">sys</span>
 
 <span class="k">def</span> <span class="nf">on_message</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
@@ -478,13 +479,13 @@
         [변수1].[Hooking할 함수].implementation = function (args){
         	[원하는 코드 작성]
         }
-    
+
     });
 </span><span class="sh">"""</span>
 
 <span class="k">try</span><span class="p">:</span>
     <span class="n">device</span> <span class="o">=</span> <span class="n">frida</span><span class="p">.</span><span class="nf">get_usb_device</span><span class="p">(</span><span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-    <span class="n">pid</span> <span class="o">=</span> <span class="n">device</span><span class="p">.</span><span class="nf">spawn</span><span class="p">([</span><span class="n">PACKAGE_NAME</span><span class="p">])</span> 
+    <span class="n">pid</span> <span class="o">=</span> <span class="n">device</span><span class="p">.</span><span class="nf">spawn</span><span class="p">([</span><span class="n">PACKAGE_NAME</span><span class="p">])</span>
     <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">App is starting ... pid : {}</span><span class="sh">"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">pid</span><span class="p">))</span>
     <span class="n">process</span> <span class="o">=</span> <span class="n">device</span><span class="p">.</span><span class="nf">attach</span><span class="p">(</span><span class="n">pid</span><span class="p">)</span>
     <span class="n">device</span><span class="p">.</span><span class="nf">resume</span><span class="p">(</span><span class="n">pid</span><span class="p">)</span>
@@ -498,10 +499,11 @@
 </code></pre></div></div>
 
 <h1 id="모듈-사용법">모듈 사용법</h1>
+
 <h1 id="so-파일-후킹해서-메모리-변조">so 파일 후킹해서 메모리 변조</h1>
+
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Interceptor</span><span class="p">.</span><span class="nf">attach</span><span class="p">(</span><span class="nx">Module</span><span class="p">.</span><span class="nf">findExportByName </span><span class="p">(</span><span class="dl">"</span><span class="s2">후킹해야할 so파일명</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">함수이름</span><span class="dl">"</span><span class="p">)</span>
 </code></pre></div></div>
-
 
         
       </section>
@@ -537,11 +539,11 @@
       
   <nav class="pagination">
     
-      <a href="/iOS/UIButton/" class="pagination--pager" title="[iOS] Button 사용법
+      <a href="/iOS/UIButton/" class="pagination--pager" title="[UIKit] Button 사용법
 ">Prev</a>
     
     
-      <a href="/iOS/UILabel/" class="pagination--pager" title="[iOS] UILabel 사용법
+      <a href="/iOS/UILabel/" class="pagination--pager" title="[UIKit] UILabel 사용법
 ">Next</a>
     
   </nav>
@@ -557,6 +559,42 @@
     <div class="page__related">
       <h4 class="page__related-title">You may also enjoy</h4>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/Swift/condition/" rel="permalink">[Swift] 01.조건문
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2024-02-03T00:00:00+09:00">February 3, 2024</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
         
           
 
@@ -640,42 +678,6 @@
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/Algorithm/time-complexity/" rel="permalink">시간복잡도
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-calendar-alt" aria-hidden="true"></i>
-        <time datetime="2023-12-27T00:00:00+09:00">December 27, 2023</time>
-      </span>
-    
-
-    
-
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/C++/split/" rel="permalink">split() 메소드 구현
 </a>
       
     </h2>
