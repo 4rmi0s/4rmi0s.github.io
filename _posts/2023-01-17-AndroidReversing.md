@@ -1,5 +1,5 @@
 ---
-title: "[Malware] 안드로이드 리버싱시 환경 구성 방법"
+title: "[REV] 안드로이드 리버싱시 환경 구성 방법"
 excerpt: ""
 
 categories:
@@ -18,14 +18,12 @@ last_modified_at: 2023-01-17
 
 ## 설치해야 할 툴
 
-
 1. jadx-gui
 2. apktool
 3. nox
 4. adb 명령어 환경 변수에 설정
 
 ### 1. jadx-gui 설치
-
 
 아래 블로그의 방식을 따라가주세요.<br>
 
@@ -37,13 +35,11 @@ last_modified_at: 2023-01-17
 
 ### 2. apktool
 
-
 무조건 환경변수 등록하기. → 앱의 위치와 apktool의 위치가 다른 경우 번거로움.
 
 [https://novvon.tistory.com/213](https://novvon.tistory.com/213)
 
 ### 3. nox
-
 
 nox는 안드로이드 앱을 구동하기 위한 하나의 가상환경입니다. <br>
 우리가 윈도우 악성코드를 실행시킬 때 가상환경에서 하는 것처럼 apk파일은 nox에서 구동합니다.
@@ -51,7 +47,6 @@ nox는 안드로이드 앱을 구동하기 위한 하나의 가상환경입니�
 [https://kr.bignox.com/](https://kr.bignox.com/)
 
 ### 4. adb
-
 
 adb 명령어는 안드로이드 분석에서 중요합니다. <br>
 
@@ -64,4 +59,3 @@ adb 는 안드로이드 스튜디오 설치햇다면 따로 설치할 필요없�
 [https://serendipper16.tistory.com/6](https://serendipper16.tistory.com/6)
 
 [https://nuritech.tistory.com/20](https://nuritech.tistory.com/20)
-

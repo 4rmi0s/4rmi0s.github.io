@@ -1,5 +1,5 @@
 ---
-title: "[iOS]Pod 설치 방법"
+title: "[UIKit]Pod 설치 방법"
 excerpt: ""
 
 categories:
@@ -14,13 +14,9 @@ toc_sticky: true
 
 date: 2022-08-09
 last_modified_at: 2022-08-09
-
 ---
 
-
 # 설치 방법
-
-
 
 ## 코코아팟 설치
 
@@ -32,14 +28,14 @@ sudo gem install cocoapods
 
 프로젝트 경로로 이동하는 방법은 많다. 그중에 나는 `Finder` 를 이용하는 방법을 사용함.
 
-`Xcode` 키고 → 원하는 project에서 오른쪽 마우스 클릭 or 터치패드 두 손가락으로 클릭 → `show in Finder` → 다시 Finder에서 원하는 project를 선택한 후 오른쪽 마우스 클릭/터치패드 클릭 → `폴더에서 새로운 터미널 열기`  를 누르면 project 경로가 설정된 모습을 볼 수 있다. 
+`Xcode` 키고 → 원하는 project에서 오른쪽 마우스 클릭 or 터치패드 두 손가락으로 클릭 → `show in Finder` → 다시 Finder에서 원하는 project를 선택한 후 오른쪽 마우스 클릭/터치패드 클릭 → `폴더에서 새로운 터미널 열기` 를 누르면 project 경로가 설정된 모습을 볼 수 있다.
 
 ## pod 파일 생성해주기
 
 프로젝트 경로로 이동한 후에는 프로젝트 안에 pod 파일을 생성해 줘야 한다. 이 파일로 Xcode 외부 라이브러리를 `install` 하여 사용할 수 있다.
 
 ```swift
-pod init 
+pod init
 ```
 
 ### 주의할 점
@@ -48,8 +44,6 @@ pod init
 <img src="https://super.so/icon/dark/check.svg" alt="" width="40px" /> 빈 프로젝트가 아닌 프로젝트에서 pod init 명령어를 사용해야 한다.
 
 </aside>
-
-
 
 ## pod파일 열기
 
@@ -65,7 +59,7 @@ open -e podfile
 
 ## pod 파일 수정
 
-파일 수정은 각 라이브러리마다 다르기 때문에  tabman 을 예로 들어보자 . Podfile의 특정 위치에 설치하고 싶은 라이브러리를 적어주면 된다.
+파일 수정은 각 라이브러리마다 다르기 때문에 tabman 을 예로 들어보자 . Podfile의 특정 위치에 설치하고 싶은 라이브러리를 적어주면 된다.
 
 ```swift
 pod 'Tabman', '~> 2.11'
@@ -125,4 +119,4 @@ arch -x86_64 pod install
 
 [iOS Swift 코코아팟 설치 + 라이브러리 Tabman 사용하기](https://bcoding-lab.tistory.com/119)
 
-[](https://github.com/uias/Tabman](https://github.com/uias/Tabman))
+[](<https://github.com/uias/Tabman](https://github.com/uias/Tabman)>)

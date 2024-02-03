@@ -1,5 +1,5 @@
---- 
-title: "[Security] Frida 간단 작성법"
+---
+title: "[AOS] Frida 간단 작성법"
 excerpt: ""
 
 categories:
@@ -25,13 +25,13 @@ Java.perform(function() {
         [변수1].[Hooking할 함수].implementation = function (args){
         	[원하는 코드 작성]
         }
-    
-    });
-    
-``` 
 
+    });
+
+```
 
 # 기본 구조 - Python
+
 ```python
 import frida, sys
 
@@ -49,13 +49,13 @@ jscode = """
         [변수1].[Hooking할 함수].implementation = function (args){
         	[원하는 코드 작성]
         }
-    
+
     });
 """
 
 try:
     device = frida.get_usb_device(timeout=10)
-    pid = device.spawn([PACKAGE_NAME]) 
+    pid = device.spawn([PACKAGE_NAME])
     print("App is starting ... pid : {}".format(pid))
     process = device.attach(pid)
     device.resume(pid)
@@ -69,10 +69,9 @@ except Exception as e:
 ```
 
 # 모듈 사용법
+
 # so 파일 후킹해서 메모리 변조
+
 ```javascript
 Interceptor.attach(Module.findExportByName ("후킹해야할 so파일명","함수이름")
 ```
-
-
-
