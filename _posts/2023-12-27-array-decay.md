@@ -26,11 +26,11 @@ Array decay는 한마디로 배열을 포인터와 비슷하게 사용할 수 �
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() { 
-	int a[3] = { 1, 2, 3 }; 
-	auto b = a; 
-	cout << "a size: " << sizeof(a) << endl << "b size: " << sizeof(b) << endl; 
-	return 0; 
+int main() {
+	int a[3] = { 1, 2, 3 };
+	auto b = a;
+	cout << "a size: " << sizeof(a) << endl << "b size: " << sizeof(b) << endl;
+	return 0;
 }
 ```
 
@@ -42,8 +42,8 @@ sizeof(b) : 8
 Program ended with exit code: 0
 ```
 
-즉, array a의 경우에는 크기가 12가 나왔고, 포인터의 경우에는 8이라는 크기를 갖고 있다. 이를 생각해보면, 배열 a의 경우에는 ==(배열의 크기 * 배열의 자료형 크기)==의 크기를 갖는 것을 알 수 있다. 포인터의 경우에는 ==아키텍쳐의 크기==를 의미한다.
+즉, array a의 경우에는 크기가 12가 나왔고, 포인터의 경우에는 8이라는 크기를 갖고 있다. 이를 생각해보면, 배열 a의 경우에는 <span style="background-color:#fff5b1"> (배열의 크기 \* 배열의 자료형 크기) </span>의 크기를 갖는 것을 알 수 있다. 포인터의 경우에는 <span style="background-color:#fff5b1"> 아키텍쳐의 크기 </span>를 의미한다.
 
-[[Pointer의 크기는 아키텍쳐의 크기에 따라 다르다 ?]]
+[[Pointer의 크기는 아키텍쳐의 크기에 따라 다르다 ?]](https://parkhoho.github.io/Algorithm/Pointer/)
 
-즉, Array decay는 Array가 Pointer의 성격을 가지게 되는 과정에서 배열의 크기에 대한 성질을 잊어버리게 되면서 발생하는 것이다. 그렇기에 위와 같은 결과가 출력되는 것이다. 
+즉, Array decay는 Array가 Pointer의 성격을 가지게 되는 과정에서 배열의 크기에 대한 성질을 잊어버리게 되면서 발생하는 것이다. 그렇기에 위와 같은 결과가 출력되는 것이다.

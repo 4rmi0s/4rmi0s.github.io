@@ -4,7 +4,7 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
-        <loc>http://localhost:4000/C++/prefixSum/.html</loc>
+        <loc>http://localhost:4000/C++/prefixSum/</loc>
         
         <lastmod>2023-12-27T00:00:00+09:00</lastmod>
         
@@ -20,7 +20,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/Algorithm/Array-decay/.html</loc>
+        <loc>http://localhost:4000/Algorithm/Array-decay/</loc>
         
         <lastmod>2023-12-27T00:00:00+09:00</lastmod>
         
@@ -36,7 +36,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/Algorithm/time-complexity/.html</loc>
+        <loc>http://localhost:4000/Algorithm/time-complexity/</loc>
         
         <lastmod>2023-12-27T00:00:00+09:00</lastmod>
         
@@ -52,7 +52,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/C++/split/.html</loc>
+        <loc>http://localhost:4000/C++/split/</loc>
         
         <lastmod>2023-12-27T00:00:00+09:00</lastmod>
         
@@ -68,7 +68,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/Algorithm/Pointer/.html</loc>
+        <loc>http://localhost:4000/Algorithm/Pointer/</loc>
         
         <lastmod>2023-12-27T00:00:00+09:00</lastmod>
         
@@ -84,7 +84,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/Life/Sdev/.html</loc>
+        <loc>http://localhost:4000/Life/Sdev/</loc>
         
         <lastmod>2023-12-25T00:00:00+09:00</lastmod>
         
@@ -100,7 +100,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/Algorithm/a number card game/.html</loc>
+        <loc>http://localhost:4000/Algorithm/a number card game/</loc>
         
         <lastmod>2023-04-26T00:00:00+09:00</lastmod>
         
@@ -116,7 +116,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/Algorithm/law of large numbers/.html</loc>
+        <loc>http://localhost:4000/Algorithm/law of large numbers/</loc>
         
         <lastmod>2023-04-21T00:00:00+09:00</lastmod>
         
@@ -132,7 +132,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/Malware/Reversing/.html</loc>
+        <loc>http://localhost:4000/Malware/Reversing/</loc>
         
         <lastmod>2023-01-17T00:00:00+09:00</lastmod>
         
@@ -148,7 +148,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/Malware/Android Malware/.html</loc>
+        <loc>http://localhost:4000/Malware/Android Malware/</loc>
         
         <lastmod>2023-01-10T00:00:00+09:00</lastmod>
         
@@ -164,7 +164,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/Security/FridaLab/.html</loc>
+        <loc>http://localhost:4000/Security/FridaLab/</loc>
         
         <lastmod>2022-10-26T00:00:00+09:00</lastmod>
         
@@ -180,7 +180,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/iOS/Sound/.html</loc>
+        <loc>http://localhost:4000/iOS/Sound/</loc>
         
         <lastmod>2022-10-07T00:00:00+09:00</lastmod>
         
@@ -196,7 +196,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/iOS/TextFieldDelegate/.html</loc>
+        <loc>http://localhost:4000/iOS/TextFieldDelegate/</loc>
         
         <lastmod>2022-10-07T00:00:00+09:00</lastmod>
         
@@ -212,7 +212,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/iOS/UITimer/.html</loc>
+        <loc>http://localhost:4000/iOS/UITimer/</loc>
         
         <lastmod>2022-10-06T00:00:00+09:00</lastmod>
         
@@ -228,7 +228,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/iOS/UILabel/.html</loc>
+        <loc>http://localhost:4000/iOS/UILabel/</loc>
         
         <lastmod>2022-10-05T00:00:00+09:00</lastmod>
         
@@ -244,7 +244,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/Security/FridaScript/.html</loc>
+        <loc>http://localhost:4000/Security/FridaScript/</loc>
         
         <lastmod>2022-10-05T00:00:00+09:00</lastmod>
         
@@ -260,7 +260,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/iOS/UIButton/.html</loc>
+        <loc>http://localhost:4000/iOS/UIButton/</loc>
         
         <lastmod>2022-10-04T00:00:00+09:00</lastmod>
         
@@ -276,7 +276,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/iOS/colorLiteral/.html</loc>
+        <loc>http://localhost:4000/iOS/colorLiteral/</loc>
         
         <lastmod>2022-08-27T00:00:00+09:00</lastmod>
         
@@ -292,7 +292,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/iOS/variable/.html</loc>
+        <loc>http://localhost:4000/iOS/variable/</loc>
         
         <lastmod>2022-08-26T00:00:00+09:00</lastmod>
         
@@ -308,7 +308,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/Life/javascript/.html</loc>
+        <loc>http://localhost:4000/Life/javascript/</loc>
         
         <lastmod>2022-08-16T00:00:00+09:00</lastmod>
         
@@ -324,7 +324,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/Security/Frida2/.html</loc>
+        <loc>http://localhost:4000/Security/Frida2/</loc>
         
         <lastmod>2022-08-11T00:00:00+09:00</lastmod>
         
@@ -340,7 +340,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/Security/Frida1/.html</loc>
+        <loc>http://localhost:4000/Security/Frida1/</loc>
         
         <lastmod>2022-08-10T00:00:00+09:00</lastmod>
         
@@ -356,7 +356,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/ios/pod.html</loc>
+        <loc>http://localhost:4000/ios/pod</loc>
         
         <lastmod>2022-08-09T00:00:00+09:00</lastmod>
         
@@ -372,7 +372,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/Life/start/.html</loc>
+        <loc>http://localhost:4000/Life/start/</loc>
         
         <lastmod>2022-08-04T00:00:00+09:00</lastmod>
         
@@ -388,7 +388,7 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/iOS/delegate.html</loc>
+        <loc>http://localhost:4000/iOS/delegate</loc>
         
         <lastmod>2022-08-04T00:00:00+09:00</lastmod>
         

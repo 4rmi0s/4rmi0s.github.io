@@ -113,20 +113,20 @@ var store = [{
         "url": "/Algorithm/a%20number%20card%20game/",
         "teaser": null
       },{
-        "title": "S-개발자 1차 후기",
+        "title": "S-개발자 1기 2차 후기",
         "excerpt":"S-개발자가 이번년도(2023)에 1기가 끝이 났다. 많은 우여곡절도 있었고, 중간에 포기하려고도 생각했지만 꾸역꾸역 버티다보니 수료를 하게 되었다. 이번 글을 통해 S-개발자에 지원하는 누군가에게 도움이 또는 조언이 되었으면 한다. ☝🏻 지원동기 3학년 1학기가 너무나도 힘들어서 휴학을 생각하고 있었다. 휴학하고 뭘 하는게 좋을까를 가장 많이 생각을 했고, BOB를 지원해보려고 했던 것이 목표였다. 하지만,...","categories": ["Life"],
         "tags": ["Life","S-dev"],
         "url": "/Life/Sdev/",
         "teaser": null
       },{
         "title": "Pointer의 크기는 아키텍쳐의 크기에 따라 다르다.",
-        "excerpt":" ","categories": ["Algorithm"],
+        "excerpt":"포인터 Pointer란 먼저 주소를 담는 자료형이다. 즉, 주소 0x00000000를 담기 위해서 필요한 것이다. 이 주소에 접근해서 다양한 계산을 할 수 있다. 여기서 중요한 것은 포인터의 크기이다. 하나의 포인터는 자료형의 크기를 따라가는 것이 아니라 아키텍쳐가 다룰 수 있는 최대 크기를 따라간다는 점을 파악해야 한다. 예를 하나 들어보겠다. #include &lt;bits/stdc++.h&gt; using namespace...","categories": ["Algorithm"],
         "tags": ["Algorithm","Pointer"],
         "url": "/Algorithm/Pointer/",
         "teaser": null
       },{
         "title": "split() 메소드 구현",
-        "excerpt":"Split() 메소드 c++에서는 split()메소드를 지원하지 않는다. 즉, 구현을 해야한다. // #include &lt;algorithm&gt; #include &lt;algorithm&gt; #include &lt;string&gt; #include &lt;vector&gt; #include &lt;iostream&gt; using namespace std; vector&lt;string&gt; split(string input,string delimiter){ long long pos; string token = \"\"; vector&lt;string&gt; ret; while((pos = input.find(delimiter)) != string::npos ){ token = input.substr(0,pos); ret.push_back(token); input.erase(0,pos+delimiter.length()); } ret.push_back(input); return...","categories": ["C++"],
+        "excerpt":"☝🏻 Split() 메소드 c++에서는 split()메소드를 지원하지 않는다. 즉, 구현을 해야한다. // #include &lt;algorithm&gt; #include &lt;algorithm&gt; #include &lt;string&gt; #include &lt;vector&gt; #include &lt;iostream&gt; using namespace std; vector&lt;string&gt; split(string input,string delimiter){ long long pos; string token = \"\"; vector&lt;string&gt; ret; while((pos = input.find(delimiter)) != string::npos ){ token = input.substr(0,pos); ret.push_back(token); input.erase(0,pos+delimiter.length()); } ret.push_back(input);...","categories": ["C++"],
         "tags": ["tag1","tag2"],
         "url": "/C++/split/",
         "teaser": null
@@ -138,7 +138,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Array decay",
-        "excerpt":" ","categories": ["Algorithm"],
+        "excerpt":"배열이 수식에서 사용될 때 포인터로 변환되는 현상 Array decay는 한마디로 배열을 포인터와 비슷하게 사용할 수 있다는 것이다. 하나의 예를 들어보자. #include &lt;bits/stdc++.h&gt; using namespace std; int main() { int a[3] = { 1, 2, 3 }; auto b = a; cout &lt;&lt; \"a size: \" &lt;&lt; sizeof(a) &lt;&lt; endl &lt;&lt;...","categories": ["Algorithm"],
         "tags": ["Algorithm","Array decay"],
         "url": "/Algorithm/Array-decay/",
         "teaser": null
