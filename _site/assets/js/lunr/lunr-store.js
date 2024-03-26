@@ -1,10 +1,4 @@
 var store = [{
-        "title": "[UIKit]delegate란 무엇인가 ?",
-        "excerpt":"먼저 공부한 내용은 Zeddios 님의 블로그를 참고했음을 밝힙니다.   🍎 delegate   delegate는 객체가 맡은 임무를 위임하는 것을 뜻합니다.  ","categories": ["iOS"],
-        "tags": ["iOS","Swift"],
-        "url": "/iOS/delegate",
-        "teaser": null
-      },{
         "title": "[Life]블로그 기록 start",
         "excerpt":"☝🏻 블로그 시작 전부터 기술 블로그 하나 만들어보자! 라는 생각을 갖고 있었다. 그전에는 노션, velog, 네이버 블로그 등 많은 블로그를 만들고 사용했지만 뭔가 하나씩 마음에 들지 않았다.그렇게 해서 찾게 된 것이 깃 블로그다. ✌🏻 why 깃블로그 ? 깃블로그 장점 1. 자유 내가 알아본 깃 블로그는 다른 블로그보다 자유가 확보된 느낌이였다.물론...","categories": ["Life"],
         "tags": ["Life","start"],
@@ -23,22 +17,10 @@ var store = [{
         "url": "/Security/Frida1/",
         "teaser": null
       },{
-        "title": "[AOS] Frida 기능",
-        "excerpt":"주요 기능 injection 임의 코드를 메모리나 애플리케이션에 주입 Interception 함수가 실행되기 전에 함수의 매개변수나 반환값을 수정 stalking 원하는 명령어나 함수를 찾아 메모리 데이터 추출 Frida Tools REPL : 컴파일 과정 없이 대화형 인터페이스를 사용한다. 인터프리터 형식과 유사 옵션 frida-ps: 프로세스 목록 출력 프로세스는 쉽게 말하면 메모리 상에 올라간 즉 실행시킨...","categories": ["Security"],
-        "tags": ["Security","Mobile"],
-        "url": "/Security/Frida2/",
-        "teaser": null
-      },{
         "title": "[Life] 자바스크립스의 시작",
         "excerpt":"자바스크립트의 시작… iOS, Android 사랑 나는 어렸을 때부터 태블릿 및 핸드폰 기기에 무척 관심이 많았다. 이 관심은 내가 모은 돈 모두를 각종 핸드폰 기기를 사는데 쏟아붓게 했고 이러한 유별난 취미가 각종 모바일 운영체제를 사용할 수 있는 기회를 얻게 만들어줬다. 물론 내가 많은 기기를 사용해본것은 아니다. 어렸을 때의 용돈으로 기기를 산다는...","categories": ["Life"],
         "tags": ["javascript","security"],
         "url": "/Life/javascript/",
-        "teaser": null
-      },{
-        "title": "[UIKit] @IBOutlet ",
-        "excerpt":"오늘은 @IBOutlet와 @IBAction 에 대해 정리해보겠습니다. ☝🏻 @IBOutlet 먼저 @IBOutlet 입니다. @IBOutlet은 UI를 코드로 바꿔주는 작업을 한다고 생각하면 됩니다. 더 쉽게 생각하면 화면에 UI 객체를 만들어 주는 키워드입니다. 저는 @IBOutlet을 어원에 접근해 이해하는 것이 쉽다고 생각하는데요. IBOutlet은 IB(interface builder) + Outlet으로, Outlet(배출)하여 화면에 어떠한 영향을 주겠다! 라는 뜻입니다. 이와 비슷하게...","categories": ["iOS"],
-        "tags": ["iOS","object"],
-        "url": "/iOS/variable/",
         "teaser": null
       },{
         "title": "[UIKit] #colorLiteral()",
@@ -47,34 +29,10 @@ var store = [{
         "url": "/iOS/colorLiteral/",
         "teaser": null
       },{
-        "title": "[UIKit] Button 사용법",
-        "excerpt":"UIButton 코드로 만들기 ❗️ 버튼의 타이틀을 바꾸는 법 ❗️ button.setTitle(\"my text here\",forstate: .normal) ❗️ 버튼 색깔 바꾸기 ❗️ button.backgroudn = #colorLiteral() ❗️ 버튼 객체 코드로만 만들기 ❗️ private let passwordResetButton : UIButton = { let button = UIButton() button.backgroundColor = .clear button.setTitle(\"\", for: .normal) button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14) button.addTarget(self, action:...","categories": ["iOS"],
-        "tags": ["iOS","UIButton"],
-        "url": "/iOS/UIButton/",
-        "teaser": null
-      },{
         "title": "[AOS] Frida 간단 작성법",
         "excerpt":"기본 구조 - JS Java.perform(function() { var [변수1] = Java.use(\"[Hooking할 함수의 클래스]\"); [변수1].[Hooking할 함수].implementation = function (args){ [원하는 코드 작성] } }); 기본 구조 - Python import frida, sys def on_message(message, data): if message['type'] == 'send': print(\"[*] {0}\".format(message['payload'])) else: print(message) PACKAGE_NAME = \"[패키지명]\" jscode = \"\"\" Java.perform(function() { var [변수1]...","categories": ["Security"],
         "tags": ["Security","Frida"],
         "url": "/Security/FridaScript/",
-        "teaser": null
-      },{
-        "title": "[UIKit] UILabel 사용법",
-        "excerpt":"UILable 코드로 만들기   ❗️ 레이블 코드로만 만들기 ❗️   레이블 텍스트 변경하기   label.text = \"안녕하세요\"  ","categories": ["iOS"],
-        "tags": ["iOS","UILabel"],
-        "url": "/iOS/UILabel/",
-        "teaser": null
-      },{
-        "title": "[UIKit] 타이머 사용법",
-        "excerpt":"Timer 사용법   타이머 설정하기   var timer = Timer()  override func viewDidLoad() {     self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { in         updateCounting()     }) }  func updateCounting(){     print(\"counting...\") }   timer_?.invalidate()  ","categories": ["iOS"],
-        "tags": ["iOS","iOS"],
-        "url": "/iOS/UITimer/",
-        "teaser": null
-      },{
-        "title": "[UIKit] TextField Delegate",
-        "excerpt":"TextField Delegate 준비조건 textField.delegate = self TextField 사용하기 ❗️ 텍스트필드의 입력이 시작될 때 호출 ❗️ // 텍스트 필드의 입력을 시작할 때 호출(시작할지 말지 여부 허락하는 것) func textFieldShouldBeginEditing(textField: UITextField) -&gt; Bool {         return true } ❗️ 시작 시점을 알 수 있다.. ❗️ // 시작 시점  ...","categories": ["iOS"],
-        "tags": ["TextField","Delegate"],
-        "url": "/iOS/TextFieldDelegate/",
         "teaser": null
       },{
         "title": "[UIKit] Sound 사용법",
@@ -149,9 +107,9 @@ var store = [{
         "url": "/C++/prefixSum/",
         "teaser": null
       },{
-        "title": "[Swift] 01.조건문",
-        "excerpt":"🧑🏻‍💻Day 01 - 조건문🧑🏻‍💻 import UIKit // 다크모드 여부 var isDarkMode : Bool = false //if(isDarkMode == true){ // print(\"다크모드 입니다.\") //} else { // print(\"다크모드가 아닙니다.\") //} //isDarkMode == true //if !isDarkMode { // print(\"다크모드가 아닙니다.\") //} else { // print(\"다크모드 입니다.\") //} var title : String = isDarkMode...","categories": ["Swift"],
-        "tags": ["Swift","condition"],
-        "url": "/Swift/condition/",
+        "title": "[iOS] iOS에서 container란 뭘까 ?",
+        "excerpt":"☝🏻 문제상황 iOS kernel에서 aslr의 변화를 확인하고 싶어서 c로 된 코드를 짰다. 그 후에 clang을 이용해 컴파일했더니 다음이 오류가 발생했다. 왜 이러한 상황이 발생한걸까 ? iOS에서는 탈옥되었더라도 보안을 위해서 바이너리 실행이 불가능한걸까 ? Codesign을 받아야하는걸까 ? 다양한 생각이 들었고, 내가 최종적으로 내린 결론을 정리하고자 한다. ☝🏻 Container란 뭘까 ? iOS에서는...","categories": ["Security"],
+        "tags": ["Security","iOS"],
+        "url": "/Security/container/",
         "teaser": null
       }]

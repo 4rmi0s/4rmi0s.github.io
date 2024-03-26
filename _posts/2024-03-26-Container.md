@@ -21,7 +21,7 @@ iOS kernel에서 aslr의 변화를 확인하고 싶어서 c로 된 코드를 짰
 그 후에 clang을 이용해 컴파일했더니 다음이 오류가 발생했다.
 
 <div>
-    <img src="/assets/images/aslr.png" alt="" width="40px" />
+    <img src="/assets/images/aslr.png" alt=""  />
 </div>
 
 
@@ -46,12 +46,12 @@ Container는 iOS(모바일) 에서 사용되는 개념이다.
 그렇기에 /usr/libexec/sandboxd 에서 컨테이너가 적용되지 않은 바이너리라고 판단하고 실행을 거부한 것이다.
 
 <div>
-  <img src="../assets/images/error message.png" alt="" width="40px" />
+  <img src="/assets/images/error message.png" alt="" />
 </div>
 
 
 따라서 컨테이너에 속하지 않은 디렉토리로 이동해서 실행하면 다음과 같이 동작하는 것을 확인할 수 있다.
 
 <div>
-  <img src="../assets/images/aslr_test.png" alt="" width="40px" />
+  <img src="/assets/images/aslr_test.png" alt="" />
 </div>

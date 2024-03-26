@@ -4,9 +4,9 @@
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     
     <url>
-        <loc>http://localhost:4000/Swift/condition/</loc>
+        <loc>http://localhost:4000/Security/container/</loc>
         
-        <lastmod>2024-02-03T00:00:00+09:00</lastmod>
+        <lastmod>2024-03-26T00:00:00+09:00</lastmod>
         
 
         
@@ -212,73 +212,9 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/iOS/TextFieldDelegate/</loc>
-        
-        <lastmod>2022-10-07T00:00:00+09:00</lastmod>
-        
-
-        
-        <changefreq>weekly</changefreq>
-        
-
-        
-        <priority>0.5</priority>
-        
-
-    </url>
-    
-    <url>
-        <loc>http://localhost:4000/iOS/UITimer/</loc>
-        
-        <lastmod>2022-10-06T00:00:00+09:00</lastmod>
-        
-
-        
-        <changefreq>weekly</changefreq>
-        
-
-        
-        <priority>0.5</priority>
-        
-
-    </url>
-    
-    <url>
-        <loc>http://localhost:4000/iOS/UILabel/</loc>
-        
-        <lastmod>2022-10-05T00:00:00+09:00</lastmod>
-        
-
-        
-        <changefreq>weekly</changefreq>
-        
-
-        
-        <priority>0.5</priority>
-        
-
-    </url>
-    
-    <url>
         <loc>http://localhost:4000/Security/FridaScript/</loc>
         
         <lastmod>2022-10-05T00:00:00+09:00</lastmod>
-        
-
-        
-        <changefreq>weekly</changefreq>
-        
-
-        
-        <priority>0.5</priority>
-        
-
-    </url>
-    
-    <url>
-        <loc>http://localhost:4000/iOS/UIButton/</loc>
-        
-        <lastmod>2022-10-04T00:00:00+09:00</lastmod>
         
 
         
@@ -308,41 +244,9 @@
     </url>
     
     <url>
-        <loc>http://localhost:4000/iOS/variable/</loc>
-        
-        <lastmod>2022-08-26T00:00:00+09:00</lastmod>
-        
-
-        
-        <changefreq>weekly</changefreq>
-        
-
-        
-        <priority>0.5</priority>
-        
-
-    </url>
-    
-    <url>
         <loc>http://localhost:4000/Life/javascript/</loc>
         
         <lastmod>2022-08-16T00:00:00+09:00</lastmod>
-        
-
-        
-        <changefreq>weekly</changefreq>
-        
-
-        
-        <priority>0.5</priority>
-        
-
-    </url>
-    
-    <url>
-        <loc>http://localhost:4000/Security/Frida2/</loc>
-        
-        <lastmod>2022-08-11T00:00:00+09:00</lastmod>
         
 
         
@@ -389,22 +293,6 @@
     
     <url>
         <loc>http://localhost:4000/Life/start/</loc>
-        
-        <lastmod>2022-08-04T00:00:00+09:00</lastmod>
-        
-
-        
-        <changefreq>weekly</changefreq>
-        
-
-        
-        <priority>0.5</priority>
-        
-
-    </url>
-    
-    <url>
-        <loc>http://localhost:4000/iOS/delegate</loc>
         
         <lastmod>2022-08-04T00:00:00+09:00</lastmod>
         
