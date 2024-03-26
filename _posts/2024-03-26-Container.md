@@ -45,8 +45,13 @@ Container는 iOS(모바일) 에서 사용되는 개념이다.
 결론부터 말하면 내가 코드를 컴파일하고 실행한 공간은 컨테이너에 속한다.
 그렇기에 /usr/libexec/sandboxd 에서 컨테이너가 적용되지 않은 바이너리라고 판단하고 실행을 거부한 것이다.
 
-<img src="../assets/images/error message.png" alt="" width="40px" />
+<div>
+  <img src="../assets/images/error message.png" alt="" width="40px" />
+</div>
+
 
 따라서 컨테이너에 속하지 않은 디렉토리로 이동해서 실행하면 다음과 같이 동작하는 것을 확인할 수 있다.
 
-<img src="../assets/images/aslr_test.png" alt="" width="40px" />
+<div>
+  <img src="../assets/images/aslr_test.png" alt="" width="40px" />
+</div>
