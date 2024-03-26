@@ -1,21 +1,48 @@
-<!-- ---
-title: "[포스팅 예시] 이곳에 제목을 입력하세요"
-excerpt: "본문의 주요 내용을 여기에 입력하세요"
+---
+title: "[iOS] iOS에서 container란 뭘까 ?"
+excerpt: ""
 
 categories:
-  - categories3
+  - Security
 tags:
-  - [tag1, tag2]
+  - [Security, iOS]
 
-permalink: /categories3/post-name-here-3/
+permalink: /Security/container/
 
 toc: true
 toc_sticky: true
 
-date: 2022-07-24
-last_modified_at: 2022-07-24
+date: 2024-03-26
+last_modified_at: 2024-03-26
 ---
 
-## 🦥 본문
+## ☝🏻 문제상황
+iOS kernel에서 aslr의 변화를 확인하고 싶어서 c로 된 코드를 짰다.
+그 후에 clang을 이용해 컴파일했더니 다음이 오류가 발생했다.
 
-본문은 여기에 ... -->
+<img src="../assets/images/aslr.png" alt="" width="40px" />
+
+왜 이러한 상황이 발생한걸까 ?
+iOS에서는 탈옥되었더라도 보안을 위해서 바이너리 실행이 불가능한걸까 ?
+Codesign을 받아야하는걸까 ?
+
+다양한 생각이 들었고, 내가 최종적으로 내린 결론을 정리하고자 한다.
+
+## ☝🏻 Container란 뭘까 ?
+iOS에서는 다른 os에서도 사용되는 샌드박스라는 개념이 사용된다.
+이는 쉽게 말해서 하나의 프로세스에서 시스템 호출을 막아두는 개념이다. 
+이러한 개념을 통해 권한을 탈취당하더라도 전체 os 및 kernel을 보호하는 방법을 택한 것이다. 
+
+Container는 iOS(모바일) 에서 사용되는 개념이다.
+애플은 iOS에서 앱보호를 위해서 Container를 구축하였다.
+이 Container를 /var/mobile/Container 또는 /var/mobile/Application에 적용하면서 샌드박스화했다.
+
+## ☝🏻 결론
+결론부터 말하면 내가 코드를 컴파일하고 실행한 공간은 컨테이너에 속한다.
+그렇기에 /usr/libexec/sandboxd 에서 컨테이너가 적용되지 않은 바이너리라고 판단하고 실행을 거부한 것이다.
+
+<img src="../assets/images/error message.png" alt="" width="40px" />
+
+따라서 컨테이너에 속하지 않은 디렉토리로 이동해서 실행하면 다음과 같이 동작하는 것을 확인할 수 있다.
+
+<img src="../assets/images/aslr_test.png" alt="" width="40px" />
