@@ -20,7 +20,11 @@ last_modified_at: 2024-03-26
 iOS kernel에서 aslr의 변화를 확인하고 싶어서 c로 된 코드를 짰다.
 그 후에 clang을 이용해 컴파일했더니 다음이 오류가 발생했다.
 
-<img src="../assets/images/aslr.png" alt="" width="40px" />
+<div>
+    <img src="/assets/images/aslr.png" alt="" width="40px" />
+</div>
+
+
 
 왜 이러한 상황이 발생한걸까 ?
 iOS에서는 탈옥되었더라도 보안을 위해서 바이너리 실행이 불가능한걸까 ?
