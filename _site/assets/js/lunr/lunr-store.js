@@ -112,4 +112,10 @@ var store = [{
         "tags": ["Security","iOS"],
         "url": "/Security/container/",
         "teaser": null
+      },{
+        "title": "[iOS] d: warning: -no_pie ignored for arm64",
+        "excerpt":"☝🏻 문제상황 aslr를 해제하기 위한 여러가지 방법을 찾는 중에 32bit ios 에서처럼 fno-pie를 적용하면 어떻게 에러가 나올까 하는 생각으로 시작되었다. ld: warning: -no_pie ignored for arm64 위와 같은 에러가 출력되었다. 위의 에러는 당연하게도 64bit 에서는 aslr이 들어가기 때문에 pie를 해제할 수 없다는 컴파일러(clang) 자체의 오류였다. 결론 그렇다면 어떻게 ios 64bit...","categories": ["Security"],
+        "tags": ["Security","iOS"],
+        "url": "/Security/no_pie/",
+        "teaser": null
       }]
