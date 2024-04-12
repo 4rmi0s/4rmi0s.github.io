@@ -116,9 +116,9 @@ alias android-arm32-cpp="compile_android_cpp arm32 $ANDROID_TOOLCHAIN/clang++"
 
 컴파일하면 다음과 같은 결과를 얻을 수 있다.
 
-<img src="/assets/images/android.png" width="180px">
+<img src="/assets/images/android.png">
 
 # ☝🏻 결론
 cpp 코드의 경우에는 dependency를 따로 추가해야 한다. dependency에 대해서는 다음에 다룰 예정이다.
 
-<img src="/assets/images/cpp_dependency.png" width="180px">
+<img src="/assets/images/cpp_dependency.png">
