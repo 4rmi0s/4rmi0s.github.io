@@ -51,14 +51,14 @@ WARN: Device disconnected
 
 ```
 
-scrcpy 명령어를 사용했을 때 나타나는 에러들이다. 
-Encoding Error로 볼 수 있는데 생각보다 Encoding Error를 다루는 블로그 글이 많지 않아서 정리해본다.
+scrcpy 명령어를 사용했을 때 나타나는 에러들이다. <br>
+Encoding Error로 볼 수 있는데 생각보다 Encoding Error를 다루는 블로그 글이 많지 않아서 정리해본다.<br>
 
 ## ☝🏻 해결방법
-해결방법은 github issue에서 볼 수 있었다.
+해결방법은 github issue에서 볼 수 있었다.<br>
 https://github.com/Genymobile/scrcpy/issues/4299
 
-이중에서 나는 다음의 방법으로 해결했다.
+이중에서 나는 다음의 방법으로 해결했다.<br><br>
 
 
 `[server] WARN: Audio disabled: it is not supported before Android 11` 에러의 경우에는 안드로이드11 이전의 기기에서는 audio를 지원하지 않는 것으로 보인다. 따라서 scrcpy Usage Example에도 나와있듯이 `--no-audio` 옵션을 사용하면 된다.
@@ -66,14 +66,14 @@ https://github.com/Genymobile/scrcpy/issues/4299
 
 
 `[server] ERROR: Encoding error: java.lang.IllegalStateException: null` 에러의 경우에는 scrcpy가 인코딩을 하지 못해서 생기는 오류다. 따라서 인코딩 옵션을 따로 줘야한다는 것이 이슈의 핵심이였다. 
-
+<br>
 다음의 명령어를 사용해서 가능한 인코딩 옵션을 확인해보자. 
 
 ```
 $ scrcpy --no-audio --list-encoders
 ```
 
-출력 결과는 다음과 같다.
+<br>출력 결과는 다음과 같다.<br>
 
 ```
 [server] INFO: Device: [samsung] samsung SM-G930S (Android 7.1.1)
@@ -86,10 +86,10 @@ $ scrcpy --no-audio --list-encoders
     --audio-codec=flac --audio-encoder='OMX.google.flac.encoder'
 ```
 
-따라서 이중 하나의 옵션을 주면 되는데 h264 encoder 가 많이 사용되는 것을 확인하여 2번째 옵션을 주었다.
+따라서 이중 하나의 옵션을 주면 되는데 h264 encoder 가 많이 사용되는 것을 확인하여 2번째 옵션을 주었다.<br>
 
 ## ☝🏻 결론
-내가 encoding error를 해결한 명령어는 다음과 같다.
+내가 encoding error를 해결한 명령어는 다음과 같다.<br>
 
 ```
 $ scrcpy --no-audio --video-codec=h264 --video-encoder='OMX.google.h264.encoder'
