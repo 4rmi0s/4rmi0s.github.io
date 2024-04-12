@@ -3,11 +3,11 @@ title: "[Android] Scrcpy ERROR: Encoding error: java.lang.IllegalStateException:
 excerpt: ""
 
 categories:
-  - security
+  - Security
 tags:
   - [android, scrcpy ]
 
-permalink: /security/encoding-error/
+permalink: /Security/encoding-error/
 
 toc: true
 toc_sticky: true
