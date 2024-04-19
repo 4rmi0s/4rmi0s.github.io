@@ -109,7 +109,7 @@ APP_PLATFORM := android-23
 빌드는 jni가 존재하는 그리고, Android.mk와 Application.mk가 존재하는 상위폴더에서 진행하면 됩니다.<br>
 
 ```bash
-ndk-build
+ndk-build or /path/to/ndk-build
 ```
 
 위와 같이 ndk-build 스크립트를 실행하면 다음의 결과를 볼 수 있습니다.<br>
@@ -148,4 +148,5 @@ cpp 코드 빌드 과정의 경우에는 스포가 될 수 있기 때문에 따�
 
 소스코드 : [github](https://github.com/ParkHoHo/Android-Study/tree/main/compile-set)
 <br>
-cpp ex : [cpp code]()
+
+cpp ex : [cpp code](https://parkhoho.github.io/Security/ndk-build-with-cpp/)

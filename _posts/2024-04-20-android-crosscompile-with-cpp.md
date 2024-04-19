@@ -76,6 +76,7 @@ int main() {
 실행 결과는 다음과 같습니다.
 
 ```
+$ ndk-build
 [armeabi-v7a] Install libs/armeabi-v7a/libc++_shared.so:
 [arm64-v8a] Install libs/arm64-v8a/libc++_shared.so:
 [armeabi-v7a] Compile++ thumb: hello-world <= hello-world.cpp
@@ -94,4 +95,5 @@ int main() {
 <img src="/assets/images/cpp-64.png">
 <img src="/assets/images/cpp-32.png">
 
-[깃허브 소스코드]()
+
+[깃허브 소스코드](https://github.com/ParkHoHo/Android-Study/tree/main/cpp-test/jni)
