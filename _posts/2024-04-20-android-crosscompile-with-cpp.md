@@ -16,11 +16,11 @@ date: 2024-04-19
 last_modified_at: 2024-04-19
 ---
 
-[이전post](https://parkhoho.github.io/Security/ndk-build-with-c/)와 이어지는 내용입니다.
-ndk-build 스크립트를 이용한 cpp 코드 빌드 프로젝트는 따로 없어서 정리해봅니다.
+[이전post](https://parkhoho.github.io/Security/ndk-build-with-c/)와 이어지는 내용입니다.<br>
+ndk-build 스크립트를 이용한 cpp 코드 빌드 프로젝트는 따로 없어서 정리해봅니다.<br>
 <br>
-이전 post에서 ndk-build를 이용해서 c코드를 빌드하고, android shell 에서 실행시켜봤습니다.
-cpp코드도 비슷하지만 조금 다른 부분도 있고,
+이전 post에서 ndk-build를 이용해서 c코드를 빌드하고, android shell 에서 실행시켜봤습니다.<br>
+cpp코드도 비슷하지만 조금 다른 부분도 있고,<br>
 이해가 안되는 부분도 있어 기록 남겨봅니다.
 
 # How to make?
@@ -72,7 +72,7 @@ int main() {
 }
 ```
 
-위와 같이 작성해준 후에 jni 상위폴더에서 `ndk-build` 스크립트를 실행해주면 됩니다.
+위와 같이 작성해준 후에 jni 상위폴더에서 `ndk-build` 스크립트를 실행해주면 됩니다.<br>
 실행 결과는 다음과 같습니다.
 
 ```
@@ -89,9 +89,9 @@ int main() {
 위에서 선언한대로 `armeabi-v7a`와 `arm64-v8a` 바이너리만 생성한 것을 확인할 수 있습니다.
 
 ## 실행
-안드로이드 기기에서 각각의 파일을 실행하면 다음과 같습니다.
+안드로이드 기기에서 각각의 파일을 실행한 결과입니다.
 
 <img src="/assets/images/cpp-64.png">
 <img src="/assets/images/cpp-32.png">
 
-
+[깃허브 소스코드]()

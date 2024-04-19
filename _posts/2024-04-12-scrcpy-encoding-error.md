@@ -97,3 +97,4 @@ $ scrcpy --no-audio --video-codec=h264 --video-encoder='OMX.google.h264.encoder'
 
 <img src="/assets/images/scrcpy.png" width=
 "180px">
+
