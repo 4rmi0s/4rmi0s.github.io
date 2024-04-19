@@ -38,13 +38,11 @@ ndk-build는 ndk를 이용하여 안드로이드를 target으로 빌드를 진�
 
 > `ndk-build` 스크립트는 NDK의 Make 기반 빌드 시스템을 사용하는 프로젝트를 빌드합니다.
 
-즉, ndk-build는 c/c++ 프로젝트를 안드로이드 앱 제작에 사용하기 위한 빌드 스크립트라고 볼 수 있습니다. <br>
-이러한 ndk-build 스크립트는 ndk를 다운받게되면 사용할 수 있습니다.<br>
+즉, ndk-build는 c/c++ 프로젝트를 안드로이드 앱 제작에 사용하기 위한 빌드 스크립트라고 볼 수 있습니다.이러한 ndk-build 스크립트는 ndk를 다운받게되면 사용할 수 있습니다.<br>
 
 [Android-download-ndk](https://developer.android.com/ndk/downloads?hl=ko)
 
 안드로이드에서 직접적으로 ndk-build를 Make기반이라고 설명하고 있습니다.<br>
-
 아래는 ndk-build가 실행될 때 실행되는 명령어 set입니다.<br>
 
 ```bash
@@ -76,9 +74,9 @@ $ tree .                                                                     ─
     └── hello.c
 ```
 
-폴더 구성을 위와 같이 jni폴더를 생성하고, 하위 폴더에 빌드하고 싶은 소스코드 파일 , 빌드 속성을 지정할 수 있는 Android.mk, Application.mk를 만들어주면 기본적인 환경구성은 끝입니다.<br><br>
+폴더 구성을 위와 같이 jni폴더를 생성하고, 하위 폴더에 빌드하고 싶은 소스코드 파일 , 빌드 속성을 지정할 수 있는 Android.mk, Application.mk를 만들어주면 기본적인 환경구성은 끝입니다.<br>
 
-이제 각각을 어떻게 구성했는지 보겠습니다.</br>
+이제 각각을 어떻게 구성했는지 보겠습니다.<br>
 먼저 Android.mk는 다음과 같이 작성했습니다.<br>
 
 ## Android.mk
