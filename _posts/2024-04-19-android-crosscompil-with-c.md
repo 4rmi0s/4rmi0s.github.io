@@ -31,7 +31,7 @@ Android 공식 페에지에서는 ndk를 이용한 빌드 방법을 3가지 소�
 
 [Android-ndk-build](https://developer.android.com/ndk/guides/build?hl=ko)
 
-# What is NDK-build
+# ☝🏻 What is NDK-build
 
 ndk-build는 ndk를 이용하여 안드로이드를 target으로 빌드를 진행할 수 있도록 돕는 Tool입니다.<br>
 안드로이드 공식페이지에서는 다음과 같이 정의하고 있습니다.<br>
@@ -56,7 +56,7 @@ $GNUMAKE -f <ndk>/build/core/build-local.mk
 ndk-build clean
 ```
 
-# How to use?
+# ☝🏻 How to use?
 ndk-build를 사용하기 위해 필요한 파일은 다음과 같습니다.<br>
 
 - jni
@@ -126,7 +126,7 @@ ndk-build or /path/to/ndk-build
 [x86_64] Install        : hello => libs/x86_64/hello
 ```
 
-# 결론
+# ☝🏻 결론
 
 빌드가 완료되었습니다.<br>
 이제 빌드결과를 확인해보겠습니다.
