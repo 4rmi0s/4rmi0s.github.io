@@ -118,4 +118,40 @@ var store = [{
         "tags": ["Security","iOS"],
         "url": "/Security/no_pie/",
         "teaser": null
+      },{
+        "title": "[Android] cross compile settings",
+        "excerpt":"☝🏻 cross compile Android에서 동작할 수 있는 바이너리 프로그램을 x64 컴퓨터에서 컴파일할 수 있는 방법에 대해 다룬다. QtCreator를 이용해서 컴파일 방식을 알 수 있는데, 컴파일 방법은 다음과 같았다. arm64 /home/hoho/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/bin/clang -target aarch64-linux-android23 -o hello-world hello-world.c arm32 /home/hoho/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/bin/clang -target armv7a-linux-androideabi23 -o hello-world hello-world.c 하지만 매번 이렇게 긴 명령어를 치는 것이 복잡할...","categories": ["Security"],
+        "tags": ["cross-compile","Android"],
+        "url": "/Security/cross-compile/",
+        "teaser": null
+      },{
+        "title": "[Android] Scrcpy ERROR: Encoding error: java.lang.IllegalStateException: null",
+        "excerpt":"☝🏻 발생 에러 $ scrcpy scrcpy 2.4 &lt;https://github.com/Genymobile/scrcpy&gt; INFO: ADB device found: INFO: --&gt; (usb) ce0516058123de0e04 device SM_G930S /usr/local/share/scrcpy/scrcpy-server: 1 file pushed. 4.5 MB/s (69007 bytes in 0.015s) [server] INFO: Device: [samsung] samsung SM-G930S (Android 7.1.1) [server] WARN: Audio disabled: it is not supported before Android 11 INFO: Renderer: opengl...","categories": ["Security"],
+        "tags": ["android","scrcpy"],
+        "url": "/Security/encoding-error/",
+        "teaser": null
+      },{
+        "title": "[Android] Android cross-compile with ndk-build(c)",
+        "excerpt":"Android 에서 실행시킬 수 있는 바이너리를 생성하는 방법은 여러가지가 있습니다. Android 공식 페에지에서는 ndk를 이용한 빌드 방법을 3가지 소개합니다. NDK로 코드를 빌드하는 방법은 크게 세 가지가 있습니다. Make 기반 ndk-build CMake 독립 실행형 도구 모음(다른 빌드 시스템과 통합하거나 configure 기반 프로젝트와 함께 사용) ❗ 개인적으로 c/c++ 코드를 빌드하는 방법중 ndk-build를 이용한 방법이 가장...","categories": ["Security"],
+        "tags": ["Security","Android"],
+        "url": "/Security/ndk-build-with-c/",
+        "teaser": null
+      },{
+        "title": "[Android] Android cross-compile with ndk-build(cpp) ",
+        "excerpt":"이전post와 이어지는 내용입니다. ndk-build 스크립트를 이용한 cpp 코드 빌드 프로젝트는 따로 없어서 정리해봅니다. 이전 post에서 ndk-build를 이용해서 c코드를 빌드하고, android shell 에서 실행시켜봤습니다. cpp코드도 비슷하지만 조금 다른 부분도 있고, 이해가 안되는 부분도 있어 기록 남겨봅니다. ☝🏻 How to make? cpp코드를 빌드하기에 앞서 폴더 구성은 다음과 같이 했습니다. tree . ─╯...","categories": ["Security"],
+        "tags": ["Security","Android"],
+        "url": "/Security/ndk-build-with-cpp/",
+        "teaser": null
+      },{
+        "title": "[Android] libpcap with ndk-build ",
+        "excerpt":"☝🏻 libpcap 빌드 cpp로 프로그램을 만들때 pcap library를 사용하는 경우가 있다. 이번 post에서는 Android 대상 pcap 라이브러리를 빌드하고 실행하는 방법까지 다뤄보도록 하겠다. 특히 libpcap을 shared_library로 빌드하는 과정에 대한 설명은 따로 찾아봐도 없기때문에 따로 남겨보려고 한다. ☝🏻 how to ? libpcap을 빌드하기 위해서 cmake, configure 스크립트, 등등 다양한 방법이 있지만, 저번...","categories": ["Security"],
+        "tags": ["Security","Android"],
+        "url": "/Security/libpcap-build/",
+        "teaser": null
+      },{
+        "title": "[iOS] iOS에서 KTRW를 우회하여 커널을 읽고 쓸 수 있는 kfd",
+        "excerpt":"**TL;DR** puaf 이용하여 free된 PTE L3 물리 페이지으로부터 커널 읽기/쓰기 권한을 가져올 수 있다.   puaf를 이용하여 권한을 가져온 상태를 정의하자  puaf는 uaf와 비슷하지만 상반되는 개념이다.     ","categories": ["Security"],
+        "tags": ["Security","iOS"],
+        "url": "/Security/puaf/",
+        "teaser": null
       }]

@@ -52,7 +52,7 @@
     
     <meta charset="utf-8" />
 
-<!-- begin _includes/seo.html --><title>[iOS] iOS에서 container란 뭘까 ? | ParkHoho</title>
+<!-- begin _includes/seo.html --><title>[Android] Scrcpy ERROR: Encoding error: java.lang.IllegalStateException: null | ParkHoho</title>
 <meta name="description" content="this is my blog!">
 
 
@@ -65,8 +65,8 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="Hokyung's blog">
-<meta property="og:title" content="[iOS] iOS에서 container란 뭘까 ?">
-<meta property="og:url" content="http://localhost:4000/Security/container/">
+<meta property="og:title" content="[Android] Scrcpy ERROR: Encoding error: java.lang.IllegalStateException: null">
+<meta property="og:url" content="http://localhost:4000/Security/encoding-error/">
 
 
   <meta property="og:description" content="this is my blog!">
@@ -77,11 +77,11 @@
 
 
 
-  <meta property="article:published_time" content="2024-03-26T00:00:00+09:00">
+  <meta property="article:published_time" content="2024-04-12T00:00:00+09:00">
 
 
 
-  <meta property="article:modified_time" content="2024-03-26T00:00:00+09:00">
+  <meta property="article:modified_time" content="2024-04-12T00:00:00+09:00">
 
 
 
@@ -90,7 +90,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/Security/container/">
+<link rel="canonical" href="http://localhost:4000/Security/encoding-error/">
 
 
 
@@ -408,15 +408,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[iOS] iOS에서 container란 뭘까 ?">
+    <meta itemprop="headline" content="[Android] Scrcpy ERROR: Encoding error: java.lang.IllegalStateException: null">
     <meta itemprop="description" content="">
-    <meta itemprop="datePublished" content="2024-03-26T00:00:00+09:00">
-    <meta itemprop="dateModified" content="2024-03-26T00:00:00+09:00">
+    <meta itemprop="datePublished" content="2024-04-12T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2024-04-12T00:00:00+09:00">
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">[iOS] iOS에서 container란 뭘까 ?
+          <h1 id="page-title" class="page__title" itemprop="headline">[Android] Scrcpy ERROR: Encoding error: java.lang.IllegalStateException: null
 </h1>
           
 
@@ -425,7 +425,7 @@
       
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
-        <time datetime="2024-03-26T00:00:00+09:00">March 26, 2024</time>
+        <time datetime="2024-04-12T00:00:00+09:00">April 12, 2024</time>
       </span>
     
 
@@ -443,47 +443,88 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#-문제상황">☝🏻 문제상황</a></li><li><a href="#-container란-뭘까-">☝🏻 Container란 뭘까 ?</a></li><li><a href="#-결론">☝🏻 결론</a></li></ul>
+              <ul class="toc__menu"><li><a href="#-발생-에러">☝🏻 발생 에러</a></li><li><a href="#-해결방법">☝🏻 해결방법</a></li><li><a href="#-결론">☝🏻 결론</a></li></ul>
 
             </nav>
           </aside>
         
-        <h2 id="-문제상황">☝🏻 문제상황</h2>
-<p>iOS kernel에서 aslr의 변화를 확인하고 싶어서 c로 된 코드를 짰다.<br />
-그 후에 clang을 이용해 컴파일했더니 다음이 오류가 발생했다.</p>
+        <h2 id="-발생-에러">☝🏻 발생 에러</h2>
 
-<div>
-    <img src="/assets/images/aslr.png" alt="" />
-</div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ scrcpy
+scrcpy 2.4 &lt;https://github.com/Genymobile/scrcpy&gt;
+INFO: ADB device found:
+INFO:     --&gt;   (usb)  ce0516058123de0e04              device  SM_G930S
+/usr/local/share/scrcpy/scrcpy-server: 1 file pushed. 4.5 MB/s (69007 bytes in 0.015s)
+[server] INFO: Device: [samsung] samsung SM-G930S (Android 7.1.1)
+[server] WARN: Audio disabled: it is not supported before Android 11
+INFO: Renderer: opengl
+INFO: OpenGL version: 4.3 (Compatibility Profile) Mesa 23.2.1-1ubuntu3.1~22.04.2
+INFO: Trilinear filtering enabled
+[server] ERROR: Encoding error: java.lang.IllegalStateException: null
+[server] INFO: Retrying with -m1920...
+[server] INFO: Retrying...
+WARN: Demuxer 'audio': stream explicitly disabled by the device
+INFO: Texture: 1440x2560--video-codec=h264 --video-encoder='OMX.google.h264.encoder'
+[server] ERROR: Encoding error: java.lang.IllegalStateException: null
+[server] INFO: Retrying with -m1600...
+[server] INFO: Retrying...
+[server] INFO: Retrying with -m1280...
+[server] INFO: Retrying...
+[server] ERROR: Encoding error: java.lang.IllegalStateException: null
+[server] ERROR: Encoding error: java.lang.IllegalStateException: null
+[server] INFO: Retrying with -m1024...
+[server] INFO: Retrying...
+[server] ERROR: Encoding error: java.lang.IllegalStateException: null
+[server] INFO: Retrying with -m800...
+[server] INFO: Retrying...
+[server] ERROR: Encoding error: java.lang.IllegalStateException: null
+WARN: Device disconnected
 
-<p>왜 이러한 상황이 발생한걸까 ?<br />
-iOS에서는 탈옥되었더라도 보안을 위해서 바이너리 실행이 불가능한걸까 ?<br />
-Codesign을 받아야하는걸까 ?<br />
+</code></pre></div></div>
+
+<p>scrcpy 명령어를 사용했을 때 나타나는 에러들이다. <br />
+Encoding Error로 볼 수 있는데 생각보다 Encoding Error를 다루는 블로그 글이 많지 않아서 정리해본다.<br /></p>
+
+<h2 id="-해결방법">☝🏻 해결방법</h2>
+<p>해결방법은 github issue에서 볼 수 있었다.<br />
+https://github.com/Genymobile/scrcpy/issues/4299</p>
+
+<p>이중에서 나는 다음의 방법으로 해결했다.<br /><br /></p>
+
+<p><code class="language-plaintext highlighter-rouge">[server] WARN: Audio disabled: it is not supported before Android 11</code> 에러의 경우에는 안드로이드11 이전의 기기에서는 audio를 지원하지 않는 것으로 보인다. 따라서 scrcpy Usage Example에도 나와있듯이 <code class="language-plaintext highlighter-rouge">--no-audio</code> 옵션을 사용하면 된다.</p>
+<blockquote>
+  <p>현재 안드로이드 기기는 linearge os version 14 이기 때문에 안드로이드 7이다.</p>
+</blockquote>
+
+<p><code class="language-plaintext highlighter-rouge">[server] ERROR: Encoding error: java.lang.IllegalStateException: null</code> 에러의 경우에는 scrcpy가 인코딩을 하지 못해서 생기는 오류다. 따라서 인코딩 옵션을 따로 줘야한다는 것이 이슈의 핵심이였다. 
 <br />
-다양한 생각이 들었고, 내가 최종적으로 내린 결론을 정리하고자 한다.</p>
+다음의 명령어를 사용해서 가능한 인코딩 옵션을 확인해보자.</p>
 
-<h2 id="-container란-뭘까-">☝🏻 Container란 뭘까 ?</h2>
-<p>iOS에서는 다른 os에서도 사용되는 샌드박스라는 개념이 사용된다.<br />
-이는 쉽게 말해서 하나의 프로세스에서 시스템 호출을 막아두는 개념이다. <br />
-이러한 개념을 통해 권한을 탈취당하더라도 전체 os 및 kernel을 보호하는 방법을 택한 것이다. <br /><br /></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ scrcpy --no-audio --list-encoders
+</code></pre></div></div>
 
-<p>Container는 iOS(모바일) 에서 사용되는 개념이다.<br />
-애플은 iOS에서 앱보호를 위해서 Container를 구축하였다.<br />
-이 Container를 /var/mobile/Container 또는 /var/mobile/Application에 적용하면서 샌드박스화했다.<br /><br /></p>
+<p><br />출력 결과는 다음과 같다.<br /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[server] INFO: Device: [samsung] samsung SM-G930S (Android 7.1.1)
+[server] INFO: List of video encoders:
+    --video-codec=h264 --video-encoder='OMX.Exynos.AVC.Encoder'
+    --video-codec=h264 --video-encoder='OMX.google.h264.encoder'
+    --video-codec=h265 --video-encoder='OMX.Exynos.HEVC.Encoder'
+[server] INFO: List of audio encoders:
+    --audio-codec=aac --audio-encoder='OMX.google.aac.encoder'
+    --audio-codec=flac --audio-encoder='OMX.google.flac.encoder'
+</code></pre></div></div>
+
+<p>따라서 이중 하나의 옵션을 주면 되는데 h264 encoder 가 많이 사용되는 것을 확인하여 2번째 옵션을 주었다.<br /></p>
 
 <h2 id="-결론">☝🏻 결론</h2>
-<p>결론부터 말하면 내가 코드를 컴파일하고 실행한 공간은 컨테이너에 속한다.<br />
-그렇기에 /usr/libexec/sandboxd 에서 컨테이너가 적용되지 않은 바이너리라고 판단하고 실행을 거부한 것이다.<br /></p>
+<p>내가 encoding error를 해결한 명령어는 다음과 같다.<br /></p>
 
-<div>
-  <img src="/assets/images/error message.png" alt="" />
-</div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ scrcpy --no-audio --video-codec=h264 --video-encoder='OMX.google.h264.encoder'
+</code></pre></div></div>
 
-<p>따라서 컨테이너에 속하지 않은 디렉토리로 이동해서 실행하면 다음과 같이 동작하는 것을 확인할 수 있다.<br /></p>
+<p><img src="/assets/images/scrcpy.png" width="180px" /></p>
 
-<div>
-  <img src="/assets/images/aslr_test.png" alt="" />
-</div>
 
         
       </section>
@@ -509,7 +550,7 @@ Codesign을 받아야하는걸까 ?<br />
 
 
         
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-03-26">March 26, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-04-12">April 12, 2024</time></p>
 
 
       </footer>
@@ -519,11 +560,11 @@ Codesign을 받아야하는걸까 ?<br />
       
   <nav class="pagination">
     
-      <a href="/C++/prefixSum/" class="pagination--pager" title="구간합 구하기
+      <a href="/Security/cross-compile/" class="pagination--pager" title="[Android] cross compile settings
 ">Prev</a>
     
     
-      <a href="/Security/no_pie/" class="pagination--pager" title="[iOS] d: warning: -no_pie ignored for arm64
+      <a href="/Security/ndk-build-with-c/" class="pagination--pager" title="[Android] Android cross-compile with ndk-build(c)
 ">Next</a>
     
   </nav>

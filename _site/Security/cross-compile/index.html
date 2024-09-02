@@ -52,7 +52,7 @@
     
     <meta charset="utf-8" />
 
-<!-- begin _includes/seo.html --><title>[iOS] iOS에서 container란 뭘까 ? | ParkHoho</title>
+<!-- begin _includes/seo.html --><title>[Android] cross compile settings | ParkHoho</title>
 <meta name="description" content="this is my blog!">
 
 
@@ -65,8 +65,8 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="Hokyung's blog">
-<meta property="og:title" content="[iOS] iOS에서 container란 뭘까 ?">
-<meta property="og:url" content="http://localhost:4000/Security/container/">
+<meta property="og:title" content="[Android] cross compile settings">
+<meta property="og:url" content="http://localhost:4000/Security/cross-compile/">
 
 
   <meta property="og:description" content="this is my blog!">
@@ -77,11 +77,11 @@
 
 
 
-  <meta property="article:published_time" content="2024-03-26T00:00:00+09:00">
+  <meta property="article:published_time" content="2024-04-12T00:00:00+09:00">
 
 
 
-  <meta property="article:modified_time" content="2024-03-26T00:00:00+09:00">
+  <meta property="article:modified_time" content="2024-04-12T00:00:00+09:00">
 
 
 
@@ -90,7 +90,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/Security/container/">
+<link rel="canonical" href="http://localhost:4000/Security/cross-compile/">
 
 
 
@@ -408,15 +408,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[iOS] iOS에서 container란 뭘까 ?">
+    <meta itemprop="headline" content="[Android] cross compile settings">
     <meta itemprop="description" content="">
-    <meta itemprop="datePublished" content="2024-03-26T00:00:00+09:00">
-    <meta itemprop="dateModified" content="2024-03-26T00:00:00+09:00">
+    <meta itemprop="datePublished" content="2024-04-12T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2024-04-12T00:00:00+09:00">
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">[iOS] iOS에서 container란 뭘까 ?
+          <h1 id="page-title" class="page__title" itemprop="headline">[Android] cross compile settings
 </h1>
           
 
@@ -425,7 +425,7 @@
       
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
-        <time datetime="2024-03-26T00:00:00+09:00">March 26, 2024</time>
+        <time datetime="2024-04-12T00:00:00+09:00">April 12, 2024</time>
       </span>
     
 
@@ -443,47 +443,114 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#-문제상황">☝🏻 문제상황</a></li><li><a href="#-container란-뭘까-">☝🏻 Container란 뭘까 ?</a></li><li><a href="#-결론">☝🏻 결론</a></li></ul>
+              <ul class="toc__menu"><li><a href="#-cross-compile">☝🏻 cross compile</a></li><li><a href="#-간편화c">☝🏻 간편화(c)</a></li><li><a href="#-간편화cpp">☝🏻 간편화(cpp)</a></li></ul>
 
             </nav>
           </aside>
         
-        <h2 id="-문제상황">☝🏻 문제상황</h2>
-<p>iOS kernel에서 aslr의 변화를 확인하고 싶어서 c로 된 코드를 짰다.<br />
-그 후에 clang을 이용해 컴파일했더니 다음이 오류가 발생했다.</p>
+        <h2 id="-cross-compile">☝🏻 cross compile</h2>
 
-<div>
-    <img src="/assets/images/aslr.png" alt="" />
-</div>
+<p>Android에서 동작할 수 있는 바이너리 프로그램을 x64 컴퓨터에서 컴파일할 수 있는 방법에 대해 다룬다.</p>
 
-<p>왜 이러한 상황이 발생한걸까 ?<br />
-iOS에서는 탈옥되었더라도 보안을 위해서 바이너리 실행이 불가능한걸까 ?<br />
-Codesign을 받아야하는걸까 ?<br />
-<br />
-다양한 생각이 들었고, 내가 최종적으로 내린 결론을 정리하고자 한다.</p>
+<p>QtCreator를 이용해서 컴파일 방식을 알 수 있는데, 컴파일 방법은 다음과 같았다.</p>
 
-<h2 id="-container란-뭘까-">☝🏻 Container란 뭘까 ?</h2>
-<p>iOS에서는 다른 os에서도 사용되는 샌드박스라는 개념이 사용된다.<br />
-이는 쉽게 말해서 하나의 프로세스에서 시스템 호출을 막아두는 개념이다. <br />
-이러한 개념을 통해 권한을 탈취당하더라도 전체 os 및 kernel을 보호하는 방법을 택한 것이다. <br /><br /></p>
+<ul>
+  <li>arm64
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/home/hoho/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/bin/clang -target aarch64-linux-android23 -o hello-world hello-world.c
+</code></pre></div>    </div>
+  </li>
+  <li>arm32
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/home/hoho/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/linux-x86_64/bin/clang -target armv7a-linux-androideabi23 -o hello-world hello-world.c
+</code></pre></div>    </div>
+  </li>
+</ul>
 
-<p>Container는 iOS(모바일) 에서 사용되는 개념이다.<br />
-애플은 iOS에서 앱보호를 위해서 Container를 구축하였다.<br />
-이 Container를 /var/mobile/Container 또는 /var/mobile/Application에 적용하면서 샌드박스화했다.<br /><br /></p>
+<p>하지만 매번 이렇게 긴 명령어를 치는 것이 복잡할 뿐만 아니라 번거롭다.
+따라서 이를 쉽게 컴파일하기 위한 방식을 다루고자 한다.</p>
 
-<h2 id="-결론">☝🏻 결론</h2>
-<p>결론부터 말하면 내가 코드를 컴파일하고 실행한 공간은 컨테이너에 속한다.<br />
-그렇기에 /usr/libexec/sandboxd 에서 컨테이너가 적용되지 않은 바이너리라고 판단하고 실행을 거부한 것이다.<br /></p>
+<p>cmake,.profile 등 다양한 방법이 있지만, 이번 article 에서는 ~/.bashrc 를 이용한 방법에 대해 설명하고자 한다.</p>
 
-<div>
-  <img src="/assets/images/error message.png" alt="" />
-</div>
+<h2 id="-간편화c">☝🏻 간편화(c)</h2>
+<p>clang과 clang++은 각각 c와 cpp로 된 프로그램을 컴파일하는데 사용된다.
+이중에 먼저 c컴파일하기 위해 추가된 것은 다음과 같다.</p>
 
-<p>따라서 컨테이너에 속하지 않은 디렉토리로 이동해서 실행하면 다음과 같이 동작하는 것을 확인할 수 있다.<br /></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> Android NDK
+ANDROID_NDK_ROOT=/home/hoho/Android/Sdk/ndk/25.1.8937393
+ANDROID_TOOLCHAIN=$ANDROID_NDK_ROOT/toolchains/llvm/prebuilt/linux-x86_64/bin
 
-<div>
-  <img src="/assets/images/aslr_test.png" alt="" />
-</div>
+function compile_android() {
+    local arch=$1
+    local compiler=$2
+    
+    for file in *.c
+    do
+        filename="${file%.*}"
+        case $arch in
+            x86_64)
+                $compiler $file -o $filename.x86_64
+                ;;
+            arm64)
+                $compiler -target aarch64-linux-android23 $file -o $filename.arm64
+                ;;
+            arm32)
+                $compiler -target armv7a-linux-androideabi23 $file -o $filename.arm32
+                ;;
+        esac
+    done
+}
+</code></pre></div></div>
+
+<p>NDK 경로를 설정해주고, 아키텍처마다 실행하는 명령어를 달리하여 등록하였다.<br />
+그 후에 다음과 같이 명령어를 설정했다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>alias android-x86_64-cc="compile_android x86_64 gcc"
+alias android-arm64-cc="compile_android arm64 $ANDROID_TOOLCHAIN/clang"
+alias android-arm32-cc="compile_android arm32 $ANDROID_TOOLCHAIN/clang"
+</code></pre></div></div>
+
+<h2 id="-간편화cpp">☝🏻 간편화(cpp)</h2>
+<p>cpp는 다음과 같이 설정할 수 있다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ANDROID_NDK_ROOT=/home/hoho/Android/Sdk/ndk/25.1.8937393
+ANDROID_TOOLCHAIN=$ANDROID_NDK_ROOT/toolchains/llvm/prebuilt/linux-x86_64/bin
+
+function compile_android_cpp() {
+    local arch=$1
+    local compiler=$2
+
+    for file in *.cpp
+    do
+        filename="${file%.*}"
+        case $arch in
+            x86_64)
+                $compiler $file -o $filename.x86_64
+                ;;
+            arm64)
+                $compiler -target aarch64-linux-android23 $file -o $filename.arm64
+                ;;
+            arm32)
+                $compiler -target armv7a-linux-androideabi23 $file -o $filename.arm32
+                ;;
+        esac
+    done
+}
+</code></pre></div></div>
+
+<p>그 후에 명령어를 다음과 같이 설정했다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>alias android-x86_64-cpp="compile_android_cpp x86_64 g++"
+alias android-arm64-cpp="compile_android_cpp arm64 $ANDROID_TOOLCHAIN/clang++"
+alias android-arm32-cpp="compile_android_cpp arm32 $ANDROID_TOOLCHAIN/clang++"
+</code></pre></div></div>
+
+<p>컴파일하면 다음과 같은 결과를 얻을 수 있다.</p>
+
+<p><img src="/assets/images/android.png" /></p>
+
+<h1 id="-결론">☝🏻 결론</h1>
+<p>cpp 코드의 경우에는 dependency를 따로 추가해야 한다. dependency에 대해서는 다음에 다룰 예정이다.</p>
+
+<p><img src="/assets/images/cpp_dependency.png" /></p>
 
         
       </section>
@@ -509,7 +576,7 @@ Codesign을 받아야하는걸까 ?<br />
 
 
         
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-03-26">March 26, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-04-12">April 12, 2024</time></p>
 
 
       </footer>
@@ -519,11 +586,11 @@ Codesign을 받아야하는걸까 ?<br />
       
   <nav class="pagination">
     
-      <a href="/C++/prefixSum/" class="pagination--pager" title="구간합 구하기
+      <a href="/Security/no_pie/" class="pagination--pager" title="[iOS] d: warning: -no_pie ignored for arm64
 ">Prev</a>
     
     
-      <a href="/Security/no_pie/" class="pagination--pager" title="[iOS] d: warning: -no_pie ignored for arm64
+      <a href="/Security/encoding-error/" class="pagination--pager" title="[Android] Scrcpy ERROR: Encoding error: java.lang.IllegalStateException: null
 ">Next</a>
     
   </nav>

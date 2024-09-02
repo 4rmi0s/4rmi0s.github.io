@@ -52,7 +52,7 @@
     
     <meta charset="utf-8" />
 
-<!-- begin _includes/seo.html --><title>[iOS] iOS에서 container란 뭘까 ? | ParkHoho</title>
+<!-- begin _includes/seo.html --><title>[Android] libpcap with ndk-build  | ParkHoho</title>
 <meta name="description" content="this is my blog!">
 
 
@@ -65,8 +65,8 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="Hokyung's blog">
-<meta property="og:title" content="[iOS] iOS에서 container란 뭘까 ?">
-<meta property="og:url" content="http://localhost:4000/Security/container/">
+<meta property="og:title" content="[Android] libpcap with ndk-build">
+<meta property="og:url" content="http://localhost:4000/Security/libpcap-build/">
 
 
   <meta property="og:description" content="this is my blog!">
@@ -77,11 +77,11 @@
 
 
 
-  <meta property="article:published_time" content="2024-03-26T00:00:00+09:00">
+  <meta property="article:published_time" content="2024-04-25T00:00:00+09:00">
 
 
 
-  <meta property="article:modified_time" content="2024-03-26T00:00:00+09:00">
+  <meta property="article:modified_time" content="2024-04-25T00:00:00+09:00">
 
 
 
@@ -90,7 +90,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/Security/container/">
+<link rel="canonical" href="http://localhost:4000/Security/libpcap-build/">
 
 
 
@@ -408,15 +408,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="[iOS] iOS에서 container란 뭘까 ?">
+    <meta itemprop="headline" content="[Android] libpcap with ndk-build">
     <meta itemprop="description" content="">
-    <meta itemprop="datePublished" content="2024-03-26T00:00:00+09:00">
-    <meta itemprop="dateModified" content="2024-03-26T00:00:00+09:00">
+    <meta itemprop="datePublished" content="2024-04-25T00:00:00+09:00">
+    <meta itemprop="dateModified" content="2024-04-25T00:00:00+09:00">
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">[iOS] iOS에서 container란 뭘까 ?
+          <h1 id="page-title" class="page__title" itemprop="headline">[Android] libpcap with ndk-build
 </h1>
           
 
@@ -425,7 +425,7 @@
       
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
-        <time datetime="2024-03-26T00:00:00+09:00">March 26, 2024</time>
+        <time datetime="2024-04-25T00:00:00+09:00">April 25, 2024</time>
       </span>
     
 
@@ -443,47 +443,127 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#-문제상황">☝🏻 문제상황</a></li><li><a href="#-container란-뭘까-">☝🏻 Container란 뭘까 ?</a></li><li><a href="#-결론">☝🏻 결론</a></li></ul>
+              <ul class="toc__menu"><li><a href="#-libpcap-빌드">☝🏻 libpcap 빌드</a></li><li><a href="#-how-to-">☝🏻 how to ?</a><ul><li><a href="#libpcap-소스-받기">libpcap 소스 받기</a></li><li><a href="#androidmk-applicationmk-작성">Android.mk, Application.mk 작성</a><ul><li><a href="#androidmk">Android.mk</a></li><li><a href="#applicationmk">Application.mk</a></li></ul></li><li><a href="#ndk-build-실행">ndk-build 실행</a></li></ul></li><li><a href="#-결론">☝🏻 결론</a></li></ul>
 
             </nav>
           </aside>
         
-        <h2 id="-문제상황">☝🏻 문제상황</h2>
-<p>iOS kernel에서 aslr의 변화를 확인하고 싶어서 c로 된 코드를 짰다.<br />
-그 후에 clang을 이용해 컴파일했더니 다음이 오류가 발생했다.</p>
+        <h1 id="-libpcap-빌드">☝🏻 libpcap 빌드</h1>
 
-<div>
-    <img src="/assets/images/aslr.png" alt="" />
-</div>
+<p>cpp로 프로그램을 만들때 pcap library를 사용하는 경우가 있다.<br />
+이번 post에서는 Android 대상 pcap 라이브러리를 빌드하고 실행하는 방법까지 다뤄보도록 하겠다.<br />
+특히 libpcap을 shared_library로 빌드하는 과정에 대한 설명은 따로 찾아봐도 없기때문에 따로 남겨보려고 한다.<br /></p>
 
-<p>왜 이러한 상황이 발생한걸까 ?<br />
-iOS에서는 탈옥되었더라도 보안을 위해서 바이너리 실행이 불가능한걸까 ?<br />
-Codesign을 받아야하는걸까 ?<br />
+<h1 id="-how-to-">☝🏻 how to ?</h1>
+<p>libpcap을 빌드하기 위해서 cmake, configure 스크립트, 등등 다양한 방법이 있지만, <br />
+저번 Post에 이어서 ndk-build를 이용한 빌드를 진행해보고자 한다.<br /></p>
+
+<p>빌드 순서는 다음과 같다.<br /></p>
+
+<p>1) libpcap 소스 받기<br />
+2) Android.mk, Application.mk 작성<br />
+3) ndk-build 스크립트 실행<br /></p>
+
+<h2 id="libpcap-소스-받기">libpcap 소스 받기</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://android.googlesource.com/platform/external/libpcap
+</code></pre></div></div>
+
+<p><a href="https://android.googlesource.com/platform/external/libpcap">링크</a></p>
+
+<h2 id="androidmk-applicationmk-작성">Android.mk, Application.mk 작성</h2>
+<p>Android.mk, Application.mk를 작성하기 전에 먼저 ndk-build를 이용해봐야겠다는 생각을 하게 된 계기를 설명해보고자 한다.<br />
+libpcap을 빌드하기 위해 cmake, configure 스크립트를 이용해봤다.<br />
+각각이 장단점이 있었다.<br /></p>
+
+<p>cmake의 경우에는 쉽고 편하지만 내가 잘 몰랐고,<br />
+configure의 경우에는 매번 아키텍처를 선택해줘야 하는데 그 과정이 너무 번거롭다고 느껴졌다.<br /></p>
+
+<p>특히 아키텍처를 달리하게 된다면 매번 달리 빌드를 진행해야한다는 점에서, <br />
+한번에 이 작업을 할 수는 없을까 ? 에 대한 고민을 했다.<br /></p>
+
+<p>특히 libpcap 소스코드를 살펴보다가 Android.bp 파일이 존재하는 것을 알게되어 진행을 하게 되었다.libpcap을 ndk-build를 이용해서 빌드하기 보다는 최근에는 configure나 cmake를 많이 사용하기 때문에 굳이 ndk-build를 이용할 필요는 없을 것 같다.<br />
 <br />
-다양한 생각이 들었고, 내가 최종적으로 내린 결론을 정리하고자 한다.</p>
+본론으로 돌아와서 Android.mk와 Application.mk은 다음과 같이 작성했다.<br /></p>
 
-<h2 id="-container란-뭘까-">☝🏻 Container란 뭘까 ?</h2>
-<p>iOS에서는 다른 os에서도 사용되는 샌드박스라는 개념이 사용된다.<br />
-이는 쉽게 말해서 하나의 프로세스에서 시스템 호출을 막아두는 개념이다. <br />
-이러한 개념을 통해 권한을 탈취당하더라도 전체 os 및 kernel을 보호하는 방법을 택한 것이다. <br /><br /></p>
+<h3 id="androidmk">Android.mk</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>LOCAL_PATH := $(call my-dir)
 
-<p>Container는 iOS(모바일) 에서 사용되는 개념이다.<br />
-애플은 iOS에서 앱보호를 위해서 Container를 구축하였다.<br />
-이 Container를 /var/mobile/Container 또는 /var/mobile/Application에 적용하면서 샌드박스화했다.<br /><br /></p>
+include $(CLEAR_VARS)
 
-<h2 id="-결론">☝🏻 결론</h2>
-<p>결론부터 말하면 내가 코드를 컴파일하고 실행한 공간은 컨테이너에 속한다.<br />
-그렇기에 /usr/libexec/sandboxd 에서 컨테이너가 적용되지 않은 바이너리라고 판단하고 실행을 거부한 것이다.<br /></p>
+LOCAL_MODULE := libpcap
+# LOCAL_CFLAGS := -D_BSD_SOURCE
+LOCAL_CFLAGS := -DHAVE_CONFIG_H
+LOCAL_CFLAGS += -Dlint
+LOCAL_CFLAGS += -D_U_="__attribute__((__unused__))"
+LOCAL_CFLAGS += -Wall
+# LOCAL_CFLAGS += -Werror
+LOCAL_CFLAGS += -Wno-macro-redefined
+LOCAL_CFLAGS += -Wno-pointer-arith
+LOCAL_CFLAGS += -Wno-sign-compare
+LOCAL_CFLAGS += -Wno-unused-parameter
+LOCAL_CFLAGS += -Wno-unused-result
+LOCAL_CFLAGS += -Wno-tautological-compare
 
-<div>
-  <img src="/assets/images/error message.png" alt="" />
-</div>
 
-<p>따라서 컨테이너에 속하지 않은 디렉토리로 이동해서 실행하면 다음과 같이 동작하는 것을 확인할 수 있다.<br /></p>
+LOCAL_SRC_FILES := \
+    libpcap/bpf_dump.c \
+    libpcap/bpf_filter.c \
+    libpcap/bpf_image.c \
+    libpcap/etherent.c \
+    libpcap/fad-gifc.c \
+    libpcap/fmtutils.c \
+    libpcap/gencode.c \
+    libpcap/grammar.c \
+    libpcap/nametoaddr.c \
+    libpcap/optimize.c \
+    libpcap/pcap-common.c \
+    libpcap/pcap-linux.c \
+    libpcap/pcap-netfilter-linux-android.c \
+    libpcap/pcap-usb-linux-common.c \
+    libpcap/pcap-usb-linux.c \
+    libpcap/pcap-util.c \
+    libpcap/pcap.c \
+    libpcap/savefile.c \
+    libpcap/scanner.c \
+    libpcap/sf-pcap.c \
+    libpcap/sf-pcapng.c
 
-<div>
-  <img src="/assets/images/aslr_test.png" alt="" />
-</div>
+
+LOCAL_SRC_FILES_linux += libpcap/missing/strlcpy.c
+
+LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)
+
+include $(BUILD_SHARED_LIBRARY)
+
+# build 2
+include $(CLEAR_VARS)
+LOCAL_MODULE    := interface-list
+LOCAL_SRC_FILES := interface-list.c 
+LOCAL_STATIC_LIBRARIES := libpcap
+LOCAL_C_INCLUDES := $(LOCAL_PATH) $(LOCAL_PATH)/libpcap
+include $(BUILD_EXECUTABLE)
+</code></pre></div></div>
+
+<h3 id="applicationmk">Application.mk</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>APP_PLATFORM := android-23
+# APP_ABI := armeabi-v7a arm64-v8a
+APP_ALLOW_MISSING_DEPS := true
+APP_STL := c++_shared
+</code></pre></div></div>
+
+<h2 id="ndk-build-실행">ndk-build 실행</h2>
+<p>작성이 완료되었다면 이제 ndk-build를 실행하면 된다.
+jni의 상위폴더에서 ndk-build 스크립트를 실행시켜주자.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ndk-build or /path/to/ndk-build
+</code></pre></div></div>
+
+<h1 id="-결론">☝🏻 결론</h1>
+<p>Android.mk와 Application.mk가 Make의 느린 빌드속도로 Soong 프로젝트로 대체되면서,
+많이 사용되진 않는 것처럼 보인다.
+뿐만 아니라, Cmake나 configure처럼 대안도 많은 것처럼 보인다.</p>
+
+<p>혹여나 필요하다면 위를 참고하길 바란다.</p>
 
         
       </section>
@@ -509,7 +589,7 @@ Codesign을 받아야하는걸까 ?<br />
 
 
         
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-03-26">March 26, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-04-25">April 25, 2024</time></p>
 
 
       </footer>
@@ -519,11 +599,11 @@ Codesign을 받아야하는걸까 ?<br />
       
   <nav class="pagination">
     
-      <a href="/C++/prefixSum/" class="pagination--pager" title="구간합 구하기
+      <a href="/Security/ndk-build-with-cpp/" class="pagination--pager" title="[Android] Android cross-compile with ndk-build(cpp)
 ">Prev</a>
     
     
-      <a href="/Security/no_pie/" class="pagination--pager" title="[iOS] d: warning: -no_pie ignored for arm64
+      <a href="/Security/puaf/" class="pagination--pager" title="[iOS] iOS에서 KTRW를 우회하여 커널을 읽고 쓸 수 있는 kfd
 ">Next</a>
     
   </nav>
@@ -571,42 +651,6 @@ Codesign을 받아야하는걸까 ?<br />
 
 
     <p class="archive__item-excerpt" itemprop="description">puaf에 대하여…
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/Security/libpcap-build/" rel="permalink">[Android] libpcap with ndk-build
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-calendar-alt" aria-hidden="true"></i>
-        <time datetime="2024-04-25T00:00:00+09:00">April 25, 2024</time>
-      </span>
-    
-
-    
-
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
 </p>
   </article>
 </div>
@@ -669,6 +713,42 @@ Codesign을 받아야하는걸까 ?<br />
       <span class="page__meta-date">
         <i class="far fa-calendar-alt" aria-hidden="true"></i>
         <time datetime="2024-04-19T00:00:00+09:00">April 19, 2024</time>
+      </span>
+    
+
+    
+
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/Security/encoding-error/" rel="permalink">[Android] Scrcpy ERROR: Encoding error: java.lang.IllegalStateException: null
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        <time datetime="2024-04-12T00:00:00+09:00">April 12, 2024</time>
       </span>
     
 
