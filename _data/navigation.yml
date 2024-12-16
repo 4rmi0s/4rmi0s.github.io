@@ -26,6 +26,8 @@ categories:
     url: /categories/iOS/
   - title: "Security"
     url: /categories/Security/
+  - title: "Pwn"
+    url: /categories/pwn/
   - title: "Malware"
     url: /categories/Malware/
   - title: "Algorithm"
